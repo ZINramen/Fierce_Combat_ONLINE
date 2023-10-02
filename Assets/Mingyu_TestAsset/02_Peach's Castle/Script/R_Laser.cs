@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class R_Laser : MonoBehaviour
 {
-    public GameObject LaserCtrl;
+    public GameObject PCastle_Ctrl;
 
     void End_Laser()
     {
-        LaserCtrl.GetComponent<LaserController>().is_ShootLaser = false;
+        PCastle_Ctrl.gameObject.GetComponent<PCastle_Ctrl>().EndLaser_Setting();
     }
 }
