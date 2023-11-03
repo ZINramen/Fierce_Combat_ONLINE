@@ -3,7 +3,7 @@ guid: b1ccd9e09d2acd44eb3dc81a365ab3e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2205,108 +2212,107 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Human_32: 2037293409
-      Human_65: 999437
-      Human_55: 1844500767
-      Human_49: 1288728332
-      Human_36: -964730781
-      Human_53: 690336435
-      Human_92: -700460050
-      Human_25: -2100358932
-      Human_64: -225161813
-      Human_76: 564299621
-      Human_16: 1667497242
-      Human_63: -433982997
-      Human_69: 1951934045
-      Human_11: -1895383796
-      Human_27: -101941820
-      Human_72: -327974698
-      Human_26: 1313870709
-      Human_73: -1702581638
-      Human_39: 1460616830
-      Human_58: 416053652
-      Human_45: -307754185
-      Human_89: -238332046
       Human_0: 1690291584
-      Human_98: -903995300
-      Human_41: 1867235503
-      Human_30: 634131654
-      Human_28: 1160415948
-      Human_97: 1927844851
-      Human_56: -1352599240
-      Human_95: 1189631027
-      Human_31: -725742248
-      Human_96: -2110746036
-      Human_57: 2126924525
-      Human_67: -181848728
-      Human_6: 1218820848
-      Human_80: 223260827
-      Human_7: -597627570
-      Human_18: 1811707745
-      Human_29: -2001226317
-      Human_4: -1570667417
-      Human_43: 1794248830
-      Human_52: 975647312
-      Human_61: 526202169
-      Human_46: -1841493547
-      Human_22: -1819837501
-      Human_87: 1544603166
-      Human_38: -1268842974
-      Human_90: -1222254632
-      Human_9: 729088111
-      Human_81: -1957490954
-      Human_51: -1806316960
-      Human_78: -675959397
-      Human_15: -1747095776
-      Human_93: -1008335436
-      Human_86: -210040294
-      Human_8: 1443992009
-      Human_12: -675425415
-      Human_70: 1587899967
-      Human_82: 291553847
-      Human_24: -580135668
-      Human_84: -52662946
-      Human_17: 1270431156
-      Human_44: -314319627
-      Human_34: -1155385991
-      Human_60: 233628969
-      Human_5: -1274320916
-      Human_85: -77488340
-      Human_47: 1945104841
-      Human_42: -2079428557
-      Human_20: -1059454338
-      Human_40: 362547865
-      Human_50: -1723527441
-      Human_91: -1032217813
-      Human_68: 1320186162
-      Human_59: -1411972628
-      Human_77: 1233465206
-      Human_48: -2068554444
-      Human_74: -693363424
       Human_1: -225587265
-      Human_79: -1221608403
-      Human_54: -134738558
-      Human_62: 2106087323
-      Human_19: 842992584
-      Human_23: -1574535113
       Human_10: -1632496393
-      Human_2: -165891876
-      Human_75: 35804208
-      Human_3: -472048173
-      Human_21: 1990463908
-      Human_83: -344081074
-      Human_14: 1256577428
-      Human_37: 542175551
-      Human_33: -1747843133
-      Human_71: 1315799620
-      Human_88: 2052691955
-      Human_94: -1764136652
-      Human_66: -1667439644
-      Human_35: -1641745189
+      Human_11: -1895383796
+      Human_12: -675425415
       Human_13: 472518603
-  spritePackingTag: 
+      Human_14: 1256577428
+      Human_15: -1747095776
+      Human_16: 1667497242
+      Human_17: 1270431156
+      Human_18: 1811707745
+      Human_19: 842992584
+      Human_2: -165891876
+      Human_20: -1059454338
+      Human_21: 1990463908
+      Human_22: -1819837501
+      Human_23: -1574535113
+      Human_24: -580135668
+      Human_25: -2100358932
+      Human_26: 1313870709
+      Human_27: -101941820
+      Human_28: 1160415948
+      Human_29: -2001226317
+      Human_3: -472048173
+      Human_30: 634131654
+      Human_31: -725742248
+      Human_32: 2037293409
+      Human_33: -1747843133
+      Human_34: -1155385991
+      Human_35: -1641745189
+      Human_36: -964730781
+      Human_37: 542175551
+      Human_38: -1268842974
+      Human_39: 1460616830
+      Human_4: -1570667417
+      Human_40: 362547865
+      Human_41: 1867235503
+      Human_42: -2079428557
+      Human_43: 1794248830
+      Human_44: -314319627
+      Human_45: -307754185
+      Human_46: -1841493547
+      Human_47: 1945104841
+      Human_48: -2068554444
+      Human_49: 1288728332
+      Human_5: -1274320916
+      Human_50: -1723527441
+      Human_51: -1806316960
+      Human_52: 975647312
+      Human_53: 690336435
+      Human_54: -134738558
+      Human_55: 1844500767
+      Human_56: -1352599240
+      Human_57: 2126924525
+      Human_58: 416053652
+      Human_59: -1411972628
+      Human_6: 1218820848
+      Human_60: 233628969
+      Human_61: 526202169
+      Human_62: 2106087323
+      Human_63: -433982997
+      Human_64: -225161813
+      Human_65: 999437
+      Human_66: -1667439644
+      Human_67: -181848728
+      Human_68: 1320186162
+      Human_69: 1951934045
+      Human_7: -597627570
+      Human_70: 1587899967
+      Human_71: 1315799620
+      Human_72: -327974698
+      Human_73: -1702581638
+      Human_74: -693363424
+      Human_75: 35804208
+      Human_76: 564299621
+      Human_77: 1233465206
+      Human_78: -675959397
+      Human_79: -1221608403
+      Human_8: 1443992009
+      Human_80: 223260827
+      Human_81: -1957490954
+      Human_82: 291553847
+      Human_83: -344081074
+      Human_84: -52662946
+      Human_85: -77488340
+      Human_86: -210040294
+      Human_87: 1544603166
+      Human_88: 2052691955
+      Human_89: -238332046
+      Human_9: 729088111
+      Human_90: -1222254632
+      Human_91: -1032217813
+      Human_92: -700460050
+      Human_93: -1008335436
+      Human_94: -1764136652
+      Human_95: 1189631027
+      Human_96: -2110746036
+      Human_97: 1927844851
+      Human_98: -903995300
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -35,8 +35,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerType && !StopMove)
-            Move();
+        if (StopMove)
+            h = 0;
+        else
+        {
+            if (PlayerType)
+                Move();
+        }
     }
     private void Move()
     {
@@ -54,11 +59,30 @@ public class Movement : MonoBehaviour
         else
             animator.SetBool("isWalk", false);
     }
-    void Jump(float bonus_value) 
+    public void Jump(float bonus_value)
     {
-        if(bonus_value == 0)
-            body.AddForce(Vector2.up * JumpPower * 100);
+        if (bonus_value == 0)
+            body.velocity = new Vector2(body.velocity.x, JumpPower * 2);
         else
-            body.AddForce(Vector2.up * bonus_value * 100);
+            body.velocity = new Vector2(body.velocity.x, bonus_value * 2);
+    }
+    public void SetMovementForceX(float x)
+    {
+        int plus = 1;
+        if (transform.localEulerAngles.y == 180) plus = -1;
+        body.AddForce(new Vector2(x * 100 * plus, 0));
+    }
+    public void SetThrustForceX(float x)
+    {
+        if (x < 0)
+            transform.localEulerAngles = new Vector3(0, 0, 0);
+        else
+            transform.localEulerAngles = new Vector3(0, 180, 0);
+        body.AddForce(new Vector2(x * 30, 0));
+    }
+
+    public void SetVelocityZero()
+    {
+        body.velocity = new Vector3(0, 0, 0);
     }
 }
