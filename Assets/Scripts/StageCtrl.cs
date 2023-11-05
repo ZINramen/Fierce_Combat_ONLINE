@@ -8,6 +8,7 @@ public class StageCtrl : MonoBehaviour
 {
     private Entity[] playerList; //player 목록
     private int playerNumber; //살아 있는 player 수
+    [SerializeField]
     private Vector3[] playerFirstLocations; //player 시작 위치
     private Entity superPlayer; //가장 HP가 많은 player
 
@@ -24,6 +25,9 @@ public class StageCtrl : MonoBehaviour
         playerList = FindObjectsOfType<Entity>(); //Entity를 가진 객체로 리스트를 만듬
         playerNumber = playerList.Length; //처음은 살아있으므로 리스트에 넣음
         superPlayer = playerList[0]; //임시로 superPlayer 설정
+        //플레이어 위치 설정
+        playerList[0].transform.position = playerFirstLocations[0];
+        playerList[1].transform.position = playerFirstLocations[1];
 
         Debug.Log("플레이어 수" + playerNumber);
         Debug.Log("플레이어1" + playerList[0].name);
