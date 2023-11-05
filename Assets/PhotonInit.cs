@@ -304,7 +304,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         PlayerPrefs.SetInt("LogIn", 1);
 
         //StartCoroutine(CreatePlayer());
-        PhotonNetwork.LoadLevel("SampleScene");
+        PhotonNetwork.LoadLevel("WaittingRoom");
     }
 
     private void OnApplicationQuit()
@@ -337,7 +337,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
             yield return new WaitForSeconds(0.5f);
         }
 
-        GameObject tempPlayer = PhotonNetwork.Instantiate("PlayerDagger",
+        GameObject tempPlayer = PhotonNetwork.Instantiate("Human",
                                     new Vector3(0, 0, 0),
                                     Quaternion.identity,
                                     0);
