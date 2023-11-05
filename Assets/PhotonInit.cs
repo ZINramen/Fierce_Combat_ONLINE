@@ -93,6 +93,8 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         if (connectionInfo_Text)
             connectionInfo_Text.text = connectionState;
 
+        PlayerPrefs.SetInt("LogIn", 0);
+
         //아래의 함수를 사용하여 씬이 전환 되더라도 선언 되었던 인스턴스가 파괴되지 않는다.
         //DontDestroyOnLoad(gameObject);
     }
@@ -304,7 +306,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         PlayerPrefs.SetInt("LogIn", 1);
 
         //StartCoroutine(CreatePlayer());
-        PhotonNetwork.LoadLevel("WaittingRoom");
+        PhotonNetwork.LoadLevel("WaitingRoom");
     }
 
     private void OnApplicationQuit()
@@ -338,9 +340,15 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         }
 
         GameObject tempPlayer = PhotonNetwork.Instantiate("Human",
-                                    new Vector3(0, 0, 0),
+                                    new Vector3(0, 0.15f, 5.75443172f),
                                     Quaternion.identity,
                                     0);
+
+        if(tempPlayer)
+        {
+            Debug.Log("플레이어 생성");
+        }
+
         pv = GetComponent<PhotonView>();
 
         yield return null;
@@ -353,7 +361,9 @@ public class PhotonInit : MonoBehaviourPunCallbacks
 
     public void SetPlayerName()
     {
-        Debug.Log(playerInput.text + "를 입력 하셨습니다!");
+        Debug.Log(playerInput.text + "를 입력 하셨습니다!" + 
+            "\n Game Start : " + isGameStart +
+            "\n Log In : " + isLogin);
 
         // Lobby실
         if (isGameStart == false && isLogin == false)
