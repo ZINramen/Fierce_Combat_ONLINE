@@ -16,6 +16,7 @@ public class Entity : MonoBehaviour
     public LayerMask target;
     public GameObject attackPos;
     public float attackLength;
+    public bool isDie = false; //캐릭터가 죽었는지 살았는지 여부
 
     public float flyingAttackForce = 0;
     public float flyingDamagedPower = 0;
@@ -24,6 +25,7 @@ public class Entity : MonoBehaviour
 
     private void Awake()
     {
+        hp = maxHP; //Test용
         movement = GetComponent<Movement>();
         aManager = GetComponent<AnimationManager>();
     }
@@ -43,6 +45,10 @@ public class Entity : MonoBehaviour
         {
             waitTime = 0;
         }
+
+        //생사 상태 확인
+        if (hp <= 0)
+            isDie = true;
     }
 
     public void SetPower(float powerValue) 
@@ -101,6 +107,12 @@ public class Entity : MonoBehaviour
             hp -= damageValue;
             waitTime = 0.2f;
         }
+    }
+    
+    //Hp 필요한 상황이 생겨서 추가
+    public float GetHp()
+    {
+        return hp;
     }
     // hp 임의 변경 : 아이템용이다.
     public void SetHp(float value)
