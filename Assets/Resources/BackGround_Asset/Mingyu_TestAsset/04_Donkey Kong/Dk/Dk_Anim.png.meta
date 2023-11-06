@@ -1,0 +1,6071 @@
+fileFormatVersion: 2
+guid: 58f542b7932d79a4eb07c0e2e6d5a0f5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dk_Anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 977
+        width: 1506
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a67c78cb994a14b90e5833db9b8bf1
+      internalID: 1571925438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_1
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 938
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10214f172dc937549a8e2cf07a42d3df
+      internalID: -392747755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 938
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bc434836f64134581fe43cd202fcb0
+      internalID: -538573246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_3
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 938
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d841ca45e8670ff4a86198c8e3da88ab
+      internalID: -1112427901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_4
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 938
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a9bd2aad8deef448daa99a88d8ce87
+      internalID: -1989559148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 937
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8500075f8f3402b4280efa9e135adaee
+      internalID: -568012501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_6
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 937
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99507ce10045d614b90ab1dd793a43d9
+      internalID: 86484037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 936
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8c87faf8da98e4d97bda25fcc5eabd
+      internalID: 45021540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 936
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a6f76689f743447ad47e9c722fbabf
+      internalID: -1268362944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_9
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 936
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac796dcfa05608e49b66a60d38edadb7
+      internalID: -650104098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_10
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 936
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbe8405fdf64a349a64ca531d10b00b
+      internalID: -436692081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_11
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 936
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca18367d623f5e4cb9ae2dc21868240
+      internalID: 56440884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_12
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 936
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048c2c189c4818b42b61e712edc98c6e
+      internalID: -1302766267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_13
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 936
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185379b5e73da66458d013f4159ea31a
+      internalID: 204481531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_14
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 878
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361df361c2bd4ca479053b9a653a60b4
+      internalID: -1036528626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 878
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c7adc5cf25a0a48b64141bbfeb6db7
+      internalID: -1554100674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_16
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 878
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82d05e3779cf9841ae7311ddf01f4fc
+      internalID: -1879012922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 878
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb62fdca642d3447af47c2b4fc7db54
+      internalID: 1816815789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_18
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 878
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5473d76b8e32f845b47eab2e0b4fc88
+      internalID: 1301222434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_19
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 879
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32caa49ff066e1458dcdd2d6bb7876f
+      internalID: 812423350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_20
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 879
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601cad47592977443a6694217876e2ee
+      internalID: -158601845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_21
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 879
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556f2720452f0ea4ba078858ec782b05
+      internalID: 577911852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_22
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 879
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d98dc55b976cb40b9e1259fd4c1b2a
+      internalID: 1369695180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_23
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 879
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b6014441672d4488147019013fe2ec
+      internalID: 2104638325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_24
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 879
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696b21cb52821544daa514819d2a729f
+      internalID: 1486719731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_25
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 879
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dc5c8efcff020429c5fedb2d01e944
+      internalID: 1382728147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_26
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 879
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f3139eb33989f45aabc7ebfd84da3a
+      internalID: -2138706239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_27
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 878
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbce785a3e93534281406500ba80f7f
+      internalID: 669974581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_28
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 878
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb938454459db34b92d7a1e5a04f2ec
+      internalID: -1441287354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_29
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 878
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0a4477571aedc49a7a80a0b012d074
+      internalID: 1241443013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_30
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 878
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db3e069b435cda4496cc23a23e900cf
+      internalID: 1503011733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_31
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 878
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e2b06bd9c33614bbaec9d8e8ff8d31
+      internalID: 548635400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_32
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 878
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bcdc6b128307548bd6215a05d1f0ae
+      internalID: -1164069911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_33
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 878
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f03ff5a4af2e0a44a12435e5aebf43d
+      internalID: -321203537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_34
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 878
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56c040039965494a8cd413c74a1ab04
+      internalID: -479067771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_35
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 878
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476cdffe36815c44ab782b9b1850abd2
+      internalID: -715948948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_36
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 878
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3944b737ff3c33446899ebe45f818d4b
+      internalID: 2036104931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_37
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 878
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18848a25b4cfb394bb9b93ae0966e891
+      internalID: -1568724575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_38
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 878
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054a2a66eec57a04ca3ff76a38842b91
+      internalID: -1763862463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_39
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 878
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20cee49c018b654880400adc438d084
+      internalID: -1928040930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_40
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 878
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e977d150ca4e85a46832c14d47c92648
+      internalID: 53711776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_41
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 878
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9eee6a8905cb44d97d452af4b4d728
+      internalID: 1524365586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_42
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 878
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a0d1fb73d264445b97a7a33a6fd90e
+      internalID: -2085286250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_43
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 878
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bf2668532d60541a5fcd14bc9b9821
+      internalID: -419853157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_44
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 878
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c979420fbd9024fa821f3747de9c06
+      internalID: 924796098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_45
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 878
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80adc04218e1db14bbef6c3be5956f52
+      internalID: -660093624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_46
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 878
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55539263001527140b483d783ad129c8
+      internalID: 1431954666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_47
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 819
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c84abbbbabdff48a0b90f3152a5585
+      internalID: -841499612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_48
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 819
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c17b86cd39c14c46bc9e36f305c7703
+      internalID: 1104349947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_49
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 819
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea909086e975bb4191708e30c38aecd
+      internalID: 761540377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 818
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ada765638c9f741ad68318cc334bc2
+      internalID: 83028188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_51
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 818
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f6bb01b4aae9e4ea5c86b773237e8a
+      internalID: -608871423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 817
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56099fdac68fdd441ba94accffdefbbb
+      internalID: -580990329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_53
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 817
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf1bd43887f8d74f9c087819fcd0abd
+      internalID: -1120873053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_54
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 817
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf804ed7d3c70964b86f769f67c25c2e
+      internalID: -597703480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_55
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 817
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1965072eba25f9c4f8b62d44ee1e4ae6
+      internalID: 470373843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_56
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 817
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2299389108257a46aae74c9c279d55e
+      internalID: 242350239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_57
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 817
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03aecbcb629161f4aa1c22ed80df44b7
+      internalID: -1728579476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_58
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 817
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aaec65e9b4c05a468c7d1bca5d2524f
+      internalID: 490002679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_59
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 817
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7596849317b0c84fbcf39c9f33accda
+      internalID: 1060002889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_60
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 817
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1244f0147ef744aba3a2affeea5fc4
+      internalID: -2010707957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_61
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 817
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37c9b1a09e03a748b8becd9ec763ffd
+      internalID: -682037081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_62
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 817
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb0cf4c996350f4a958f167c4c65bc4
+      internalID: -1249157994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_63
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 817
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55daa6956739204ba1db764bde78160
+      internalID: -1935282777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_64
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 817
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f9def53f218234aa5a61baa70de968
+      internalID: -1553124689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_65
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 819
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d2d59c73a4227479134cbed66c93d0
+      internalID: -490254545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_66
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 819
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba0a47c1c746d44b99522161a920d40
+      internalID: 1359497144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_67
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 819
+        width: 51
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391756e3eb1fd134a9902c1f91cb70af
+      internalID: 1464587898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_68
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 819
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f4fcfd4e2ef634c94326f88e64457f
+      internalID: 1462222864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_69
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 819
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f467ab199ae974ab67f56377380cdc
+      internalID: -1155302986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_70
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 818
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfd0e8d5eb2add48873cccf9fa5a6ef
+      internalID: -301332385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_71
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 818
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc12a82b531aa7c4fb609c459c5079ca
+      internalID: 1405458494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_72
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 767
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6815a5f2534184f8b999a859a60a7f
+      internalID: -728784810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_73
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 767
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783997535c625bf46903b01af19d9f3e
+      internalID: -113998001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_74
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 767
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3171e3444a0493940808ac8cbe739510
+      internalID: 476006688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_75
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 766
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668cdb141018b424795955954950fc07
+      internalID: -498715536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_76
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 766
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf23ff30c876b714dbd62c2d882a3de3
+      internalID: -691270191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_77
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 766
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf19fd71035f534f85b469fddebad24
+      internalID: -1598977151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_78
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 766
+        width: 44
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44a519641d988e41a3af608b3c8f26e
+      internalID: -1117239388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_79
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 765
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb253b539196254886eb147fbef95a1
+      internalID: -572838467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_80
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 765
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee866470849b00c4d9c75a6ec25eaed7
+      internalID: 2116809523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_81
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 764
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e761f6eeae595b642a953220263dbde2
+      internalID: 2032560580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_82
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 764
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509201804f268be44961c9a7df853e41
+      internalID: -585233124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_83
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 764
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7f6e5e4ceaa0c41a8282d9643f172d
+      internalID: -829127222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_84
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 763
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f8bee0382e8be478e94eb054233809
+      internalID: -98750175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_85
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 763
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601f63a9fac8e714985af9a142dfb4bc
+      internalID: 1362585392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_86
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 801
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ab9ba3d32e9f44bbc965e1a8cd58b3
+      internalID: -9736763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_87
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 801
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3454a36e88af454983d848fb2df0c6f
+      internalID: 474129830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_88
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 801
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5a44b5028dcd44899683f561e9d5be
+      internalID: -1648980724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_89
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 801
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee07ff59cc9418347b559aa33ecc32b4
+      internalID: -1692283390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_90
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 801
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852388235640efb439bcb6beadb28400
+      internalID: 1723701944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_91
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 801
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323aaad44b1c8954993f3cd9c5017bf9
+      internalID: -2090134614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_92
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 762
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d020e8648934beb4f935c5aed4e50f34
+      internalID: 304699447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_93
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 761
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af07fecf75b435744ac6cc5467628ef7
+      internalID: 1613782839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_94
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 762
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37346be7ecf93d4da1ec427e96c37db
+      internalID: -841126575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_95
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 762
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8997535c4db59584fb8ff6abd6e98c20
+      internalID: 914749962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_96
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 761
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb37545b49d1364ba0186b76965aacc
+      internalID: 1266876104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_97
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 760
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ca3b46ee77e8d45b0e92c401f9c941
+      internalID: 322424667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_98
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 786
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c54e2fce1659c4f853512cd77cec20
+      internalID: -1114069207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_99
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 788
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ae021356bee344d83827d98f049073
+      internalID: -852105420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_100
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 788
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514a032a688ec14419e96d03156f51fe
+      internalID: -195641181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_101
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 788
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9bce8379a671a439558f469fee2765
+      internalID: 1212492583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_102
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 788
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f19a5c6defb9af4c877211bf5507556
+      internalID: -2084264475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_103
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 788
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea530ebb59e090f40ade6cdceb86064f
+      internalID: -34862939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_104
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 788
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61da33ceea205a94cba2e5b46572a87b
+      internalID: -340893814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_105
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 788
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9493e300c7192048857e5a8803bfd6d
+      internalID: 1534197746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_106
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 788
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb490059aeb85e4d95b11981520568d
+      internalID: 847875765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_107
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 788
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0de2bc6f8891f418220fa411b9af9b
+      internalID: 68059733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_108
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 788
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6038c36eff3f54da8302243654707e
+      internalID: 209820176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_109
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 788
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb1c061cb91f0d46bb75fa9e69e04a8
+      internalID: -2100718893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_110
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 788
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6060d08d1cc2a248b726328bce677e3
+      internalID: 208627841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_111
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 788
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9297256d18a5e494699a48ac6c18a7c6
+      internalID: 1421860780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_112
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 788
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1278a773b1b6c7418514670cdd243f4
+      internalID: -630705605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_113
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 788
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f8b471883a85642aa6515eed1441f5
+      internalID: -1770060796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_114
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 788
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105233dbd263a414b80a1c1b90cadb17
+      internalID: -901031642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_115
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 788
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52772a6e6057ac343acbeb0581007814
+      internalID: 407782688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_116
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 788
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52d6fcdec4a0654995caf720ce15051
+      internalID: 1912355143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_117
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 788
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2e07aa81fc7a043a62eacc7b189d14
+      internalID: -1633000441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_118
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 788
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621a0ee89974c8e45897a23dbb29fb20
+      internalID: -331395059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_119
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 786
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6a9751b14979a498620e4026a69535
+      internalID: 1889625152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_120
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 711
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c392edfc055354ab56bab69bbcd11b
+      internalID: 2097663776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_121
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 710
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd7d8ce0e7532745906a3174de76264
+      internalID: 2105487776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_122
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 713
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace48e3e96a651e448c0ac8bee7daa12
+      internalID: -1345580479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_123
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 712
+        width: 64
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc07d6525590d2f4eb339e7e150eb867
+      internalID: 97684766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_124
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 712
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2c8cbc077c0be4b8c51062e0886f78
+      internalID: -2040813596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_125
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 714
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d887b18757a24184e8561afd6663dd87
+      internalID: 1516909916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_126
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 710
+        width: 70
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6f524de77fdfd468d4817041ef52f8
+      internalID: 912961536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_127
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 709
+        width: 70
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea9349a125389443a6a0807584efeb9
+      internalID: -500962580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_128
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 710
+        width: 72
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33acc058b61523149ad09dcb1310afc7
+      internalID: -460190448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_129
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 711
+        width: 67
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bff15cdf14308479a493779aeb8950
+      internalID: -389468705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_130
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 711
+        width: 58
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e369a4c8398901d4fb858bc3b4209459
+      internalID: 873110013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_131
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 712
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51483d22c88a2a4fa48753a480c9db5
+      internalID: 1717644366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_132
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 712
+        width: 52
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e65c9867502e454981d3b4fac3fc915
+      internalID: -1767143408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_133
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 711
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0b5a4bc611aa846bd6accfa1e4f1fb
+      internalID: 357552927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_134
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 709
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09fa3e153dda6341b6e76b40e3258c8
+      internalID: 769498631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_135
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 707
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42af6409076fe4d49afde69b61d8f272
+      internalID: -2079493297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_136
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 707
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ac4f3fd9736de4aa67829fbed7c612
+      internalID: -111494680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_137
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 706
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1674ca9d718c8db41ad960737c23b4e9
+      internalID: 1070031920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_138
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 706
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6435b2bd6c143f24b9e483ac2393107e
+      internalID: 265745189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_139
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 704
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42238eacc8ab31f4c85ace60ff7c9303
+      internalID: 393556891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_140
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 715
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17bbe82fd392fb42bb0bf658915866d
+      internalID: 2021383732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_141
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 715
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860f5c6a51d9c444a8db67ed4c246ae1
+      internalID: 1319661651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_142
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 651
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1bae448acd7664caa264db4cf7407d
+      internalID: -257199248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_143
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 652
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aeb1841ebb3bfc45b70ba086ee91545
+      internalID: 1553771633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_144
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 654
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68074cb467c75bf4ca3fef9bee995ca6
+      internalID: -242656118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_145
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 652
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc165f6e3a4134946af5cb89e82f1917
+      internalID: 2042556992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_146
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 654
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95fa7dc9a1924c4fbfde3b35468f152
+      internalID: -1402742484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_147
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 656
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24937a116c89292419fd5ec308b4e157
+      internalID: -1116338343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_148
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 657
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2837f03b4cc80c1419d2158b735a85c5
+      internalID: 857064412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_149
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 658
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0a1e4c29f65d94ba491d2bc543261e
+      internalID: -1730434480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_150
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 658
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3ea43247c86704ea38b9c74fd00f36
+      internalID: -83863660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_151
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 657
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6162726b6dff5489ba54358d875cb0
+      internalID: 436703007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_152
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 655
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ef4d417aa25424aa1e3dd8938da7ee
+      internalID: 709212308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_153
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 653
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e227ce2e8bf544c47890095059d89914
+      internalID: -1436026040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_154
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 654
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed40571865779647b6747da863e71eb
+      internalID: 585829232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_155
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 654
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc387ddf3b9b7349b76250b4deeacdc
+      internalID: 495572732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_156
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 654
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b465ddcf6486a40a7d7720a02011cb
+      internalID: 287992135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_157
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 655
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bcec2408104d546a78967d0d1a792b
+      internalID: 901533495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_158
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 658
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf7c7c8900ac3d4d981c9eb99927631
+      internalID: 1322152117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_159
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 659
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3ed1c93d618334c88ae4dde4158eca
+      internalID: 15103425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_160
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 655
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a02c7a01305e3468096c5713301a33
+      internalID: -1289746733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_161
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 653
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92f744082a123e43816a9a94e2dc8d9
+      internalID: 1585559720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_162
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 653
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb60038cda5dee14a87e3f9658b83356
+      internalID: 1348760473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_163
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 656
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c73dae4473c524cb717143154db599
+      internalID: -1947980617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_164
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 660
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0f8450f858b2849b54bedad9c9be14
+      internalID: -389384166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_165
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 660
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c7b1c59bc70144eb62d67b77dd7ff7
+      internalID: 775380448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_166
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 662
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57cd7a52d46ffa4b9125197ad6b1187
+      internalID: 253249214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_167
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 661
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8db6ecd068576f4bb1aedbcd43bfd62
+      internalID: 569079936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_168
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 657
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ed454105aa4cd409805b89a7d1d6c8
+      internalID: 1824523346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_169
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 656
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bc44089a9edbe46b29393a4f7f92f8
+      internalID: -91105242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_170
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 656
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1f578bd4cacff429982bfef936f07c
+      internalID: 1473452791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_171
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 655
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472590a18ab18a24aa8c0dccb10e686d
+      internalID: -591469083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_172
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 582
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3375f78a7074e61418af09379e9db848
+      internalID: 795432308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_173
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 582
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e3f639011d3bb40897c18da3b010eb
+      internalID: 876133671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_174
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 578
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1566b44c87b70e24b9682d9c03403410
+      internalID: 203396418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_175
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 575
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb1c93956f941446bec23c7c948ebfe
+      internalID: -205038366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_176
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 574
+        width: 42
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e849975f12ca66e4a8fd6c683504fba7
+      internalID: -1205857410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_177
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 572
+        width: 38
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5399439e21b2863429732711d102cb1f
+      internalID: -36496564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_178
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 573
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7611fc02ffb00e4c86cb53367f2435f
+      internalID: -1365830569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_179
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 572
+        width: 33
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b13d13310ba4c47ae5ad93c8324bd0
+      internalID: -1775637289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_180
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 573
+        width: 33
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b831668ce45b44189485977ea55574
+      internalID: 1730092969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_181
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 571
+        width: 33
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06613bd8afb1a0e48a637db79fbecd5a
+      internalID: -1375176373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_182
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 571
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc9be924b9ea62459734b5d4e605fa7
+      internalID: 1914421037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_183
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 570
+        width: 32
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c399eb66f0cecb45b4e9624a09cb766
+      internalID: -967184163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_184
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 568
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179870c243b4a8a44ad5687dbb9b19be
+      internalID: -2106573018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_185
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 571
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf42658f2d14f245949002a77eeef5d
+      internalID: -604625509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_186
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 571
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb6800e2fd88b44c94417ca3d62229d
+      internalID: 687512000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_187
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 572
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87728508d8aa1ab4ba5ae9409e11f688
+      internalID: 1066721947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_188
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 569
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81900f30520346b448ad59f490048684
+      internalID: 2031879632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_189
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 569
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b633235c7da7214fa65f3ce813bc262
+      internalID: 1804592034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_190
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 569
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596fa5bbc7b6b9f4abeecd46a582a50a
+      internalID: -287130931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_191
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 564
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430e6ec3da2d2fa4cb6aee897d740fde
+      internalID: 934238690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_192
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 514
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbdecd9cf0728749b554926eaea2000
+      internalID: -1398869680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_193
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 514
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fbb55c13667ac4799f46006ae1a825
+      internalID: 1348570881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_194
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 515
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135f207431b760e48b0c874a91675306
+      internalID: 1294245839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_195
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 519
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c73b0cb3a59f34e8aae043f533679b
+      internalID: 760187860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_196
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 518
+        width: 52
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8fbd59981408040b6e6bfbbebe68c4
+      internalID: -939355916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_197
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 516
+        width: 55
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f1de27f0f81384d9b74eaa2dcc6a99
+      internalID: -471097197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_198
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 516
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4a7e5370923e44c888d92c86923db8
+      internalID: 1633653863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_199
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 516
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97916c48ef173854c9490e6796df333b
+      internalID: 2041506894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_200
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 517
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8caf64f3b96471742b3143f6e5870b1e
+      internalID: 1779411263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_201
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 465
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c06b48a53f330469e51255d91034ec
+      internalID: 1294898095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_202
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 465
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f025469f2cd1a7b4a915114fe5ce8f56
+      internalID: 2111022965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_203
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 465
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c388e5864595e4442987e8e3f02c02e0
+      internalID: 556942573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_204
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 465
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da05f5382ed856448b9c7efe1c6cf67a
+      internalID: 584387562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_205
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 465
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b6129320b30674d8bc3b798a29c81d
+      internalID: -1450965942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_206
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 465
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f465ed1a4ff444da976cf070254bf3
+      internalID: -1056193962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_207
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 465
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30951dc687700f40a346f5df5274c39
+      internalID: -1884661659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_208
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 465
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5108deb43724347950f701dca47ce6
+      internalID: -119382821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_209
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 465
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f052c008981632a49b563628e94ad488
+      internalID: -1229832031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_210
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 465
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ffb91bab2e1884683372612fa935b9
+      internalID: 1524239295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_211
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 465
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b3773d95f0192458a75acb27a6dcce
+      internalID: -2142769438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_212
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 464
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69644540ea89174da89bc474e639ad6
+      internalID: 184626342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_213
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 464
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230cb148df2685042b21d5151a8afad1
+      internalID: 2106828228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_214
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 464
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43793d3577e8ff14ea7ed38e8099a127
+      internalID: 1146771789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_215
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 464
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368ffe0a0a62c8b4d97bfde486f37ba1
+      internalID: -472495162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_216
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 464
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97afb00b82974dd48a6168c948edf689
+      internalID: -1246890231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_217
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 464
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5e41e57800f9445b3ab21e0a1f0f8c
+      internalID: 1558500738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_218
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 463
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22e34bea1e4b8749a2ef2c8626e4c1f
+      internalID: -378485958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_219
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 463
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb9a429c0e77eb40979157a0e133447
+      internalID: -1018547347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_220
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 463
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057de842a9a567c49abfba38f37a77a8
+      internalID: 2085530128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_221
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 463
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a65b406c5ed31d49bad951035c24c70
+      internalID: 1206459401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_222
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 463
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847a9c2b218cb274bbacbeab25192677
+      internalID: 1316624103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_223
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 463
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033a9e0fa64a37848844e0149c65a7a1
+      internalID: 305765851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_224
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 463
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b511ef257b7c1d468243a7d1fbb9da9
+      internalID: 1514019886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_225
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 404
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563fa4c5aa3cd5442be316488532b888
+      internalID: 1436810049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_226
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 399
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1d32855229a754db834a1b911f3089
+      internalID: 1521867985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_227
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 404
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6eb19de6b735694985870e0bf614df7
+      internalID: -694297198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_228
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 412
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31df2c2d5cfc950429a20be5d893104f
+      internalID: -23127243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_229
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 411
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433b2a5dcb48ba447a343f3cc5bf3e43
+      internalID: -379952433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_230
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 410
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b026b42c6cc8654c92c2b0a03534477
+      internalID: -1330590406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_231
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 409
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef85bbbf176541468b85c76a3fcefe7
+      internalID: -1235160625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_232
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 407
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc25966786aee54b9de23e5bf9862d1
+      internalID: -1192190184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_233
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 407
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bf5f15a096bf14c9320b2854f9096f
+      internalID: -1370513026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_234
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 407
+        width: 52
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b68472538fd909439bff35d8aa2ca59
+      internalID: 1423578071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_235
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 407
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632b46995ca999c42bf6f891b7a1162d
+      internalID: -1920087982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_236
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 405
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f682818253891544ebfdc52c05b72f96
+      internalID: -31293840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_237
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 408
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa81e4afa80b59418ec5fd61292eea7
+      internalID: -453767511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_238
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 407
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384c66d17a3fdc241bf937f16f5fd272
+      internalID: -1530326773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_239
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 407
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db383a549cbbaa74dbbe8113a0002483
+      internalID: -199707709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_240
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 407
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e822c64c19861f4aba8b89551d60141
+      internalID: -1901008789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_241
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 407
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9283ced166766459f973392caf9c67
+      internalID: 1060774072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_242
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 407
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dc163ed0a4f854f9a040ef42547721
+      internalID: -1121379772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_243
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 331
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299502e092e99a34183ecee44e3dbaf0
+      internalID: 857576138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_244
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 331
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f57bdb91dcca114fac310441b4db872
+      internalID: -2038441855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_245
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 331
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f02ec7bf72b4084e802b0b2157673e6
+      internalID: 680418569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_246
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 331
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce7511f6af49af40815282d82603f0f
+      internalID: 1157001750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_247
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 331
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519410ced5ce5344da371d835f0a53c3
+      internalID: -1533853880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_248
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 331
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1088b17ee3662f44b0d6bb62fcc4417
+      internalID: 1158635131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_249
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 331
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80066dee32a4d134cbef561a15150a0f
+      internalID: -749095546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_250
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 330
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94c1365e40309e4599c9377c5c7faa2
+      internalID: 732376127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_251
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 330
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba9027a819d38d4e9881c85bf6fb806
+      internalID: -1361071264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_252
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 329
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fa11f1ae0ee6840bcd229669ab916b
+      internalID: -1345384219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_253
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 330
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b109370139d6b4a9d97eb19a7b7f9f
+      internalID: -712501635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_254
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 329
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed916901083eb7243a3ee5b354b0fe08
+      internalID: 215594252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_255
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 329
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42f33c86912c2a44acffa8de30a0eee
+      internalID: 208230485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_256
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 329
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a23cb3152ac3e4ea28e2683646472e
+      internalID: 556448709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_257
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 329
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d47bd351763a04a9825edf2c0c70e5
+      internalID: -287393510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_258
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 331
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ffac740566ba54e8f06ccb750637e7
+      internalID: -1886470951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_259
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 332
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17bef7aa69a284489249656072f94db
+      internalID: -1095440045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_260
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 332
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a459818012663264fb3a724a11d10713
+      internalID: 1884342857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_261
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 332
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab523dd984f30241b0df949ab2bc028
+      internalID: -238142792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_262
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 331
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24514c0d11d6dd41af69b54ab011cbb
+      internalID: 103634604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_263
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 329
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b448a6ba73b7340b96b1f41eb58c23
+      internalID: -1451905452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_264
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 329
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1623fc309442b6c41927932d73af0079
+      internalID: -1988834762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_265
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 329
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf48673d81db1f449a0b592dee29d8ec
+      internalID: 260682471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_266
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 328
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c92c81bd970d3e41be28d783b69cfdd
+      internalID: -2011434154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_267
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 328
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7001f1879c26a4daf03007a8df0fd5
+      internalID: 960761055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dk_Anim_268
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 327
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ceab27d80922fe42bf81d9ee8ed8db0
+      internalID: -2019126436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dk_Anim_0: 1571925438
+      Dk_Anim_1: -392747755
+      Dk_Anim_10: -436692081
+      Dk_Anim_100: -195641181
+      Dk_Anim_101: 1212492583
+      Dk_Anim_102: -2084264475
+      Dk_Anim_103: -34862939
+      Dk_Anim_104: -340893814
+      Dk_Anim_105: 1534197746
+      Dk_Anim_106: 847875765
+      Dk_Anim_107: 68059733
+      Dk_Anim_108: 209820176
+      Dk_Anim_109: -2100718893
+      Dk_Anim_11: 56440884
+      Dk_Anim_110: 208627841
+      Dk_Anim_111: 1421860780
+      Dk_Anim_112: -630705605
+      Dk_Anim_113: -1770060796
+      Dk_Anim_114: -901031642
+      Dk_Anim_115: 407782688
+      Dk_Anim_116: 1912355143
+      Dk_Anim_117: -1633000441
+      Dk_Anim_118: -331395059
+      Dk_Anim_119: 1889625152
+      Dk_Anim_12: -1302766267
+      Dk_Anim_120: 2097663776
+      Dk_Anim_121: 2105487776
+      Dk_Anim_122: -1345580479
+      Dk_Anim_123: 97684766
+      Dk_Anim_124: -2040813596
+      Dk_Anim_125: 1516909916
+      Dk_Anim_126: 912961536
+      Dk_Anim_127: -500962580
+      Dk_Anim_128: -460190448
+      Dk_Anim_129: -389468705
+      Dk_Anim_13: 204481531
+      Dk_Anim_130: 873110013
+      Dk_Anim_131: 1717644366
+      Dk_Anim_132: -1767143408
+      Dk_Anim_133: 357552927
+      Dk_Anim_134: 769498631
+      Dk_Anim_135: -2079493297
+      Dk_Anim_136: -111494680
+      Dk_Anim_137: 1070031920
+      Dk_Anim_138: 265745189
+      Dk_Anim_139: 393556891
+      Dk_Anim_14: -1036528626
+      Dk_Anim_140: 2021383732
+      Dk_Anim_141: 1319661651
+      Dk_Anim_142: -257199248
+      Dk_Anim_143: 1553771633
+      Dk_Anim_144: -242656118
+      Dk_Anim_145: 2042556992
+      Dk_Anim_146: -1402742484
+      Dk_Anim_147: -1116338343
+      Dk_Anim_148: 857064412
+      Dk_Anim_149: -1730434480
+      Dk_Anim_15: -1554100674
+      Dk_Anim_150: -83863660
+      Dk_Anim_151: 436703007
+      Dk_Anim_152: 709212308
+      Dk_Anim_153: -1436026040
+      Dk_Anim_154: 585829232
+      Dk_Anim_155: 495572732
+      Dk_Anim_156: 287992135
+      Dk_Anim_157: 901533495
+      Dk_Anim_158: 1322152117
+      Dk_Anim_159: 15103425
+      Dk_Anim_16: -1879012922
+      Dk_Anim_160: -1289746733
+      Dk_Anim_161: 1585559720
+      Dk_Anim_162: 1348760473
+      Dk_Anim_163: -1947980617
+      Dk_Anim_164: -389384166
+      Dk_Anim_165: 775380448
+      Dk_Anim_166: 253249214
+      Dk_Anim_167: 569079936
+      Dk_Anim_168: 1824523346
+      Dk_Anim_169: -91105242
+      Dk_Anim_17: 1816815789
+      Dk_Anim_170: 1473452791
+      Dk_Anim_171: -591469083
+      Dk_Anim_172: 795432308
+      Dk_Anim_173: 876133671
+      Dk_Anim_174: 203396418
+      Dk_Anim_175: -205038366
+      Dk_Anim_176: -1205857410
+      Dk_Anim_177: -36496564
+      Dk_Anim_178: -1365830569
+      Dk_Anim_179: -1775637289
+      Dk_Anim_18: 1301222434
+      Dk_Anim_180: 1730092969
+      Dk_Anim_181: -1375176373
+      Dk_Anim_182: 1914421037
+      Dk_Anim_183: -967184163
+      Dk_Anim_184: -2106573018
+      Dk_Anim_185: -604625509
+      Dk_Anim_186: 687512000
+      Dk_Anim_187: 1066721947
+      Dk_Anim_188: 2031879632
+      Dk_Anim_189: 1804592034
+      Dk_Anim_19: 812423350
+      Dk_Anim_190: -287130931
+      Dk_Anim_191: 934238690
+      Dk_Anim_192: -1398869680
+      Dk_Anim_193: 1348570881
+      Dk_Anim_194: 1294245839
+      Dk_Anim_195: 760187860
+      Dk_Anim_196: -939355916
+      Dk_Anim_197: -471097197
+      Dk_Anim_198: 1633653863
+      Dk_Anim_199: 2041506894
+      Dk_Anim_2: -538573246
+      Dk_Anim_20: -158601845
+      Dk_Anim_200: 1779411263
+      Dk_Anim_201: 1294898095
+      Dk_Anim_202: 2111022965
+      Dk_Anim_203: 556942573
+      Dk_Anim_204: 584387562
+      Dk_Anim_205: -1450965942
+      Dk_Anim_206: -1056193962
+      Dk_Anim_207: -1884661659
+      Dk_Anim_208: -119382821
+      Dk_Anim_209: -1229832031
+      Dk_Anim_21: 577911852
+      Dk_Anim_210: 1524239295
+      Dk_Anim_211: -2142769438
+      Dk_Anim_212: 184626342
+      Dk_Anim_213: 2106828228
+      Dk_Anim_214: 1146771789
+      Dk_Anim_215: -472495162
+      Dk_Anim_216: -1246890231
+      Dk_Anim_217: 1558500738
+      Dk_Anim_218: -378485958
+      Dk_Anim_219: -1018547347
+      Dk_Anim_22: 1369695180
+      Dk_Anim_220: 2085530128
+      Dk_Anim_221: 1206459401
+      Dk_Anim_222: 1316624103
+      Dk_Anim_223: 305765851
+      Dk_Anim_224: 1514019886
+      Dk_Anim_225: 1436810049
+      Dk_Anim_226: 1521867985
+      Dk_Anim_227: -694297198
+      Dk_Anim_228: -23127243
+      Dk_Anim_229: -379952433
+      Dk_Anim_23: 2104638325
+      Dk_Anim_230: -1330590406
+      Dk_Anim_231: -1235160625
+      Dk_Anim_232: -1192190184
+      Dk_Anim_233: -1370513026
+      Dk_Anim_234: 1423578071
+      Dk_Anim_235: -1920087982
+      Dk_Anim_236: -31293840
+      Dk_Anim_237: -453767511
+      Dk_Anim_238: -1530326773
+      Dk_Anim_239: -199707709
+      Dk_Anim_24: 1486719731
+      Dk_Anim_240: -1901008789
+      Dk_Anim_241: 1060774072
+      Dk_Anim_242: -1121379772
+      Dk_Anim_243: 857576138
+      Dk_Anim_244: -2038441855
+      Dk_Anim_245: 680418569
+      Dk_Anim_246: 1157001750
+      Dk_Anim_247: -1533853880
+      Dk_Anim_248: 1158635131
+      Dk_Anim_249: -749095546
+      Dk_Anim_25: 1382728147
+      Dk_Anim_250: 732376127
+      Dk_Anim_251: -1361071264
+      Dk_Anim_252: -1345384219
+      Dk_Anim_253: -712501635
+      Dk_Anim_254: 215594252
+      Dk_Anim_255: 208230485
+      Dk_Anim_256: 556448709
+      Dk_Anim_257: -287393510
+      Dk_Anim_258: -1886470951
+      Dk_Anim_259: -1095440045
+      Dk_Anim_26: -2138706239
+      Dk_Anim_260: 1884342857
+      Dk_Anim_261: -238142792
+      Dk_Anim_262: 103634604
+      Dk_Anim_263: -1451905452
+      Dk_Anim_264: -1988834762
+      Dk_Anim_265: 260682471
+      Dk_Anim_266: -2011434154
+      Dk_Anim_267: 960761055
+      Dk_Anim_268: -2019126436
+      Dk_Anim_27: 669974581
+      Dk_Anim_28: -1441287354
+      Dk_Anim_29: 1241443013
+      Dk_Anim_3: -1112427901
+      Dk_Anim_30: 1503011733
+      Dk_Anim_31: 548635400
+      Dk_Anim_32: -1164069911
+      Dk_Anim_33: -321203537
+      Dk_Anim_34: -479067771
+      Dk_Anim_35: -715948948
+      Dk_Anim_36: 2036104931
+      Dk_Anim_37: -1568724575
+      Dk_Anim_38: -1763862463
+      Dk_Anim_39: -1928040930
+      Dk_Anim_4: -1989559148
+      Dk_Anim_40: 53711776
+      Dk_Anim_41: 1524365586
+      Dk_Anim_42: -2085286250
+      Dk_Anim_43: -419853157
+      Dk_Anim_44: 924796098
+      Dk_Anim_45: -660093624
+      Dk_Anim_46: 1431954666
+      Dk_Anim_47: -841499612
+      Dk_Anim_48: 1104349947
+      Dk_Anim_49: 761540377
+      Dk_Anim_5: -568012501
+      Dk_Anim_50: 83028188
+      Dk_Anim_51: -608871423
+      Dk_Anim_52: -580990329
+      Dk_Anim_53: -1120873053
+      Dk_Anim_54: -597703480
+      Dk_Anim_55: 470373843
+      Dk_Anim_56: 242350239
+      Dk_Anim_57: -1728579476
+      Dk_Anim_58: 490002679
+      Dk_Anim_59: 1060002889
+      Dk_Anim_6: 86484037
+      Dk_Anim_60: -2010707957
+      Dk_Anim_61: -682037081
+      Dk_Anim_62: -1249157994
+      Dk_Anim_63: -1935282777
+      Dk_Anim_64: -1553124689
+      Dk_Anim_65: -490254545
+      Dk_Anim_66: 1359497144
+      Dk_Anim_67: 1464587898
+      Dk_Anim_68: 1462222864
+      Dk_Anim_69: -1155302986
+      Dk_Anim_7: 45021540
+      Dk_Anim_70: -301332385
+      Dk_Anim_71: 1405458494
+      Dk_Anim_72: -728784810
+      Dk_Anim_73: -113998001
+      Dk_Anim_74: 476006688
+      Dk_Anim_75: -498715536
+      Dk_Anim_76: -691270191
+      Dk_Anim_77: -1598977151
+      Dk_Anim_78: -1117239388
+      Dk_Anim_79: -572838467
+      Dk_Anim_8: -1268362944
+      Dk_Anim_80: 2116809523
+      Dk_Anim_81: 2032560580
+      Dk_Anim_82: -585233124
+      Dk_Anim_83: -829127222
+      Dk_Anim_84: -98750175
+      Dk_Anim_85: 1362585392
+      Dk_Anim_86: -9736763
+      Dk_Anim_87: 474129830
+      Dk_Anim_88: -1648980724
+      Dk_Anim_89: -1692283390
+      Dk_Anim_9: -650104098
+      Dk_Anim_90: 1723701944
+      Dk_Anim_91: -2090134614
+      Dk_Anim_92: 304699447
+      Dk_Anim_93: 1613782839
+      Dk_Anim_94: -841126575
+      Dk_Anim_95: 914749962
+      Dk_Anim_96: 1266876104
+      Dk_Anim_97: 322424667
+      Dk_Anim_98: -1114069207
+      Dk_Anim_99: -852105420
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
