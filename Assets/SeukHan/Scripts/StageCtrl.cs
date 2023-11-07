@@ -46,6 +46,7 @@ public class StageCtrl : MonoBehaviour
                     superPlayer = playerList[i];
             }
 
+            //승리 조건
             if (superPlayer.isDie == true)
             {
                 result = GameResult.Draw;
