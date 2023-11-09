@@ -141,6 +141,18 @@ public class AnimationManager : MonoBehaviour
             {
                 ani.SetTrigger("Catch");
             }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                ani.SetTrigger("Dodge");
+            }
+            if (Input.GetKey(KeyCode.Z))
+            {
+                ani.SetBool("Heal", true);
+            }
+            if (Input.GetKeyUp(KeyCode.Z))
+            {
+                ani.SetBool("Heal", false);
+            }
         }
     }
 }

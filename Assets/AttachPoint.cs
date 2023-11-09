@@ -19,9 +19,12 @@ public class AttachPoint : MonoBehaviour
     }
     private void Update()
     {
-        target.Dameged(0, 0);
-        target.transform.parent = transform;
-        target.movement.Freeze();
+        if (target)
+        {
+            target.Dameged(0, 0);
+            target.transform.parent = transform;
+            target.movement.Freeze();
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -29,10 +32,10 @@ public class AttachPoint : MonoBehaviour
         if (entity)
             if (entity == target)
             {
+                entity.SetHp(entity.GetHp()-5.0f);
                 target = null;
                 entity.movement.UnFreeze();
                 entity.transform.parent = null;
-                entity.Dameged(5, -10);
             } 
     }
 }

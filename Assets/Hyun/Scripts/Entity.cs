@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    private float hp;
+    [SerializeField] private float hp;
     private float attackForce = 0;
     private float thrustpower = 0;
 
@@ -22,10 +22,15 @@ public class Entity : MonoBehaviour
 
     public AnimationManager aManager;
 
+    public enum DefenseStatus { Nope,Guard, invincible, Warning }
+
+    public DefenseStatus DamageBlock = DefenseStatus.Nope;
+
     private void Awake()
     {
         movement = GetComponent<Movement>();
         aManager = GetComponent<AnimationManager>();
+        hp = maxHP;
     }
 
     private void Update()
@@ -94,7 +99,7 @@ public class Entity : MonoBehaviour
         }
     }
     // 날라가지 않고 데미지만
-    public void Internal_Dameged(float damageValue, float thrustValue)
+    public void Internal_Dameged(float damageValue)
     {
         if (waitTime == 0)
         {
@@ -105,20 +110,19 @@ public class Entity : MonoBehaviour
     // hp 임의 변경 : 아이템용이다.
     public void SetHp(float value)
     {
-        hp = value;
+        if (value > maxHP)
+            hp = maxHP;
+        else hp = value;
+    }
+    public float GetHp()
+    {
+        return hp;
     }
 
-    public void Internal_Dameged(float damageValue)
-    {
-        if (waitTime == 0)
-        {
-            hp -= damageValue;
-            waitTime = 0.2f;
-        }
-    }
 
     public void Dameged(float damageValue, float thrustValue)
     {
+        if (DamageBlock == DefenseStatus.invincible) return;
         if (flyingDamagedPower > 0)
         { 
             movement.Jump(flyingDamagedPower);
@@ -129,7 +133,14 @@ public class Entity : MonoBehaviour
         Debug.Log(gameObject);
         if (waitTime == 0)
         {
-            hp -= damageValue;
+            if(DamageBlock != DefenseStatus.Guard)
+                hp -= damageValue;
+
+            if (DamageBlock == DefenseStatus.Warning)
+            {
+                hp -= 10;
+            }
+
             waitTime = 0.2f;
             if (movement)
                 movement.SetThrustForceX(thrustValue);
