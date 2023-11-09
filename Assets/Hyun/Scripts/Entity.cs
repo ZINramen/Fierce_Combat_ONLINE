@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
     private float attackForce = 0;
     private float thrustpower = 0;
 
-    private Movement movement;
+    public Movement movement;
 
     private float waitTime = 0;
 
@@ -135,4 +135,5 @@ public class Entity : MonoBehaviour
                 movement.SetThrustForceX(thrustValue);
         }
     }
+
 }

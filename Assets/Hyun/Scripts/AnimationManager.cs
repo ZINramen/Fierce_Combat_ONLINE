@@ -44,6 +44,7 @@ public class AnimationManager : MonoBehaviour
         ani.ResetTrigger("Punch_Up");
         ani.ResetTrigger("Punch");
         ani.ResetTrigger("Kick");
+        ani.ResetTrigger("Catch");
     }
 
     void StateChange(AnimationState newState) 
@@ -135,6 +136,10 @@ public class AnimationManager : MonoBehaviour
                 {
                     ani.SetTrigger("Dash");
                 }
+            }
+            if (Input.GetKeyUp(KeyCode.Q))
+            {
+                ani.SetTrigger("Catch");
             }
         }
     }
