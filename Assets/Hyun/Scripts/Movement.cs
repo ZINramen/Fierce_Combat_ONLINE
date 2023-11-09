@@ -85,4 +85,13 @@ public class Movement : MonoBehaviour
     {
         body.velocity = new Vector3(0, 0, 0);
     }
+    public void UnFreeze()
+    {
+        body.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    public void Freeze()
+    {
+        body.constraints = RigidbodyConstraints2D.FreezePositionY & RigidbodyConstraints2D.FreezeRotation;
+    }
 }
