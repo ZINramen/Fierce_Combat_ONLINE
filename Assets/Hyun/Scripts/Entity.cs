@@ -94,6 +94,8 @@ public class Entity : MonoBehaviour
                         transform.position = new Vector2(enemy.transform.position.x + 0.5f, transform.position.y);
                     else
                         transform.position = new Vector2(enemy.transform.position.x - 0.5f, transform.position.y);
+
+                    break;
                 }
             }
         }

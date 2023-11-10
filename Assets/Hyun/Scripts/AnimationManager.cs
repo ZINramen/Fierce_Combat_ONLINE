@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
+    private bool onGround = true;
     private bool ecActive = false;
 
     public float rotationZ = 0;
@@ -17,7 +18,8 @@ public class AnimationManager : MonoBehaviour
 
     [Header("PlayerSet")] 
     [Tooltip("조종할 플레이어 캐릭터의 경우 True")]
-    public bool isPlayer = false; 
+    public bool isPlayer = false;
+    public bool isHuman = false;
 
     public EffectCreator Ec;
     
@@ -30,6 +32,57 @@ public class AnimationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit2D hit;
+        if (hit = Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y / 2), Vector3.down, 0.2f))
+        {
+            if(hit.collider.transform.parent != transform)
+            if (State == AnimationState.Fall)
+            {
+                onGround = true;
+                if (isHuman)
+                {
+                    ani.ResetTrigger("Jump");
+                    ani.SetTrigger("Landing");
+                }
+                State = AnimationState.Normal;
+                if (Ec && ecActive)
+                {
+                    Ec.PlayEffect("bang", hit);
+                    ecActive = false;
+                }
+            }
+        }
+        else
+        {
+            if (State == AnimationState.Normal)
+            {
+                if (isHuman)
+                    ani.SetTrigger("fall");
+            }
+            if (onGround)
+            {
+                onGround = false;
+                if (isHuman)
+                {
+                    ani.ResetTrigger("Landing");
+                }
+            }
+            else
+            {
+                if (isPlayer)
+                {
+                    if (Input.GetKeyDown(KeyCode.D))
+                    {
+                        ani.SetTrigger("Kick");
+                        ecActive = true;
+                    }
+                    if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        ani.SetTrigger("Punch");
+                    }
+                }
+            }
+        }
         if (isPlayer)
             PlayerAnimation();
         
@@ -45,6 +98,8 @@ public class AnimationManager : MonoBehaviour
         ani.ResetTrigger("Punch");
         ani.ResetTrigger("Kick");
         ani.ResetTrigger("Catch");
+        ani.ResetTrigger("Dodge");
+        ani.ResetTrigger("Dash");
     }
 
     void StateChange(AnimationState newState) 
@@ -63,32 +118,6 @@ public class AnimationManager : MonoBehaviour
     }
     void PlayerAnimation() // 조종하는 플레이어 캐릭터의 애니메이션 관리 -> 입력에 반응
     {
-        RaycastHit2D hit;
-        if (hit = Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y / 2), Vector3.down, 0.2f))
-        {
-            if (State == AnimationState.Fall)
-            {
-                ani.ResetTrigger("Jump");
-                ani.SetTrigger("Landing");
-                if (Ec && ecActive)
-                {
-                    Ec.PlayEffect("bang", hit);
-                    ecActive = false;
-                }
-                State = AnimationState.Normal;
-            }
-        }
-        else
-        {
-            if (State == AnimationState.Jump)
-                State = AnimationState.Fall;
-
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                ani.SetTrigger("Kick");
-                ecActive = true;
-            }
-        }
         if (Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y/2), Vector3.down, 0.2f) && Input.GetKeyDown(KeyCode.Space) && !Input.GetKey(KeyCode.DownArrow))
         {
             State = AnimationState.Jump;

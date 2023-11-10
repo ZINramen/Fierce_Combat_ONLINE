@@ -25,6 +25,8 @@ public class Movement : MonoBehaviour
     [Tooltip("움직임 봉쇄")]
     public bool StopMove = false;
 
+    public PhysicsMaterial2D pMaterial;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,9 +39,13 @@ public class Movement : MonoBehaviour
     void Update()
     {
         if (StopMove)
+        {
             h = 0;
+            body.sharedMaterial = null;
+        }
         else
         {
+            body.sharedMaterial = pMaterial;
             if (PlayerType)
                 Move();
         }
