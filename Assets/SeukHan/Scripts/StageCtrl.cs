@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class StageCtrl : MonoBehaviour
 {
-    private Entity[] playerList; //player 목록
+    private Entity_Han[] playerList; //player 목록
     private int playerNumber; //살아 있는 player 수
     [SerializeField]
     private Vector3[] playerFirstLocations; //player 시작 위치
-    private Entity superPlayer; //가장 HP가 많은 player
+    private Entity_Han superPlayer; //가장 HP가 많은 player
 
     public enum GameResult { Win, Draw, Lose };
     public static GameResult result = GameResult.Draw;
@@ -22,7 +22,7 @@ public class StageCtrl : MonoBehaviour
 
     void Awake()
     {
-        playerList = FindObjectsOfType<Entity>(); //Entity를 가진 객체로 리스트를 만듬
+        playerList = FindObjectsOfType<Entity_Han>(); //Entity를 가진 객체로 리스트를 만듬
         playerNumber = playerList.Length; //처음은 살아있으므로 리스트에 넣음
         superPlayer = playerList[0]; //임시로 superPlayer 설정
         //플레이어 위치 설정

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public class Entity_Han : MonoBehaviour
 {
     private float hp;
     private float attackForce = 0;
