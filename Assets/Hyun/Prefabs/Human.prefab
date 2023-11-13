@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2321508580897382156}
   - component: {fileID: 774340644961914944}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trail (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6887087517516766731}
   - component: {fileID: 1200555344321968789}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141959759113006736}
   - component: {fileID: 4981204713043410536}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9050662056115998880}
   - component: {fileID: 5878003179750734369}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8277258378370618556}
   - component: {fileID: 8448273127789242606}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7079574627125667111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Teleport_Kunai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759696116900858612}
   - component: {fileID: 6622037504938008095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5855705952962677173}
   - component: {fileID: 6227062625768008881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8682003952102191405}
   - component: {fileID: 313715929486496448}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3618794041656619655}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,7 +904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3549559601841763851}
   - component: {fileID: 5690234192330707200}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -988,7 +988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486061233197685378}
   - component: {fileID: 9125805683974256750}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_96
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2803735884077485763}
   - component: {fileID: 2788922386878492592}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1156,7 +1156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3681851335716715195}
   - component: {fileID: 4426351906004667712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1308780252390426877}
   - component: {fileID: 4510637509824306934}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3719247537033537857}
   - component: {fileID: 3352325147739907737}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7499713455316888800}
   - component: {fileID: 7963752184620767848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3701654812067474265}
   - component: {fileID: 441850156207320933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7221013942699026169}
   - component: {fileID: 2551278046472669544}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1660,7 +1660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6623212228080517140}
   - component: {fileID: 8419970609133258111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_69
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1743,7 +1743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5124178324451426869}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Etc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1782,7 +1782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7575736263434400608}
   - component: {fileID: 6565487179272713360}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_91
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1866,7 +1866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4323436042066737582}
   - component: {fileID: 539440513927351057}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1950,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8480755813763998361}
   - component: {fileID: 7884539468955215995}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2085,7 +2085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3986308603514221777}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BubbleMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2125,7 +2125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7946454226349149401}
   - component: {fileID: 5732816997821641561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2208,7 +2208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4271406793237433590}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2243,7 +2243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3005107630818210000}
   - component: {fileID: 6059284712704755216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2327,7 +2327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7601573046014045457}
   - component: {fileID: 4486792222834711346}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v5_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2411,7 +2411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263289186674398629}
   - component: {fileID: 65949567226652878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2495,7 +2495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2533237596718684871}
   - component: {fileID: 564494717323643703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2579,7 +2579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2862049114732408850}
   - component: {fileID: 7066235469852968084}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2663,7 +2663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5629996030769812919}
   - component: {fileID: 3756429358212468434}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2748,7 +2748,7 @@ GameObject:
   - component: {fileID: 3052621150181866693}
   - component: {fileID: 4010936625421777466}
   - component: {fileID: 7275454339126991459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7575,7 +7575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5689270553270209783}
   - component: {fileID: 2234722406598798468}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v6_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7659,7 +7659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8975362309130008841}
   - component: {fileID: 1686466662645786243}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7743,7 +7743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9158937429318022065}
   - component: {fileID: 8808069580224947305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7827,7 +7827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2790703162981950951}
   - component: {fileID: 103390557060025759}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7910,7 +7910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7354512913579538652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8099,6 +8099,7 @@ MonoBehaviour:
   JumpPower: 3
   PlayerType: 1
   StopMove: 0
+  is2P: 0
   pMaterial: {fileID: 6200000, guid: 2625e2c707384e648858a3535b6fee58, type: 2}
 --- !u!114 &261092784084560709
 MonoBehaviour:
@@ -8117,6 +8118,17 @@ MonoBehaviour:
   isPlayer: 1
   isHuman: 1
   Ec: {fileID: 4525935664011901028}
+  Punch: 115
+  Kick: 100
+  Guard: 0
+  Catch: 119
+  Dash: 0
+  Backstep: 0
+  Jump: 32
+  DownArrow: 274
+  UpArrow: 273
+  Emotion_1: 0
+  Heal: 0
 --- !u!114 &4525935664011901028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8149,6 +8161,7 @@ MonoBehaviour:
     m_Bits: 8
   attackPos: {fileID: 6618511080284083528}
   attackLength: 0
+  isDie: 0
   flyingAttackForce: 0
   flyingDamagedPower: 0
   aManager: {fileID: 0}
@@ -8163,7 +8176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3911696235284094540}
   - component: {fileID: 4145755941518101742}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_85
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8247,7 +8260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424031917433669226}
   - component: {fileID: 6728158195450292764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8331,7 +8344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5703283041322085576}
   - component: {fileID: 7446045365779862555}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8415,7 +8428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9021203524163924050}
   - component: {fileID: 1262082669659147722}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v5_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8499,7 +8512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 238691698449234531}
   - component: {fileID: 4501345366584550208}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8583,7 +8596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4652567838313044879}
   - component: {fileID: 3960736015177485613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_95
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8667,7 +8680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262093763903312897}
   - component: {fileID: 1206763088899866401}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_97
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8751,7 +8764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3595441962398425549}
   - component: {fileID: 5637671702783412548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8834,7 +8847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961062821540436346}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dash (Punch)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8869,7 +8882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4713775422899252731}
   - component: {fileID: 3244477092519913672}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v6_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8952,7 +8965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5739524433829861302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CrossSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8987,7 +9000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4324453188296972871}
   - component: {fileID: 1939732879232421516}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9071,7 +9084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3557621498517700723}
   - component: {fileID: 1168714939266373680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v5_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9155,7 +9168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5200584214551619509}
   - component: {fileID: 6500751749655580413}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9239,7 +9252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2511477833195063236}
   - component: {fileID: 3268966176090946546}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v3_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9323,7 +9336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3481325188473344780}
   - component: {fileID: 4526207383356437125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9407,7 +9420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6500426747442754239}
   - component: {fileID: 8187549005974531150}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9491,7 +9504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5146630853374122354}
   - component: {fileID: 3455697322286128686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9574,7 +9587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6084057585925334195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Punch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9614,7 +9627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3419890812427469759}
   - component: {fileID: 9213202000479479390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effect (fire)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9700,7 +9713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8152757212058253728}
   - component: {fileID: 4968319481354335116}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v5_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9784,7 +9797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621362525575558713}
   - component: {fileID: 8094887316319110382}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9867,7 +9880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5035329382126269166}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9910,7 +9923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5936591200606899239}
   - component: {fileID: 4393628990231051123}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9994,7 +10007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5713079367734560648}
   - component: {fileID: 3369833308631186212}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effect_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10078,7 +10091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9082305655256731489}
   - component: {fileID: 3064748792410632312}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v7_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10162,7 +10175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8754117687322215744}
   - component: {fileID: 989003928185454540}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v6_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10246,7 +10259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6027280518428355456}
   - component: {fileID: 8063992099949456570}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10330,7 +10343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8109173983872763310}
   - component: {fileID: 6486068914433348159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10414,7 +10427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4835428172096589812}
   - component: {fileID: 6349939819713589323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10498,7 +10511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3325613316948441950}
   - component: {fileID: 1936758482894871699}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v3_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10582,7 +10595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7515643541000141506}
   - component: {fileID: 5776993834250207911}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_93
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10666,7 +10679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 453215686280606584}
   - component: {fileID: 5963038932319043605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10750,7 +10763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7220597403199727638}
   - component: {fileID: 2495626224711469361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10833,7 +10846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7676393045030533414}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DownsideKick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10867,7 +10880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6413715427712795522}
   - component: {fileID: 1077979455785115437}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10951,7 +10964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8074777908003643920}
   - component: {fileID: 9176516644686518718}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v5_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11034,7 +11047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6658954848498694165}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11075,7 +11088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916876904039801500}
   - component: {fileID: 6293349700136458663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11159,7 +11172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3640807314307681719}
   - component: {fileID: 1653329268806677475}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11242,7 +11255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7324294154902570441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kick(Down)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11280,7 +11293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7949809742841857098}
   - component: {fileID: 4464355846752429298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11363,7 +11376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3557838036337041098}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Evasion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11398,7 +11411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451870107681507631}
   - component: {fileID: 7050122892381169326}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v6_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11482,7 +11495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9156378722845283797}
   - component: {fileID: 7025321437416567406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v2_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11565,7 +11578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3775430305177441371}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11600,7 +11613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1362248717415171767}
   - component: {fileID: 5764836476786137739}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11684,7 +11697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8440966880832750356}
   - component: {fileID: 4537812484387992961}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11768,7 +11781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7154894937480959400}
   - component: {fileID: 8015783858077705745}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v7_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11852,8 +11865,8 @@ GameObject:
   m_Component:
   - component: {fileID: 737753340399661990}
   - component: {fileID: 2122820686162187277}
-  - component: {fileID: 6549719108505215530}
   - component: {fileID: 8862355879120041689}
+  - component: {fileID: 6246321285156756627}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -11928,21 +11941,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6549719108505215530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5871230623333936452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99f5088d5fa82044f98199da2e393e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noCatch: 0
-  owner: {fileID: 188581463067392291}
-  target: {fileID: 0}
 --- !u!61 &8862355879120041689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11988,6 +11986,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6246321285156756627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871230623333936452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156b0be6b002ef747ad6f191095e3c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noCatch: 0
+  owner: {fileID: 188581463067392291}
+  target: {fileID: 0}
 --- !u!1 &5900347617779944806
 GameObject:
   m_ObjectHideFlags: 0
@@ -11998,7 +12011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2159904447836683590}
   - component: {fileID: 1315725057314830436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12082,7 +12095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3476253760478229147}
   - component: {fileID: 5828765315565112171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effect_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12166,7 +12179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 343897823162456879}
   - component: {fileID: 3470941509627708931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v3_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12250,7 +12263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5603137721411644298}
   - component: {fileID: 7147578518451545736}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effect (fire) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12334,7 +12347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7980777700062531202}
   - component: {fileID: 6385032104014782222}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12418,7 +12431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8239986383606155155}
   - component: {fileID: 5618810025503764029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12501,7 +12514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5649347354902457628}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Heal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12538,7 +12551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2552918526739799606}
   - component: {fileID: 1101780357872951067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12622,7 +12635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5191545958675735260}
   - component: {fileID: 5556445984813420298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12705,7 +12718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6574840199357681318}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12738,7 +12751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3179867165869991600}
   - component: {fileID: 8018468528324258585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12822,7 +12835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4232027893135996871}
   - component: {fileID: 4551604459656453054}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12959,7 +12972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8742428539038124392}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlyAway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12998,7 +13011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4076986259618875978}
   - component: {fileID: 2169559882075672579}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13082,7 +13095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539783222588379994}
   - component: {fileID: 5398419094990329875}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13197,7 +13210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2387063191082390270}
   - component: {fileID: 3497252615553872844}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13281,7 +13294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359361651432976368}
   - component: {fileID: 8693589360576231341}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13365,7 +13378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6218521066254034131}
   - component: {fileID: 2400806783925582483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13448,7 +13461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6737620678771927394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13481,7 +13494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9130935147380070775}
   - component: {fileID: 1721123454166824162}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13565,7 +13578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102922572004606254}
   - component: {fileID: 3126389212038067224}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13649,7 +13662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9004342942037306836}
   - component: {fileID: 6765271150256265212}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effect_1(copy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13732,7 +13745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6785557245145980725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13767,7 +13780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3609562042522103815}
   - component: {fileID: 4270066891780245672}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effect (fire) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13851,7 +13864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2885282566402822997}
   - component: {fileID: 2909485784689703112}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13935,7 +13948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2605072504911128215}
   - component: {fileID: 1905235134566743300}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14019,7 +14032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658926716191850010}
   - component: {fileID: 8766656949642844478}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14103,7 +14116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6438768468684624196}
   - component: {fileID: 7742605556797657431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14186,7 +14199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5820733590640981881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Punch (Up)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14222,7 +14235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820098206964304679}
   - component: {fileID: 8595866158001766682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14305,7 +14318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1655913352240248422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dash (Kick)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14341,7 +14354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7627689908148173418}
   - component: {fileID: 6094993760313006683}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v5_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14426,7 +14439,7 @@ GameObject:
   - component: {fileID: 2591431305042039523}
   - component: {fileID: 7642431611964225134}
   - component: {fileID: 6655806516344578337}
-  - component: {fileID: 3212533866279817725}
+  - component: {fileID: 2532918473380035623}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -19244,7 +19257,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &3212533866279817725
+--- !u!114 &2532918473380035623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19253,7 +19266,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7712309562804942333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3376babde4f20dc4da7dd34e26de934a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b75f24327cc19e40b353f731afe859e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
@@ -19271,7 +19284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5456522701653438645}
   - component: {fileID: 6929717282543948421}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v7_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19355,7 +19368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3625968948060465630}
   - component: {fileID: 8230213196188936181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19439,7 +19452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1169386166815927139}
   - component: {fileID: 6160416154127062992}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19523,7 +19536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047138975898765288}
   - component: {fileID: 6198632499837932203}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19607,7 +19620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2542697624843667350}
   - component: {fileID: 3286631487134706121}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19691,7 +19704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571873048202484193}
   - component: {fileID: 1979610490680549722}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19775,7 +19788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5597132286027907871}
   - component: {fileID: 5402173155697823612}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19859,7 +19872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8523588300078143834}
   - component: {fileID: 4062020121937021296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19943,7 +19956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4264683889504454979}
   - component: {fileID: 4038278867441182136}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20027,7 +20040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7685401127633973862}
   - component: {fileID: 882426906023566482}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v4_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20111,7 +20124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7224630695225118374}
   - component: {fileID: 6466307240339544807}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v6_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20195,7 +20208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3111331491879695879}
   - component: {fileID: 6536372525447992481}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20279,7 +20292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2981309172179872648}
   - component: {fileID: 5162879756316804214}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20362,7 +20375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7203173336218249602}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Additional_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20405,7 +20418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4428611777352368905}
   - component: {fileID: 7921476055664567931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20489,7 +20502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4789608164390015686}
   - component: {fileID: 7360298391690668723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20573,7 +20586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749763225586147479}
   - component: {fileID: 6133738055306789405}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20657,7 +20670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7836873049169484357}
   - component: {fileID: 1670476313528569250}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_v5_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20741,7 +20754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2740573464222512427}
   - component: {fileID: 1180106060058328011}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20825,7 +20838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2793948841097320003}
   - component: {fileID: 848564185812367205}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20909,7 +20922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134390959263986812}
   - component: {fileID: 8542438273413445513}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20993,7 +21006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2774725505907923519}
   - component: {fileID: 7338964589486059673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21077,7 +21090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8391052365279022358}
   - component: {fileID: 246094511226659618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21161,7 +21174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6266169261600526710}
   - component: {fileID: 8743831003943126963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21245,7 +21258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2224011789275753291}
   - component: {fileID: 3300028760417304786}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21329,7 +21342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4904990290457287487}
   - component: {fileID: 5360912715600547363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Human_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}

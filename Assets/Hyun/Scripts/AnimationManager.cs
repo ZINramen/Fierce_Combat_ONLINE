@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
+    public Entity owner;
     private bool onGround = true;
     private bool ecActive = false;
 
@@ -22,7 +23,22 @@ public class AnimationManager : MonoBehaviour
     public bool isHuman = false;
 
     public EffectCreator Ec;
-    
+
+    [Header("Key Mapping")]
+    public KeyCode Punch;
+    public KeyCode Kick;
+    public KeyCode Guard;
+    public KeyCode Catch;
+    public KeyCode Dash;
+    public KeyCode Backstep;
+    public KeyCode Jump;
+
+    public KeyCode DownArrow;
+    public KeyCode UpArrow;
+
+    public KeyCode Emotion_1;
+    public KeyCode Heal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,12 +87,12 @@ public class AnimationManager : MonoBehaviour
             {
                 if (isPlayer)
                 {
-                    if (Input.GetKeyDown(KeyCode.D))
+                    if (Input.GetKeyDown(Kick))
                     {
                         ani.SetTrigger("Kick");
                         ecActive = true;
                     }
-                    if (Input.GetKeyDown(KeyCode.S))
+                    if (Input.GetKeyDown(Punch))
                     {
                         ani.SetTrigger("Punch");
                     }
@@ -118,67 +134,67 @@ public class AnimationManager : MonoBehaviour
     }
     void PlayerAnimation() // 조종하는 플레이어 캐릭터의 애니메이션 관리 -> 입력에 반응
     {
-        if (Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y/2), Vector3.down, 0.2f) && Input.GetKeyDown(KeyCode.Space) && !Input.GetKey(KeyCode.DownArrow))
+        if (Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y/2), Vector3.down, 0.2f) && Input.GetKeyDown(Jump) && !Input.GetKey(DownArrow))
         {
             State = AnimationState.Jump;
             ani.SetTrigger("Jump");
         }
         if (State == AnimationState.Normal) 
         {
-            if (Input.GetAxis("Horizontal") == 0 && Input.GetKeyDown(KeyCode.F1))
+            if (Input.GetAxis("Horizontal") == 0 && Input.GetKeyDown(Emotion_1))
             {
                 State = AnimationState.Emotion;
                 ani.SetTrigger("Breaktime");
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(Punch))
             {
-                if (Input.GetKey(KeyCode.UpArrow))
+                if (Input.GetKey(UpArrow))
                 {
                     ani.SetTrigger("Punch_Up");
                 }
                 else if(!ani.GetBool("Down"))
                     ani.SetTrigger("Punch");
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(Kick))
             {
                 ani.SetTrigger("Kick");
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(DownArrow))
             {
                 ani.SetBool("Down", true);
             }
-            if (Input.GetKeyUp(KeyCode.DownArrow))
+            if (Input.GetKeyUp(DownArrow))
             {
                 ani.SetBool("Down", false);
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(Guard))
             {
                 ani.SetBool("Defense", true);
             }
-            if (Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKeyUp(Guard))
             {
                 ani.SetBool("Defense", false);
             }
             if (Input.GetAxis("Horizontal") == 0)
             {
-                if (Input.GetKeyDown(KeyCode.F) && !ani.GetBool("Down"))
+                if (Input.GetKeyDown(Dash) && !ani.GetBool("Down"))
                 {
                     ani.SetTrigger("Dash");
                 }
             }
-            if (Input.GetKeyUp(KeyCode.Q))
+            if (Input.GetKeyUp(Catch))
             {
                 ani.SetTrigger("Catch");
             }
-            if (Input.GetKeyUp(KeyCode.W))
+            if (Input.GetKeyUp(Backstep))
             {
                 ani.SetTrigger("Dodge");
             }
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(Heal))
             {
                 ani.SetBool("Heal", true);
             }
-            if (Input.GetKeyUp(KeyCode.Z))
+            if (Input.GetKeyUp(Heal))
             {
                 ani.SetBool("Heal", false);
             }

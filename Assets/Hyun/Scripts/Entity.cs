@@ -16,6 +16,7 @@ public class Entity : MonoBehaviour
     public LayerMask target;
     public GameObject attackPos;
     public float attackLength;
+    public bool isDie = false; //캐릭터가 죽었는지 살았는지 여부
 
     public float flyingAttackForce = 0;
     public float flyingDamagedPower = 0;
@@ -30,6 +31,9 @@ public class Entity : MonoBehaviour
     {
         movement = GetComponent<Movement>();
         aManager = GetComponent<AnimationManager>();
+        
+        aManager.owner = this;
+        movement.owner = this;
         hp = maxHP;
     }
 
@@ -48,6 +52,9 @@ public class Entity : MonoBehaviour
         {
             waitTime = 0;
         }
+        //생사 상태 확인
+        if (hp <= 0)
+            isDie = true;
     }
 
     public void SetPower(float powerValue) 
@@ -69,7 +76,7 @@ public class Entity : MonoBehaviour
                 if (enemy)
                 {
                     enemy.flyingDamagedPower = flyingAttackForce;
-                    if(transform.localEulerAngles.y == 180)
+                    if (transform.localEulerAngles.y == 180)
                         enemy.Dameged(attackForce, -thrustpower);
                     else
                         enemy.Dameged(attackForce, thrustpower);
@@ -125,28 +132,38 @@ public class Entity : MonoBehaviour
     public void Dameged(float damageValue, float thrustValue)
     {
         if (DamageBlock == DefenseStatus.invincible) return;
-        if (flyingDamagedPower > 0)
-        { 
-            movement.Jump(flyingDamagedPower);
-            flyingDamagedPower = 0;
-        }
-        if(aManager)
-            aManager.Hit(damageValue);
-        Debug.Log(gameObject);
         if (waitTime == 0)
         {
-            if(DamageBlock != DefenseStatus.Guard)
+            Debug.Log(gameObject);
+            if (aManager)
+            {
+                if (DamageBlock != DefenseStatus.Guard || damageValue == 0)
+                aManager.Hit(damageValue);
+            }
+            if (flyingDamagedPower != 0)
+            {
+                movement.Jump(flyingDamagedPower);
+                flyingDamagedPower = 0;
+            }
+            if (DamageBlock != DefenseStatus.Guard)
                 hp -= damageValue;
+            else 
+                hp -= (float)damageValue/2;
 
             if (DamageBlock == DefenseStatus.Warning)
             {
                 hp -= 10;
             }
-
             waitTime = 0.2f;
-            if (movement)
-                movement.SetThrustForceX(thrustValue);
+            movement.StopMove = true;
+            StartCoroutine(ThrustPlayer(thrustValue));
         }
     }
 
+    IEnumerator ThrustPlayer(float thrustValue) 
+    {
+        yield return new WaitForSeconds(0.01f);
+        if (movement)
+            movement.SetThrustForceX(thrustValue);
+    }
 }

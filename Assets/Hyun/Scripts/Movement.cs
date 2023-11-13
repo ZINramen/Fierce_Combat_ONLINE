@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public Entity owner;
+
     float h;
     float v;
     Rigidbody2D body;
@@ -25,7 +27,14 @@ public class Movement : MonoBehaviour
     [Tooltip("움직임 봉쇄")]
     public bool StopMove = false;
 
+    [Header("2P Move : I J K L")]
+    public bool is2P = false;
     public PhysicsMaterial2D pMaterial;
+
+    public Rigidbody2D GetBody() 
+    {
+        return body;
+    }
 
     // Start is called before the first frame update
     void Awake()
@@ -35,13 +44,13 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void physicChange() 
     {
+
         if (StopMove)
         {
-            h = 0;
             body.sharedMaterial = null;
+            h = 0;
         }
         else
         {
@@ -50,9 +59,19 @@ public class Movement : MonoBehaviour
                 Move();
         }
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        physicChange();
+    }
     private void Move()
     {
-        h = Input.GetAxis("Horizontal");
+        body.sharedMaterial = pMaterial;
+        if (is2P) 
+            h = Input.GetAxis("Horizontal_2P");
+        else 
+            h = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(h * 100 * speed * Time.deltaTime, body.velocity.y);
 
         if (h != 0)
@@ -85,6 +104,7 @@ public class Movement : MonoBehaviour
             transform.localEulerAngles = new Vector3(0, 0, 0);
         else
             transform.localEulerAngles = new Vector3(0, 180, 0);
+        
         body.AddForce(new Vector2(x * 30, 0));
     }
 
