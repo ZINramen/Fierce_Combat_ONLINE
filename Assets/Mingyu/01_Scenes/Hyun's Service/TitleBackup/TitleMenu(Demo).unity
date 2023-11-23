@@ -6332,8 +6332,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomItems: []
   roomListView: {fileID: 1765217326}
-  roomListItem: {fileID: 6228418956045941060, guid: e6186910cf77c434a8ef6cbc3ef92e21, type: 3}
+  roomListItem: {fileID: 6228418956045941060, guid: 5bb9af2d8fdf01f4bae136565c3abacd, type: 3}
   simpleAnim: {fileID: 929551537}
+  is_OnPw: 0
+  roomName: 
 --- !u!114 &1700280597
 MonoBehaviour:
   m_ObjectHideFlags: 0

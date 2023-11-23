@@ -139,9 +139,12 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
                     roomTemp.localScale = new Vector3(1, 1, 1);
                 }
                 PhotonRoomListInfoSync sync = roomTemp.GetComponent<PhotonRoomListInfoSync>();
-                //sync.name = item.Name;
-                //sync.roomNameT.text = item.Name;
-                //sync.playerNumberT.text = item.PlayerCount.ToString();
+                if (sync)
+                {
+                    sync.name = item.Name;
+                    sync.roomNameT.text = item.Name;
+                    sync.playerNumberT.text = item.PlayerCount.ToString();
+                }
                 if (item != null)
                     roomItems.Add(sync);
             }

@@ -9,6 +9,12 @@ public class Mingyu_RoomCtrl : MonoBehaviourPunCallbacks
     public Text roomNameT;
     public Text playerNumberT;
     public Text StageNameT;
+
+    public void joinRoom()
+    {
+        PhotonNetwork.JoinRoom(roomNameT.text);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
