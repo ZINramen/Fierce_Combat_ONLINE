@@ -27,6 +27,22 @@ public class Entity : MonoBehaviour
 
     public DefenseStatus DamageBlock = DefenseStatus.Nope;
 
+
+    [Header("Combo")]
+    [SerializeField]private int currentCombo = 0;
+    public int maxcombo = 10;
+    public ComboView ComboUI;
+
+    [Header("Additional Effect")]
+    public GameObject HitEffect;
+    public GameObject StrongHitEffect;
+
+    public GameObject HitTextEffect;
+    public GameObject StrongHitTextEffect;
+
+    public GameObject CoolTextEffect;
+    
+    
     private void Awake()
     {
         movement = GetComponent<Movement>();
@@ -53,8 +69,13 @@ public class Entity : MonoBehaviour
             waitTime = 0;
         }
         //생사 상태 확인
-        if (hp <= 0)
+        if (hp <= 0 && !isDie)
+        {
+            DamageBlock = DefenseStatus.invincible;
             isDie = true;
+            hp = 0;
+            aManager.Die();
+        }
     }
 
     public void SetPower(float powerValue) 
@@ -110,6 +131,7 @@ public class Entity : MonoBehaviour
     // 날라가지 않고 데미지만
     public void Internal_Dameged(float damageValue)
     {
+        if (DamageBlock == DefenseStatus.invincible) return;
         if (waitTime == 0)
         {
             hp -= damageValue;
@@ -132,6 +154,16 @@ public class Entity : MonoBehaviour
     public void Dameged(float damageValue, float thrustValue)
     {
         if (DamageBlock == DefenseStatus.invincible) return;
+        if (currentCombo < maxcombo && damageValue != 0)
+        {
+            currentCombo++;
+        }
+        if(currentCombo == maxcombo)
+        {
+            aManager.FallDown();
+            currentCombo = 0;
+        }
+
         if (waitTime == 0)
         {
             Debug.Log(gameObject);
@@ -146,10 +178,35 @@ public class Entity : MonoBehaviour
                 flyingDamagedPower = 0;
             }
             if (DamageBlock != DefenseStatus.Guard)
+            {
+                ComboView.nextOwner = this;
+                if (ComboUI)
+                    Instantiate(ComboUI);
                 hp -= damageValue;
-            else 
-                hp -= (float)damageValue/2;
-
+                if (HitEffect)
+                {
+                    if (damageValue < 15)
+                    {
+                        Instantiate(HitEffect).transform.position = transform.position;
+                        Instantiate(HitTextEffect).transform.position = transform.position;
+                    }
+                    else
+                    {
+                        GameObject strongHit = Instantiate(StrongHitEffect);
+                        strongHit.transform.position = transform.position;
+                        if(transform.localEulerAngles.y != 0)
+                            strongHit.transform.localEulerAngles = new Vector3(0,0,0);
+                        else
+                            strongHit.transform.localEulerAngles = new Vector3(0, -180, 0);
+                        Instantiate(StrongHitTextEffect).transform.position = transform.position;
+                    }
+                }
+            }
+            else
+            {
+                hp -= (float)damageValue / 2;
+                Instantiate(CoolTextEffect).transform.position = transform.position;
+            }
             if (DamageBlock == DefenseStatus.Warning)
             {
                 hp -= 10;

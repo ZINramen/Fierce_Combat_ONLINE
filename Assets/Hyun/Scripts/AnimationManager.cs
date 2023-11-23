@@ -126,12 +126,32 @@ public class AnimationManager : MonoBehaviour
     }
     public void Hit(float power)
     {
-        if(Math.Abs(power) > 10)
+        DynamicCamera actionCam = Camera.main.GetComponent<DynamicCamera>();
+        if (Math.Abs(power) > 10)
+        {
+            if(actionCam)
+                actionCam.ShakeScreen(5);
             ani.SetTrigger("Hit_Upgrade");
+        }
         else
+        {
+            if (actionCam)
+                actionCam.ShakeScreen(5);
             ani.SetTrigger("Hit");
+        }
 
     }
+
+    public void FallDown()
+    {
+        ani.SetTrigger("ComboEnd");
+    }
+
+    public void Die()
+    {
+        ani.SetTrigger("Death");
+    }
+
     void PlayerAnimation() // 조종하는 플레이어 캐릭터의 애니메이션 관리 -> 입력에 반응
     {
         if (Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y/2), Vector3.down, 0.2f) && Input.GetKeyDown(Jump) && !Input.GetKey(DownArrow))

@@ -12,7 +12,7 @@ public class AttachPoint : MonoBehaviour
         Entity entity = other.GetComponent<Entity>();
         if(!noCatch)
         if (entity && target == null)
-            if (entity != owner)
+            if (entity != owner && entity.DamageBlock != Entity.DefenseStatus.invincible)
             {
                 target = entity;
             }
