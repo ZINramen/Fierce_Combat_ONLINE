@@ -9,7 +9,7 @@ using Photon.Realtime;
 
 public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 {
-    [SerializeField]List<PhotonRoomListInfoSync> roomItems;
+    [SerializeField]List<Mingyu_RoomCtrl> roomItems;
     int roomCount = 0;
     public GameObject roomListView;
     public GameObject roomListItem;
@@ -138,7 +138,7 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
                     roomTemp.SetParent(roomListView.transform);
                     roomTemp.localScale = new Vector3(1, 1, 1);
                 }
-                PhotonRoomListInfoSync sync = roomTemp.GetComponent<PhotonRoomListInfoSync>();
+                Mingyu_RoomCtrl sync = roomTemp.GetComponent<Mingyu_RoomCtrl>();
                 if (sync)
                 {
                     sync.name = item.Name;
@@ -150,7 +150,7 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             }
             else 
             {
-                foreach (PhotonRoomListInfoSync room in roomItems) 
+                foreach (Mingyu_RoomCtrl room in roomItems) 
                 {
                     if (room.name == item.Name)
                     {
@@ -254,6 +254,11 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
         roomName = makeRoom_Panel.transform.Find("RoomName_InputField").
             GetComponent<InputField>().text;
+    }
+
+    public void BtnEvent_JoinRoom()
+    {
+        
     }
 
     public override void OnLeftRoom()
