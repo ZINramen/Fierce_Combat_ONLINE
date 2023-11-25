@@ -43,7 +43,12 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     private Toggle pw_Toggle;                   // 토글
 
-    public string make_RoomName;                // 만들 때, 방 이름
+    public string roomName;                // 만들 때, 방 이름
+
+    // 방을 만들었는지 확인, 이는 나중에 로비에서
+    // 방을 만들었으면,          방을 생성하는 코루틴으로 넘어가고
+    // 방을 만들지 않았으면,     방으로 들어가는 코루틴으로 들어감
+    private bool isCreateRoom = false;                  
     #endregion
 
     public static Mingyu_Photon_Lobby Instance
@@ -275,11 +280,6 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void BtnEvent_InputPwUIOff()
-    {
-        pw_Panel.SetActive(false);
-    }
-
     // 방 만들기 입력
     public void BtnEvent_MakeRoomBtn()
     {
@@ -296,11 +296,14 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     {
         roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2;
+        Debug.Log(pw_Toggle.isOn);
 
         if (pw_Toggle.isOn)
         {
             string InputPWord = makeRoom_Panel.transform.Find("RoomPassword_InputField").
                             GetComponent<InputField>().text;
+
+            roomOptions.CustomRoomPropertiesForLobby = new string[] { "password" };
 
             roomOptions.CustomRoomProperties = new HashTable()
             {
@@ -308,9 +311,10 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             };
         }
 
-        make_RoomName = makeRoom_Panel.transform.Find("RoomName_InputField").
+        roomName = makeRoom_Panel.transform.Find("RoomName_InputField").
                             GetComponent<InputField>().text;
 
+        isCreateRoom = true;
         makeRoom_Panel.SetActive(false);
         PhotonNetwork.LeaveRoom();
     }
@@ -319,10 +323,17 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     {
         if (roomData_List[roomIndex].CustomProperties["password"] != null)
         {
+            Debug.Log("비번o : " + roomData_List[roomIndex].Name);
+            lobby.SetActive(false);
+            title_UI.SetActive(false);
+
             pw_Panel.SetActive(true);
         }
         else
-            PhotonNetwork.JoinRoom(roomData_List[roomIndex].Name);
+        {
+            Debug.Log("비번x" + roomIndex);
+            PhotonNetwork.LeaveRoom();
+        }
     }
 
     // 패스 워드가 있는 방에 들어갔을 때, 비번이 맞고 틀린 유무에 따라
@@ -330,8 +341,10 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     {
         if ((string)roomData_List[roomIndex].CustomProperties["password"] == pw_CheckInput.text)
         {
-            PhotonNetwork.JoinRoom(roomData_List[roomIndex].Name);
             pw_Panel.SetActive(false);
+
+            roomName = roomData_List[roomIndex].Name;
+            PhotonNetwork.LeaveRoom();
         }
         else
             StartCoroutine("ShowPwWrongMsg");
@@ -339,7 +352,9 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     IEnumerator ShowPwWrongMsg()
     {
-        if (pw_ErrorLog.activeSelf)
+        Debug.Log("틀림");
+
+        if (pw_ErrorLog.activeSelf == false)
         {
             pw_ErrorLog.SetActive(true);
             yield return new WaitForSeconds(3.0f);
@@ -350,14 +365,22 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         PhotonNetwork.JoinLobby();
-        StartCoroutine(EnterWaitRoom(make_RoomName));
+        StartCoroutine(Enter_WaitRoom(roomName, isCreateRoom));
     }
 
-    IEnumerator EnterWaitRoom(string roomName)
+    IEnumerator Enter_WaitRoom(string roomName, bool isCreateRoom)
     {
-        // 로비에 들어갈 때까지 대기
-        yield return new WaitUntil(() => PhotonNetwork.InLobby);
-        PhotonNetwork.CreateRoom(roomName, roomOptions);
+        if (isCreateRoom)
+        {
+            // 로비에 들어갈 때까지 대기
+            yield return new WaitUntil(() => PhotonNetwork.InLobby);
+            PhotonNetwork.CreateRoom(roomName, roomOptions);
+        }
+        else
+        {
+            yield return new WaitUntil(() => PhotonNetwork.InLobby);
+            PhotonNetwork.JoinRoom(roomName);
+        }
 
         // 방에 들어갈 때까지 대기
         yield return new WaitUntil(() => PhotonNetwork.InRoom);
@@ -366,20 +389,20 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     //public void BtnEvent_EnterRoom()
     //{
-        // 클릭한 방이 패스워드가 있다면, 패드워드 창 띄우기
-        //if (is_OnPw)
-        //{
-        //    makeRoom_Panel.SetActive(false);
-        //    pw_Panel.SetActive(true);
-        //}
+    // 클릭한 방이 패스워드가 있다면, 패드워드 창 띄우기
+    //if (is_OnPw)
+    //{
+    //    makeRoom_Panel.SetActive(false);
+    //    pw_Panel.SetActive(true);
+    //}
 
-        //// 없다면, 방에 들어가기
-        //else
-        //{
-        //    PhotonNetwork.Disconnect();
-        //    PhotonNetwork.JoinRoom(make_RoomName);
-        //    PhotonNetwork.LoadLevel("WaitingRoom");
-        //}
+    //// 없다면, 방에 들어가기
+    //else
+    //{
+    //    PhotonNetwork.Disconnect();
+    //    PhotonNetwork.JoinRoom(make_RoomName);
+    //    PhotonNetwork.LoadLevel("WaitingRoom");
+    //}
     //}
 
     // 취소 클릭
