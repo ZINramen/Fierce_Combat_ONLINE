@@ -1743,7 +1743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &467504385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3284,7 +3284,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1700280596}
         m_TargetAssemblyTypeName: Mingyu_Photon_Lobby, Assembly-CSharp
-        m_MethodName: BtnEvent_Exit
+        m_MethodName: BtnEvent_InputPwUIOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5463,7 +5463,7 @@ GameObject:
   - component: {fileID: 1566705257}
   - component: {fileID: 1566705256}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: Pw_CheckInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6332,10 +6332,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomItems: []
   roomListView: {fileID: 1765217326}
-  roomListItem: {fileID: 6228418956045941060, guid: 5bb9af2d8fdf01f4bae136565c3abacd, type: 3}
+  roomListItem: {fileID: 6228418956045941060, guid: e6186910cf77c434a8ef6cbc3ef92e21, type: 3}
   simpleAnim: {fileID: 929551537}
-  is_OnPw: 0
-  roomName: 
+  make_RoomName: 
 --- !u!114 &1700280597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6441,9 +6440,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1700280596}
-        m_TargetAssemblyTypeName: Mingyu_Photon_Lobby, Assembly-CSharp
-        m_MethodName: BtnEvent_pwInput
+      - m_Target: {fileID: 8525596830360426083, guid: e6186910cf77c434a8ef6cbc3ef92e21, type: 3}
+        m_TargetAssemblyTypeName: Mingyu_RoomCtrl, Assembly-CSharp
+        m_MethodName: Btn_EnterPWRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
