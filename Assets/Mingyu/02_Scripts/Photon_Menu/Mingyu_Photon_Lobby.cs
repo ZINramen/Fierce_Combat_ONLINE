@@ -250,7 +250,7 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     #region 로비 채팅 부분 코딩
     public void Chatting_Lobby(InputField inputChatting)
     {
-        ChatMessage = inputChatting.text;
+        ChatMessage = PhotonNetwork.NickName + ": " + inputChatting.text;
         inputChatting.text = string.Empty;
 
         pv = this.GetComponent<PhotonView>();
