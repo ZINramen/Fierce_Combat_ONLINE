@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Hyun/Scenes/HumanPhysicsTest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Mingyu/01_Scenes/Hyun's Service/TitleBackup/TitleMenu(Demo).unity
     guid: 585d87052c2370f4dba844549d7b7833
+  - enabled: 1
+    path: Assets/Hyun/Scenes/NetworkTestRoom.unity
+    guid: f87edeb1cdb59ed4e8eb36afbccadf6e
   m_configObjects: {}

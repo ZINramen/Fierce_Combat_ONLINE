@@ -141,9 +141,13 @@ public class Entity : MonoBehaviour
     // hp 임의 변경 : 아이템용이다.
     public void SetHp(float value)
     {
+        float temp = hp;
         if (value > maxHP)
             hp = maxHP;
         else hp = value;
+
+        if (temp > hp)
+            PlayHitEffect(10);
     }
     public float GetHp()
     {
@@ -183,23 +187,16 @@ public class Entity : MonoBehaviour
                 if (ComboUI)
                     Instantiate(ComboUI);
                 hp -= damageValue;
-                if (HitEffect)
+
+                // 맞는 방향으로 회전
+                if (thrustValue < 0)
+                    transform.localEulerAngles = new Vector3(0, 0, 0);
+                else
+                    transform.localEulerAngles = new Vector3(0, 180, 0);
+
+                if (HitEffect && damageValue > 0)
                 {
-                    if (damageValue < 15)
-                    {
-                        Instantiate(HitEffect).transform.position = transform.position;
-                        Instantiate(HitTextEffect).transform.position = transform.position;
-                    }
-                    else
-                    {
-                        GameObject strongHit = Instantiate(StrongHitEffect);
-                        strongHit.transform.position = transform.position;
-                        if(transform.localEulerAngles.y != 0)
-                            strongHit.transform.localEulerAngles = new Vector3(0,0,0);
-                        else
-                            strongHit.transform.localEulerAngles = new Vector3(0, -180, 0);
-                        Instantiate(StrongHitTextEffect).transform.position = transform.position;
-                    }
+                    PlayHitEffect(damageValue); 
                 }
             }
             else
@@ -222,5 +219,24 @@ public class Entity : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         if (movement)
             movement.SetThrustForceX(thrustValue);
+    }
+
+    void PlayHitEffect(float damageValue)
+    {
+        if (damageValue < 15)
+        {
+            Instantiate(HitEffect).transform.position = transform.position;
+            Instantiate(HitTextEffect).transform.position = transform.position;
+        }
+        else
+        {
+            GameObject strongHit = Instantiate(StrongHitEffect);
+            strongHit.transform.position = transform.position;
+            if (transform.localEulerAngles.y != 0)
+                strongHit.transform.localEulerAngles = new Vector3(0, 0, 0);
+            else
+                strongHit.transform.localEulerAngles = new Vector3(0, -180, 0);
+            Instantiate(StrongHitTextEffect).transform.position = transform.position;
+        }
     }
 }

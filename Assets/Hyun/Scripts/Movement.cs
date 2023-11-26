@@ -7,7 +7,6 @@ public class Movement : MonoBehaviour
     public Entity owner;
 
     float h;
-    float v;
     Rigidbody2D body;
     Animator animator;
 
@@ -44,7 +43,7 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void physicChange() 
+    public void PhysicChange() 
     {
 
         if (StopMove)
@@ -63,7 +62,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        physicChange();
+        PhysicChange();
     }
     private void Move()
     {
@@ -99,12 +98,7 @@ public class Movement : MonoBehaviour
         body.AddForce(new Vector2(x * 100 * plus, 0));
     }
     public void SetThrustForceX(float x)
-    {
-        if (x < 0)
-            transform.localEulerAngles = new Vector3(0, 0, 0);
-        else
-            transform.localEulerAngles = new Vector3(0, 180, 0);
-        
+    {        
         body.AddForce(new Vector2(x * 30, 0));
     }
 
