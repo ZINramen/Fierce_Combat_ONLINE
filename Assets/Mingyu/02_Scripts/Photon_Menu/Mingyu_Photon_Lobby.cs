@@ -242,11 +242,6 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     //    PhotonNetwork.CreateRoom("TestRoom" + roomCount, new RoomOptions { MaxPlayers = 2 });
     //}
 
-    public void GameStart(string sceneName)
-    {
-        PhotonNetwork.LoadLevel(sceneName);
-    }
-
     #region 로비 채팅 부분 코딩
     public void Chatting_Lobby(InputField inputChatting)
     {

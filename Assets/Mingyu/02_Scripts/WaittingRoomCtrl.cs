@@ -20,7 +20,7 @@ public class WaittingRoomCtrl : MonoBehaviour
         if (isColl_LButton && isColl_RButton)
         {
             Debug.Log("AA");
-            Mingyu_Photon_Lobby.Instance.GameStart(stageName);
+            // 게임 시작하는 부분
         }
     }
 }
