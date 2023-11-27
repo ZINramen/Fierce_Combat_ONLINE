@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnGoomba : MonoBehaviour
 {
-    public Vector3 SpawnPoint;
+    public Transform SpawnPoint;
     public GameObject goomba;
     public int GoombaCount
     { get; set; }
@@ -21,7 +21,7 @@ public class SpawnGoomba : MonoBehaviour
         {
             if (GoombaCount < 5)
             {
-                Instantiate(goomba);
+                Instantiate(goomba, SpawnPoint.position, Quaternion.identity);
             }
 
             yield return new WaitForSeconds(5.0f);
