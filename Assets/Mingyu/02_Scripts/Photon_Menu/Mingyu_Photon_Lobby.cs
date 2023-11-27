@@ -327,6 +327,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         else
         {
             Debug.Log("비번x" + roomIndex);
+
+            roomName = roomData_List[roomIndex].Name;
             PhotonNetwork.LeaveRoom();
         }
     }
@@ -365,6 +367,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     IEnumerator Enter_WaitRoom(string roomName, bool isCreateRoom)
     {
+        Debug.Log("Room NAme : " + roomName);
+
         if (isCreateRoom)
         {
             // 로비에 들어갈 때까지 대기

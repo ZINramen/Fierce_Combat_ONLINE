@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class WaittingRoomCtrl : MonoBehaviour
 {
@@ -14,13 +15,21 @@ public class WaittingRoomCtrl : MonoBehaviour
 
     private void Update()
     {
-        isColl_LButton = L_Button.GetComponent<ButtonCtrl>().Is_CollPlayer;
-        isColl_RButton = R_Button.GetComponent<ButtonCtrl>().Is_CollPlayer;
-
-        if (isColl_LButton && isColl_RButton)
+        if (!PhotonNetwork.IsConnected)
         {
-            Debug.Log("AA");
-            // 게임 시작하는 부분
+            PhotonNetwork.ConnectUsingSettings(); // PhotonNetwork 연결
+
+            Debug.Log("끊김");
+        }
+        else
+        {
+            isColl_LButton = L_Button.GetComponent<ButtonCtrl>().Is_CollPlayer;
+            isColl_RButton = R_Button.GetComponent<ButtonCtrl>().Is_CollPlayer;
+
+            if (PhotonNetwork.IsMasterClient && isColl_LButton && isColl_RButton)
+            {
+                PhotonNetwork.LoadLevel("Test_Scene");
+            }
         }
     }
 }
