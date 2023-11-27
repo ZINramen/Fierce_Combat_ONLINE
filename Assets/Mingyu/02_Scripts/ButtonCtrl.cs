@@ -8,6 +8,8 @@ public class ButtonCtrl : MonoBehaviourPunCallbacks
 {
     // 버튼이 스크린을 가지고 있다.
     public GameObject OK_Screen;
+    public GameObject RoomCtrl;
+
     private PhotonView pv;
 
     private bool is_Coll = false;               // tv와 trigger했는가?

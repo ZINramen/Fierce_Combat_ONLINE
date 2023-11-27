@@ -462,6 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202149945}
   - component: {fileID: 202149944}
+  - component: {fileID: 202149946}
   m_Layer: 0
   m_Name: WaitingRoomCtrl
   m_TagString: Untagged
@@ -486,6 +487,7 @@ MonoBehaviour:
   stageName: LobbyScene(DontUse)
   isColl_LButton: 0
   isColl_RButton: 0
+  isGameStart: 0
 --- !u!4 &202149945
 Transform:
   m_ObjectHideFlags: 0
@@ -501,6 +503,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202149946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202149943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &257875502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OK_Screen: {fileID: 601514165}
+  RoomCtrl: {fileID: 202149943}
 --- !u!61 &387777127
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3219,6 +3244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OK_Screen: {fileID: 506076217}
+  RoomCtrl: {fileID: 202149943}
 --- !u!61 &1767264641
 BoxCollider2D:
   m_ObjectHideFlags: 0
