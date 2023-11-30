@@ -65,7 +65,7 @@ public class StageCtrl : MonoBehaviour
             }
 
             //Debug.Log("수뻐 플레이어 : " + superPlayer.name);
-            //Debug.Log("Player1 HP :" + PlayerList[0].GetHp() + "Player2 HP :" + PlayerList[1].GetHp());
+            Debug.Log("Player1 HP :" + PlayerList[0].GetHp() + "Player2 HP :" + PlayerList[1].GetHp());
             yield return new WaitForSecondsRealtime(0.5f);
         }
     }

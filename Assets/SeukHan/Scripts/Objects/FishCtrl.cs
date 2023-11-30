@@ -7,7 +7,7 @@ public class FishCtrl : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
-    private GameObject[] Grounds;
+    public GameObject[] ignoreColl;
 
     [SerializeField]
     private float moveX = -3.0f;
@@ -21,15 +21,13 @@ public class FishCtrl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        Grounds = GameObject.FindGameObjectsWithTag("Terrain");
-        foreach (GameObject ground in Grounds)
+        foreach (GameObject obj in ignoreColl)
         {
-            if (ground != null)
+            if (obj != null)
             {
-                Physics2D.IgnoreCollision(ground.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+                Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             }
         }
-
 
         StartCoroutine(ChangeDir());
         StartCoroutine(RandomJump());
@@ -59,6 +57,7 @@ public class FishCtrl : MonoBehaviour
     {
         var wait = new WaitForSeconds(dirChangeTime);
         var flip = new Vector3(0, 180.0f, 0);
+
         while (true)
         {
             yield return wait;
@@ -71,9 +70,8 @@ public class FishCtrl : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(2.0f, 5.0f));
+            yield return new WaitForSeconds(Random.Range(3.5f, 6.0f));
             rb.AddForce(jumpForce, ForceMode2D.Impulse);
-            Debug.Log("띠용");
         }
     }
 }
