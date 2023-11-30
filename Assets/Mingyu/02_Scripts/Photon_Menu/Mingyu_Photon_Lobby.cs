@@ -249,9 +249,9 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.NickName = inputName.text;
 
-        // Lobby라는 방이 있다면, 들어가고 + 없다면, 생성해서 들어간다.
-        PhotonNetwork.JoinOrCreateRoom("Lobby", new RoomOptions { MaxPlayers = 20 }, 
-            new TypedLobby("Lobby", LobbyType.Default));
+        //// lobby라는 방이 있다면, 들어가고 + 없다면, 생성해서 들어간다.
+        //photonnetwork.joinorcreateroom("lobby", new roomoptions { maxplayers = 20 }, 
+        //    new typedlobby("lobby", lobbytype.default));
     }
 
     #region 로비 채팅 부분 코딩
@@ -323,7 +323,10 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
         isCreateRoom = true;
         makeRoom_Panel.SetActive(false);
-        PhotonNetwork.LeaveRoom();
+        //PhotonNetwork.LeaveRoom();
+
+        // 추가한 부분
+        StartCoroutine(Enter_WaitRoom(roomName, isCreateRoom));
     }
 
     public void BtnEvent_JoinRoom(int roomIndex)
@@ -341,7 +344,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             Debug.Log("비번x" + roomIndex);
 
             roomName = roomData_List[roomIndex].Name;
-            PhotonNetwork.LeaveRoom();
+
+            StartCoroutine(Enter_WaitRoom(roomName, isCreateRoom));
         }
     }
 
@@ -353,7 +357,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             pw_Panel.SetActive(false);
 
             roomName = roomData_List[roomIndex].Name;
-            PhotonNetwork.LeaveRoom();
+
+            StartCoroutine(Enter_WaitRoom(roomName, isCreateRoom));
         }
         else
             StartCoroutine("ShowPwWrongMsg");
@@ -369,13 +374,6 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             yield return new WaitForSeconds(3.0f);
             pw_ErrorLog.SetActive(false);
         }
-    }
-
-    public override void OnLeftRoom()
-    {
-        PhotonNetwork.ConnectUsingSettings();
-
-        StartCoroutine(Enter_WaitRoom(roomName, isCreateRoom));
     }
 
     IEnumerator Enter_WaitRoom(string roomName, bool isCreateRoom)
