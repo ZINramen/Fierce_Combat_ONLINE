@@ -1,23 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class PipeCtrl : MonoBehaviour
 {
     public Vector2 playerCheckRange;
     public LayerMask playerLayer;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Transform spawnTransform;
 
     private void FixedUpdate()
     {
@@ -28,10 +18,15 @@ public class PipeCtrl : MonoBehaviour
     {
         Collider2D hit = Physics2D.OverlapBox(transform.position, playerCheckRange, 0, playerLayer);
 
-        if(hit.gameObject.GetComponent<Animator>().GetBool("Down"))
+        if(hit && hit.gameObject.GetComponent<Animator>().GetBool("Down"))
         {
-
+            playerTP(hit.gameObject);
         }
+    }
+
+    private void playerTP(GameObject obj)
+    {
+        obj.transform.position = spawnTransform.position;
     }
 
     private void OnDrawGizmos()

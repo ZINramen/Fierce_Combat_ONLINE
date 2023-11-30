@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GoombaCtrl : ObjectParent
+public class GoombaCtrl : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private SpawnGoomba sGoomba;
 
+    private Vector3 FlipY = new Vector3(0.0f, 180.0f, 0.0f);
+
     [SerializeField]
     private float moveX = -3.0f;
 
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
-        base.Start();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
@@ -30,7 +31,7 @@ public class GoombaCtrl : ObjectParent
         if(temp.tag == "Pipe")
         {
             moveX *= -1;
-            transform.Rotate(new Vector3(0.0f, 180.0f, 0.0f));
+            transform.Rotate(FlipY);
         }
         
         if(temp.layer == LayerMask.NameToLayer("Entity"))

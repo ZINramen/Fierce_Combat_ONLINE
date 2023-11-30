@@ -30,9 +30,9 @@ public class StageCtrl : MonoBehaviour
         PlayerList[0].transform.position = playerFirstLocations[0].position;
         PlayerList[1].transform.position = playerFirstLocations[1].position;
 
-        Debug.Log("플레이어 수" + playerNumber);
-        Debug.Log("플레이어1" + PlayerList[0].name);
-        Debug.Log("플레이어2" + PlayerList[1].name);
+        //Debug.Log("플레이어 수" + playerNumber);
+        //Debug.Log("플레이어1" + PlayerList[0].name);
+        //Debug.Log("플레이어2" + PlayerList[1].name);
         StartCoroutine(PlayerCheck());
     }
 
@@ -64,8 +64,8 @@ public class StageCtrl : MonoBehaviour
                 Debug.Log(PlayerList[1].name + " Win");
             }
 
-            Debug.Log("수뻐 플레이어 : " + superPlayer.name);
-            Debug.Log("Player1 HP :" + PlayerList[0].GetHp() + "Player2 HP :" + PlayerList[1].GetHp());
+            //Debug.Log("수뻐 플레이어 : " + superPlayer.name);
+            //Debug.Log("Player1 HP :" + PlayerList[0].GetHp() + "Player2 HP :" + PlayerList[1].GetHp());
             yield return new WaitForSecondsRealtime(0.5f);
         }
     }

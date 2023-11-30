@@ -16,12 +16,6 @@ public class PlantCtrl : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("");
-    }
-
     private void FixedUpdate()
     {
         playerCollCheck();
