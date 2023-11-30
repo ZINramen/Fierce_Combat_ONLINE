@@ -30,7 +30,7 @@ public class GoombaCtrl : ObjectParent
         if(temp.tag == "Pipe")
         {
             moveX *= -1;
-            sprite.flipX = !sprite.flipX;
+            transform.Rotate(new Vector3(0.0f, 180.0f, 0.0f));
         }
         
         if(temp.layer == LayerMask.NameToLayer("Entity"))
@@ -42,7 +42,7 @@ public class GoombaCtrl : ObjectParent
             }
             else
             {
-                temp.GetComponent<Entity>().Dameged(10, 1);
+                temp.GetComponent<Entity>().Dameged(10, 10);
             }
         }
     }
