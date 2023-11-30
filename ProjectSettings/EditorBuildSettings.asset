@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Mingyu/01_Scenes/Hyun's Service/TitleBackup/TitleMenu(Demo).unity
     guid: 585d87052c2370f4dba844549d7b7833
   - enabled: 1
+    path: Assets/Hyun/Scenes/WaitingRoom TEST.unity
+    guid: 8b79e50c202a2444a873d7a1985cd849
+  - enabled: 1
     path: Assets/Hyun/Scenes/NetworkTestRoom.unity
     guid: f87edeb1cdb59ed4e8eb36afbccadf6e
   m_configObjects: {}

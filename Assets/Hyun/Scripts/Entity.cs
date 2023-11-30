@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Entity : MonoBehaviour
 {
+
+    private int[] keyValues;
+
+    public PhotonPlayer network;
+    public bool Network_Catch = false;
+
     [SerializeField] private float hp;
     private float attackForce = 0;
     private float thrustpower = 0;
@@ -17,7 +24,7 @@ public class Entity : MonoBehaviour
     public GameObject attackPos;
     public float attackLength;
     public bool isDie = false; //캐릭터가 죽었는지 살았는지 여부
-
+    
     public float flyingAttackForce = 0;
     public float flyingDamagedPower = 0;
 
@@ -41,10 +48,14 @@ public class Entity : MonoBehaviour
     public GameObject StrongHitTextEffect;
 
     public GameObject CoolTextEffect;
-    
-    
+
+    public EmoticonController emoticon;
+
     private void Awake()
     {
+        keyValues = (int[])System.Enum.GetValues(typeof(KeyCode));
+     
+        network = GetComponent<PhotonPlayer>();
         movement = GetComponent<Movement>();
         aManager = GetComponent<AnimationManager>();
         
@@ -55,6 +66,21 @@ public class Entity : MonoBehaviour
 
     private void Update()
     {
+        if (emoticon && network && network.pv.IsMine)
+            foreach (KeyCode key in keyValues)
+            {
+                if (Input.GetKeyDown(key))
+                {
+                    if ((int)key >= 282 && (int)key <= 292)
+                    {
+                        int keyValue = (int)key - 281;
+                        emoticon.SetValue(keyValue);
+                        if(network)
+                            network.pv.RPC("ShowEmoticon", RpcTarget.Others, keyValue);
+                        break;
+                    }
+                }
+            }
         if (attackPos)
         {
             Vector3 start = attackPos.transform.position;
@@ -98,9 +124,9 @@ public class Entity : MonoBehaviour
                 {
                     enemy.flyingDamagedPower = flyingAttackForce;
                     if (transform.localEulerAngles.y == 180)
-                        enemy.Dameged(attackForce, -thrustpower);
+                        enemy.Damaged(attackForce, -thrustpower);
                     else
-                        enemy.Dameged(attackForce, thrustpower);
+                        enemy.Damaged(attackForce, thrustpower);
                 }
             }
         }
@@ -129,25 +155,43 @@ public class Entity : MonoBehaviour
         }
     }
     // 날라가지 않고 데미지만
-    public void Internal_Dameged(float damageValue)
+    public void Internal_Damaged(float damageValue)
     {
-        if (DamageBlock == DefenseStatus.invincible) return;
-        if (waitTime == 0)
+        if (!network || PhotonNetwork.IsMasterClient)
         {
-            hp -= damageValue;
-            waitTime = 0.2f;
+            if (DamageBlock == DefenseStatus.invincible) return;
+            if (waitTime == 0)
+            {
+                hp -= damageValue;
+                waitTime = 0.2f;
+                if (network)
+                    network.HpChange();
+            }
         }
     }
-    // hp 임의 변경 : 아이템용이다.
-    public void SetHp(float value)
+    public void SetHpNetwork(float value)
     {
-        float temp = hp;
         if (value > maxHP)
             hp = maxHP;
         else hp = value;
+    }
 
-        if (temp > hp)
+    // hp 임의 변경 : 아이템용이다.
+    public void SetHp(float value)
+    {
+        if (hp > value)
+        {
             PlayHitEffect(10);
+        }
+        if (!network || PhotonNetwork.IsMasterClient)
+        {
+            if (value > maxHP)
+                hp = maxHP;
+            else hp = value;
+
+            if (network)
+                network.HpChange();
+        }
     }
     public float GetHp()
     {
@@ -155,7 +199,7 @@ public class Entity : MonoBehaviour
     }
 
 
-    public void Dameged(float damageValue, float thrustValue)
+    public void Damaged(float damageValue, float thrustValue)
     {
         if (DamageBlock == DefenseStatus.invincible) return;
         if (currentCombo < maxcombo && damageValue != 0)
@@ -174,19 +218,21 @@ public class Entity : MonoBehaviour
             if (aManager)
             {
                 if (DamageBlock != DefenseStatus.Guard || damageValue == 0)
-                aManager.Hit(damageValue);
+                    aManager.Hit(damageValue);
             }
             if (flyingDamagedPower != 0)
             {
                 movement.Jump(flyingDamagedPower);
-                flyingDamagedPower = 0;
             }
             if (DamageBlock != DefenseStatus.Guard)
             {
                 ComboView.nextOwner = this;
                 if (ComboUI)
+                {
                     Instantiate(ComboUI);
-                hp -= damageValue;
+                    if (network)
+                        network.ComboShow();
+                }
 
                 // 맞는 방향으로 회전
                 if (thrustValue < 0)
@@ -196,17 +242,38 @@ public class Entity : MonoBehaviour
 
                 if (HitEffect && damageValue > 0)
                 {
-                    PlayHitEffect(damageValue); 
+                    if (flyingDamagedPower <= 0)
+                        PlayHitEffect(damageValue);
+                }
+
+                if (!network || PhotonNetwork.IsMasterClient)
+                {
+                    hp -= damageValue;
+
+                    if (network)
+                        network.HpChange();
                 }
             }
             else
             {
-                hp -= (float)damageValue / 2;
+                if (!network || PhotonNetwork.IsMasterClient)
+                {
+                    hp -= (float)damageValue / 2;
+
+                    if (network)
+                        network.HpChange();
+                }
                 Instantiate(CoolTextEffect).transform.position = transform.position;
             }
             if (DamageBlock == DefenseStatus.Warning)
             {
-                hp -= 10;
+                if (!network || PhotonNetwork.IsMasterClient)
+                {
+                    hp -= 10;
+
+                    if (network)
+                        network.HpChange();
+                }
             }
             waitTime = 0.2f;
             movement.StopMove = true;
@@ -218,10 +285,23 @@ public class Entity : MonoBehaviour
     {
         yield return new WaitForSeconds(0.01f);
         if (movement)
+        {
             movement.SetThrustForceX(thrustValue);
+            if (network)
+                network.Thrust(thrustValue);
+        }
     }
 
-    void PlayHitEffect(float damageValue)
+    public void HitEffectWhenFly() 
+    {
+        if(flyingDamagedPower != 0) 
+        {
+            PlayHitEffect(10);
+            flyingDamagedPower = 0;
+        }
+    }
+
+    public void PlayHitEffect(float damageValue)
     {
         if (damageValue < 15)
         {

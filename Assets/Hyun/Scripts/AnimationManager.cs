@@ -2,19 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class AnimationManager : MonoBehaviour
 {
+    PhotonPlayer network;
     public Entity owner;
+    public GameObject temp;
     private bool onGround = true;
-    private bool ecActive = false;
 
+    public bool ecActive = false;
     public float rotationZ = 0;
 
     public enum AnimationState 
     { Normal, Jump, Fall, Emotion, Stun }
     
-    Animator ani;
+    public Animator ani;
     public AnimationState State = AnimationState.Normal;
 
     [Header("PlayerSet")] 
@@ -42,7 +46,10 @@ public class AnimationManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        network = GetComponent<PhotonPlayer>();
         ani = GetComponent<Animator>();
+        if (network)
+            network.am = this;
     }
 
     // Update is called once per frame
@@ -51,7 +58,7 @@ public class AnimationManager : MonoBehaviour
         RaycastHit2D hit;
         if (hit = Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y / 2), Vector3.down, 0.2f))
         {
-            if(hit.collider.transform.parent != transform)
+            if (hit.collider.transform.parent != transform && (!hit.collider.GetComponent<EffectCreator>() || owner.movement.StopMove))
             if (State == AnimationState.Fall)
             {
                 onGround = true;
@@ -59,11 +66,14 @@ public class AnimationManager : MonoBehaviour
                 {
                     ani.ResetTrigger("Jump");
                     ani.SetTrigger("Landing");
+                    if (network)
+                        network.RunTriggerRpc("Landing");
                 }
                 State = AnimationState.Normal;
                 if (Ec && ecActive)
                 {
                     Ec.PlayEffect("bang", hit);
+
                     ecActive = false;
                 }
             }
@@ -73,7 +83,12 @@ public class AnimationManager : MonoBehaviour
             if (State == AnimationState.Normal)
             {
                 if (isHuman)
+                {
                     ani.SetTrigger("fall");
+
+                    if (network)
+                        network.RunTriggerRpc("fall");
+                }
             }
             if (onGround)
             {
@@ -90,11 +105,16 @@ public class AnimationManager : MonoBehaviour
                     if (Input.GetKeyDown(Kick))
                     {
                         ani.SetTrigger("Kick");
+
+                        if (network)
+                            network.RunTriggerRpc("Kick");
                         ecActive = true;
                     }
                     if (Input.GetKeyDown(Punch))
                     {
                         ani.SetTrigger("Punch");
+                        if (network)
+                            network.RunTriggerRpc("Punch");
                     }
                 }
             }
@@ -132,12 +152,16 @@ public class AnimationManager : MonoBehaviour
             if(actionCam)
                 actionCam.ShakeScreen(5);
             ani.SetTrigger("Hit_Upgrade");
+            if (network)
+                network.RunTriggerRpc("Hit_Upgrade");
         }
         else
         {
             if (actionCam)
                 actionCam.ShakeScreen(5);
             ani.SetTrigger("Hit");
+            if (network)
+                network.RunTriggerRpc("Hit");
         }
 
     }
@@ -145,11 +169,30 @@ public class AnimationManager : MonoBehaviour
     public void FallDown()
     {
         ani.SetTrigger("ComboEnd");
+        if (network)
+            network.RunTriggerRpc("ComboEnd");
     }
 
     public void Die()
     {
         ani.SetTrigger("Death");
+        if (network)
+            network.RunTriggerRpc("Death");
+    }
+
+    public void Network_SetTrigger(string name) 
+    {
+        ani.SetTrigger(name);
+    } 
+
+    public void Network_Effect()
+    {
+        RaycastHit2D hit;
+        if (hit = Physics2D.Raycast(transform.position - new Vector3(0, transform.localScale.y / 2), Vector3.down, 500f))
+        {
+            GameObject effect = Instantiate(temp);
+            effect.transform.position = hit.point;
+        }
     }
 
     void PlayerAnimation() // 조종하는 플레이어 캐릭터의 애니메이션 관리 -> 입력에 반응
@@ -158,6 +201,9 @@ public class AnimationManager : MonoBehaviour
         {
             State = AnimationState.Jump;
             ani.SetTrigger("Jump");
+            if (network)
+                network.RunTriggerRpc("Jump");
+                
         }
         if (State == AnimationState.Normal) 
         {
@@ -165,19 +211,29 @@ public class AnimationManager : MonoBehaviour
             {
                 State = AnimationState.Emotion;
                 ani.SetTrigger("Breaktime");
+                if (network)
+                    network.RunTriggerRpc("Breaktime");
             }
             if (Input.GetKeyDown(Punch))
             {
                 if (Input.GetKey(UpArrow))
                 {
                     ani.SetTrigger("Punch_Up");
+                    if (network)
+                        network.RunTriggerRpc("Punch_Up");
                 }
-                else if(!ani.GetBool("Down"))
+                else if (!ani.GetBool("Down"))
+                {
                     ani.SetTrigger("Punch");
+                    if (network)
+                        network.RunTriggerRpc("Punch");
+                }
             }
             if (Input.GetKeyDown(Kick))
             {
                 ani.SetTrigger("Kick");
+                if (network)
+                    network.RunTriggerRpc("Kick");
             }
             if (Input.GetKey(DownArrow))
             {
@@ -200,15 +256,20 @@ public class AnimationManager : MonoBehaviour
                 if (Input.GetKeyDown(Dash) && !ani.GetBool("Down"))
                 {
                     ani.SetTrigger("Dash");
+                    if (network)
+                        network.RunTriggerRpc("Dash");
                 }
             }
             if (Input.GetKeyUp(Catch))
             {
                 ani.SetTrigger("Catch");
+                if (network)
+                    network.RunTriggerRpc("Catch");
             }
             if (Input.GetKeyUp(Backstep))
             {
-                ani.SetTrigger("Dodge");
+                if (network)
+                    network.RunTriggerRpc("Dodge");
             }
             if (Input.GetKey(Heal))
             {

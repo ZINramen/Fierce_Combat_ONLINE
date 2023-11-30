@@ -40,6 +40,17 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - Network_Trigger
+  - Network_Effect
+  - Network_Hit
+  - SetHp
+  - Network_Thrust
+  - ShowCombo
+  - Catch
+  - Hit
+  - HitEffect
+  - ShowEmoticon
+  - ShowEffect
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

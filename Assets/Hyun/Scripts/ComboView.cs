@@ -29,7 +29,19 @@ public class ComboView : MonoBehaviour
             view.SetActive(true);
         else
             view.SetActive(false);
-        comboValue.text = currValue.ToString();
+
+        if (!owner.network)
+        {
+            comboValue.text = currValue.ToString();
+        }
+        else 
+        {
+            if (owner.network.combo > 1)
+                view.SetActive(true);
+            else
+                view.SetActive(false);
+            comboValue.text = owner.network.combo.ToString();
+        }
         StartCoroutine(CheckCombo());
     }
     IEnumerator CheckCombo() 

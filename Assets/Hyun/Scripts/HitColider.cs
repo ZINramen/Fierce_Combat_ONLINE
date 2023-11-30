@@ -15,11 +15,12 @@ public class HitColider : MonoBehaviour
         if (entity != owner)
         {
             entity.flyingDamagedPower = flyingAttackForce;
-       
+            
             if (owner.transform.localEulerAngles.y == 180)
-                entity.Dameged(attackForce, (-attackForce) * thrustValue);
+                entity.Damaged(attackForce, (-attackForce) * thrustValue);
             else
-                entity.Dameged(attackForce, attackForce * thrustValue);
+                entity.Damaged(attackForce, attackForce * thrustValue);
+                
         }
     }
 }

@@ -421,10 +421,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6886157256454924086, guid: db70d0e7ead27df49b6ce6c58dd82049, type: 3}
-      propertyPath: ComboUI
-      value: 
-      objectReference: {fileID: 2320536752282502563, guid: 02f78935d275c27478963ecf2e2006de, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -850,22 +846,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 188581463067392291, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
-      propertyPath: ComboUI
-      value: 
-      objectReference: {fileID: 2320536752282502563, guid: 02f78935d275c27478963ecf2e2006de, type: 3}
-    - target: {fileID: 261092784084560709, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
-      propertyPath: Dash
-      value: 102
-      objectReference: {fileID: 0}
-    - target: {fileID: 261092784084560709, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
-      propertyPath: Backstep
-      value: 122
-      objectReference: {fileID: 0}
-    - target: {fileID: 1655913352240248422, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.547
-      objectReference: {fileID: 0}
     - target: {fileID: 1698266127977137684, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.011
@@ -1072,6 +1052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1045773e672824daf99f5c8b2edde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  network: {fileID: 0}
+  Network_Catch: 0
   hp: 0
   movement: {fileID: 0}
   maxHP: 100
@@ -1129,7 +1111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
+  temp: {fileID: 0}
+  ecActive: 0
   rotationZ: 0
+  ani: {fileID: 0}
   State: 0
   isPlayer: 0
   isHuman: 0
