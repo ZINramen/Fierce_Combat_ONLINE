@@ -301,6 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148469019}
   - component: {fileID: 148469018}
+  - component: {fileID: 148469020}
   m_Layer: 0
   m_Name: LobbyCtrl
   m_TagString: Untagged
@@ -320,10 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9e0d6c7093e1841a7495780b435844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   isLobby: 1
-  Player1: {fileID: 5190726052694202441, guid: 832b6bd6ee6eeb1489a36c93d4822cf2, type: 3}
-  Player2: {fileID: 3116628648358586995, guid: ca7d576d0cdbdee4ebbcee14d1cd2ecb, type: 3}
   PlayerLobby: {fileID: 5190726052694202441, guid: a2fbe78fddb2ea546a20d1a679824fd1, type: 3}
 --- !u!4 &148469019
 Transform:
@@ -340,6 +338,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148469020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148469017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 4
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &154228583
 GameObject:
   m_ObjectHideFlags: 0

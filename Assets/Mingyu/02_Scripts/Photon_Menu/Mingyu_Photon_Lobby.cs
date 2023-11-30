@@ -28,6 +28,7 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     // 내부 룸 데이터 관리 리스트
     private List<RoomInfo> roomData_List = new List<RoomInfo>();
+    public int a = 0;
 
     // 채팅 관련 변수
     private ScrollRect  scRect;
@@ -54,21 +55,21 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     private bool isCreateRoom = false;                  
     #endregion
 
-    public static Mingyu_Photon_Lobby Instance
-    {
-        get
-        {
-            if(!instance)
-            {
-                instance = FindObjectOfType(typeof(Mingyu_Photon_Lobby)) as Mingyu_Photon_Lobby;
+    //public static Mingyu_Photon_Lobby Instance
+    //{
+    //    get
+    //    {
+    //        if(!instance)
+    //        {
+    //            instance = FindObjectOfType(typeof(Mingyu_Photon_Lobby)) as Mingyu_Photon_Lobby;
 
-                if (instance == null)
-                    Debug.Log("No SingleTon OBJ");
-            }
+    //            if (instance == null)
+    //                Debug.Log("No SingleTon OBJ");
+    //        }
 
-            return instance;
-        }
-    }
+    //        return instance;
+    //    }
+    //}
 
     private void Awake()
     {
@@ -80,7 +81,7 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     private void OnApplicationQuit()
     {
-        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.Disconnect();
     }
 
     private void Start()
@@ -154,6 +155,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             lobby.SetActive(false);
         }
 
+        PhotonNetwork.AutomaticallySyncScene = true;
+
         //pool = PhotonNetwork.PrefabPool as DefaultPool;
         //pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
     }
@@ -165,6 +168,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         {
             if (!item.RemovedFromList)
             {
+                Debug.Log("방 생성");
+
                 #region 룸 리스트 데이터 업데이트
                 // 룸 리스트에 존재하지 않는다면, 추가해준다.
                 if (!roomData_List.Contains(item))
@@ -201,6 +206,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             }
             else 
             {
+                Debug.Log("방 삭제");
+
                 roomData_List.RemoveAt(roomData_List.IndexOf(item));
 
                 foreach (Mingyu_RoomCtrl room in roomItems) 
@@ -214,7 +221,7 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
                 }
             }
         }
-        roomCount = roomList.Count; 
+        roomCount = roomList.Count;
         Debug.Log(roomList.Count);
     }
     #endregion
@@ -246,12 +253,6 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinOrCreateRoom("Lobby", new RoomOptions { MaxPlayers = 20 }, 
             new TypedLobby("Lobby", LobbyType.Default));
     }
-
-    //public void CreateRoomBtn() 
-    //{
-    //    // 테스트 용입니다.
-    //    PhotonNetwork.CreateRoom("TestRoom" + roomCount, new RoomOptions { MaxPlayers = 2 });
-    //}
 
     #region 로비 채팅 부분 코딩
     public void Chatting_Lobby(InputField inputChatting)
@@ -372,20 +373,25 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
-        PhotonNetwork.JoinLobby();
+        PhotonNetwork.ConnectUsingSettings();
+
         StartCoroutine(Enter_WaitRoom(roomName, isCreateRoom));
     }
 
     IEnumerator Enter_WaitRoom(string roomName, bool isCreateRoom)
     {
-        Debug.Log("Room NAme : " + roomName);
+        Debug.Log("Room Name : " + roomName);
+
+        yield return new WaitUntil(() => PhotonNetwork.IsConnected);
+        PhotonNetwork.JoinLobby();
 
         if (isCreateRoom)
         {
             // 로비에 들어갈 때까지 대기
             yield return new WaitUntil(() => PhotonNetwork.InLobby);
-            PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.CreateRoom(roomName, roomOptions);
+
+            Debug.Log("룸 만듬");
         }
         else
         {

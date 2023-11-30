@@ -6,6 +6,8 @@ using Photon.Pun;
 
 public class Mingyu_RoomCtrl : MonoBehaviourPunCallbacks
 {
+    private Mingyu_Photon_Lobby photonCtrl;
+
     public Text roomNameT;
     public Text playerNumberT;
     public Text StageNameT;
@@ -15,14 +17,23 @@ public class Mingyu_RoomCtrl : MonoBehaviourPunCallbacks
     // 방 리스트를 업데이트 할때, 인덱스를 업데이트함
     public int Set_RoomIndex { set => roomIndex = value; }
 
+    private void Start()
+    {
+        photonCtrl = GameObject.Find("Canvas").
+            gameObject.GetComponent<Mingyu_Photon_Lobby>();
+
+        if (photonCtrl == null)
+            return;
+    }
+
     public void Btn_EnterButton()
     {
-        Mingyu_Photon_Lobby.Instance.BtnEvent_JoinRoom(roomIndex);
+        photonCtrl.BtnEvent_JoinRoom(roomIndex);
     }
 
     public void Btn_EnterPWRoom()
     {
-        Mingyu_Photon_Lobby.Instance.EnterRoomWithPW(roomIndex);
+        photonCtrl.EnterRoomWithPW(roomIndex);
     }
 
     public void joinRoom()

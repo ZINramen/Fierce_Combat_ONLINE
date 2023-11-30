@@ -14,6 +14,13 @@ public class WaittingRoomCtrl : MonoBehaviourPun
     public bool isColl_RButton = false;
     public bool isGameStart = false;
 
+    private PhotonView pv;
+
+    private void Start()
+    {
+        pv = this.GetComponent<PhotonView>();
+    }
+
     private void Update()
     {
         if (!PhotonNetwork.IsMasterClient)
@@ -28,6 +35,7 @@ public class WaittingRoomCtrl : MonoBehaviourPun
 
             if (PhotonNetwork.IsMasterClient)
                 PhotonNetwork.LoadLevel("Test_Scene");
+
         }
     }
 }

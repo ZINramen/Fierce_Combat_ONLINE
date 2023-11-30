@@ -43,6 +43,8 @@ public class ButtonCtrl : MonoBehaviourPunCallbacks
 
         if(PhotonNetwork.IsMasterClient == true)
             pv.RPC("Set_CollPlayer", RpcTarget.All, is_Coll);
+
+        Debug.Log("Enter Another User");
     }
 
     // 플레이어가 나가면, false로 동기화
