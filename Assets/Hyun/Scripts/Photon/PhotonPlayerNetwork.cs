@@ -13,7 +13,7 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     [SerializeField] GameObject Player2;
     [SerializeField] GameObject PlayerLobby;
 
-    PhotonView pv;
+    DefaultPool pool;
 
     public void StageLoad(string name)
     {
@@ -25,6 +25,13 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        if (!PhotonNetwork.IsConnected)
+        {
+            /////////////////////네트워크////////////////////////
+            PhotonNetwork.GameVersion = "FierceFight 1.0";
+            PhotonNetwork.ConnectUsingSettings();
+        }
+
         if (!isLobby)
         {
             cam = Camera.main.GetComponent<DynamicCamera>();
@@ -37,17 +44,27 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
                 PhotonNetwork.Instantiate(Player2.name, Vector3.zero, Quaternion.identity);
             }
         }
-        if (!PhotonNetwork.IsConnected)
+        
+            Debug.Log("실행");
+
+        if(isLobby == true && PhotonNetwork.IsConnected)
         {
-            /////////////////////네트워크////////////////////////
-            PhotonNetwork.GameVersion = "FierceFight 1.0";
-            PhotonNetwork.ConnectUsingSettings();
-            ///////////////////////////////////////////////////// 
-            DefaultPool pool = PhotonNetwork.PrefabPool as DefaultPool;
+
+            //////////////////////////  /////////////////////////// 
+            pool = PhotonNetwork.PrefabPool as DefaultPool;
+
             pool.ResourceCache.Add(Player1.name, Player1);
             pool.ResourceCache.Add(Player2.name, Player2);
             pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
+
+            StartCoroutine(WaitSpawn(pool, PlayerLobby.name));
         }
+    }
+
+    IEnumerator WaitSpawn(DefaultPool pool, string lobbyPlayerName)
+    {
+        yield return new WaitUntil(() => pool.ResourceCache.ContainsKey(lobbyPlayerName));
+        PhotonNetwork.Instantiate(lobbyPlayerName, Vector3.zero, Quaternion.identity);
     }
 
     private void Update()
@@ -67,21 +84,7 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     /////////////////////네트워크////////////////////////
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
         base.OnJoinedRoom();
-       
-        PhotonNetwork.Instantiate(PlayerLobby.name, Vector3.zero, Quaternion.identity);
-    }
-    public override void OnJoinRoomFailed(short returnCode, string message)
-    {
-        base.OnJoinRoomFailed(returnCode, message);
-        PhotonNetwork.CreateRoom("Fight", new RoomOptions { MaxPlayers = 2 });
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        base.OnConnectedToMaster();
-        PhotonNetwork.JoinRoom("Fight");
     }
     /////////////////////////////////////////////////////
 }

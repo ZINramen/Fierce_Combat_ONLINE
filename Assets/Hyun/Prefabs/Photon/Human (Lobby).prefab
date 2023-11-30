@@ -11655,7 +11655,7 @@ GameObject:
   - component: {fileID: 266556382843409427}
   m_Layer: 3
   m_Name: Human (Lobby)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11998,6 +11998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcafe6221b0dcc743a730cf6097bb713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: {fileID: 0}
   pv: {fileID: 0}
   am: {fileID: 0}
   combo: 0
