@@ -25,6 +25,13 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        DefaultPool pool = PhotonNetwork.PrefabPool as DefaultPool;
+        if (!pool.ResourceCache.ContainsKey(Player1.name))
+        {
+            pool.ResourceCache.Add(Player1.name, Player1);
+            pool.ResourceCache.Add(Player2.name, Player2);
+            pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
+        }
         if (!isLobby)
         {
             cam = Camera.main.GetComponent<DynamicCamera>();
@@ -37,16 +44,16 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
                 PhotonNetwork.Instantiate(Player2.name, Vector3.zero, Quaternion.identity);
             }
         }
+        else
+        {
+            PhotonNetwork.Instantiate(PlayerLobby.name, Vector3.zero, Quaternion.identity);
+        }
         if (!PhotonNetwork.IsConnected)
         {
             /////////////////////네트워크////////////////////////
             PhotonNetwork.GameVersion = "FierceFight 1.0";
             PhotonNetwork.ConnectUsingSettings();
             ///////////////////////////////////////////////////// 
-            DefaultPool pool = PhotonNetwork.PrefabPool as DefaultPool;
-            pool.ResourceCache.Add(Player1.name, Player1);
-            pool.ResourceCache.Add(Player2.name, Player2);
-            pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
         }
     }
 
@@ -69,8 +76,6 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.AutomaticallySyncScene = true;
         base.OnJoinedRoom();
-       
-        PhotonNetwork.Instantiate(PlayerLobby.name, Vector3.zero, Quaternion.identity);
     }
     public override void OnJoinRoomFailed(short returnCode, string message)
     {

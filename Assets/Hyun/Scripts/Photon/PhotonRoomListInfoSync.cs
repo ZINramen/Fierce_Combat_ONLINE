@@ -10,8 +10,14 @@ public class PhotonRoomListInfoSync : MonoBehaviourPunCallbacks
     public Text playerNumberT;
     public Text StageNameT;
     // Start is called before the first frame update
-    void Start()
+    public void join()
     {
+        if (roomNameT.text != "")
+        {
+            PhotonNetwork.AutomaticallySyncScene = true;
+
+            PhotonNetwork.JoinRoom(roomNameT.text);
+        }
     }
 
     // Update is called once per frame

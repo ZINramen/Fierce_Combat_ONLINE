@@ -21,6 +21,7 @@ public class PhotonMenuSystem : MonoBehaviourPunCallbacks
     }
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+        Debug.Log("ddd");
         foreach (RoomInfo item in roomList) 
         {
             if (!item.RemovedFromList)
@@ -81,9 +82,16 @@ public class PhotonMenuSystem : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.NickName = inputName.text;
     }
-    public void CreateRoomBtn() 
+    public void CreateRoomBtn()
     {
         // 테스트 용입니다.
         PhotonNetwork.CreateRoom("TestRoom" + roomCount, new RoomOptions { MaxPlayers = 2 });
+    }
+
+    public override void OnJoinedRoom()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+        if (PhotonNetwork.IsMasterClient)
+            PhotonNetwork.LoadLevel("WaitingRoom TEST");
     }
 }
