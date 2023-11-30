@@ -14,8 +14,6 @@ public class PhotonRoomListInfoSync : MonoBehaviourPunCallbacks
     {
         if (roomNameT.text != "")
         {
-            PhotonNetwork.AutomaticallySyncScene = true;
-
             PhotonNetwork.JoinRoom(roomNameT.text);
         }
     }

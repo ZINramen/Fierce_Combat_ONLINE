@@ -48,13 +48,6 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.Instantiate(PlayerLobby.name, Vector3.zero, Quaternion.identity);
         }
-        if (!PhotonNetwork.IsConnected)
-        {
-            /////////////////////네트워크////////////////////////
-            PhotonNetwork.GameVersion = "FierceFight 1.0";
-            PhotonNetwork.ConnectUsingSettings();
-            ///////////////////////////////////////////////////// 
-        }
     }
 
     private void Update()

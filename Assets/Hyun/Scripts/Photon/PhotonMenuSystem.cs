@@ -18,6 +18,7 @@ public class PhotonMenuSystem : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
 
         Debug.Log("마스터 서버에 접속중입니다.");
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
@@ -90,7 +91,6 @@ public class PhotonMenuSystem : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
         if (PhotonNetwork.IsMasterClient)
             PhotonNetwork.LoadLevel("WaitingRoom TEST");
     }

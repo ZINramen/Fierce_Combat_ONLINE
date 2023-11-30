@@ -326,8 +326,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1424541805}
+  isLobby: 0
   Player1: {fileID: 5190726052694202441, guid: 832b6bd6ee6eeb1489a36c93d4822cf2, type: 3}
   Player2: {fileID: 3116628648358586995, guid: ca7d576d0cdbdee4ebbcee14d1cd2ecb, type: 3}
+  PlayerLobby: {fileID: 5190726052694202441, guid: a2fbe78fddb2ea546a20d1a679824fd1, type: 3}
 --- !u!1 &1082790343
 GameObject:
   m_ObjectHideFlags: 0
