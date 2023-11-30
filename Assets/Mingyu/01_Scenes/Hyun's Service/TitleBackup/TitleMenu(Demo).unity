@@ -6334,7 +6334,6 @@ MonoBehaviour:
   roomListView: {fileID: 1765217326}
   roomListItem: {fileID: 6228418956045941060, guid: e6186910cf77c434a8ef6cbc3ef92e21, type: 3}
   simpleAnim: {fileID: 929551537}
-  PlayerLobby: {fileID: 5190726052694202441, guid: a2fbe78fddb2ea546a20d1a679824fd1, type: 3}
   roomName: 
 --- !u!114 &1700280597
 MonoBehaviour:

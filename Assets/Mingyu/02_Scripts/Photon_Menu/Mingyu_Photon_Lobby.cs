@@ -19,8 +19,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
 
     // 민규가 코딩한 부분
     #region
-    [SerializeField] GameObject PlayerLobby;
-    DefaultPool pool;
+    //[SerializeField] GameObject PlayerLobby;
+    //DefaultPool pool;
 
     private PhotonView pv;
     private static Mingyu_Photon_Lobby instance;
@@ -76,6 +76,11 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
 
         Debug.Log("마스터 서버에 접속중입니다.");
+    }
+
+    private void OnApplicationQuit()
+    {
+        PhotonNetwork.LeaveRoom();
     }
 
     private void Start()
@@ -149,8 +154,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             lobby.SetActive(false);
         }
 
-        pool = PhotonNetwork.PrefabPool as DefaultPool;
-        pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
+        //pool = PhotonNetwork.PrefabPool as DefaultPool;
+        //pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
     }
 
     #region 방 리스트를 업데이트 하는 부분 (호현이쪽 코드)
@@ -387,19 +392,10 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
             yield return new WaitUntil(() => PhotonNetwork.InLobby);
             PhotonNetwork.JoinRoom(roomName);
         }
-        StartCoroutine(WaitSpawn(pool, PlayerLobby.name));
 
         // 방에 들어갈 때까지 대기
         yield return new WaitUntil(() => PhotonNetwork.InRoom);
         PhotonNetwork.LoadLevel("WaitingRoom");
-    }
-
-    IEnumerator WaitSpawn(DefaultPool pool, string lobbyPlayerName)
-    {
-        Debug.Log("AAAA");
-
-        yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "WaitingRoom");
-        PhotonNetwork.Instantiate(lobbyPlayerName, Vector3.zero, Quaternion.identity);
     }
 
     //public void BtnEvent_EnterRoom()
