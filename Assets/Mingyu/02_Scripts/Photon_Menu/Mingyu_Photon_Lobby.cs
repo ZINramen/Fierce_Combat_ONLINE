@@ -292,9 +292,6 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("방 생성 버튼 클릭");
 
-        title_UI.SetActive(false);
-        lobby.SetActive(false);
-
         makeRoom_Panel.SetActive(true);
     }
 
