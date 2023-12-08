@@ -3,15 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StageCtrl : MonoBehaviour
 {
-    public Entity[] PlayerList //player 목록
-    { get; set; }
     private int playerNumber; //살아 있는 player 수
     private Entity superPlayer; //가장 HP가 많은 player
 
+    public Entity[] PlayerList { get; set; } //player 목록
     public Transform[] playerFirstLocations; //player 시작 위치
+
+    [Space]
+    public Image HP_Bar1P;
+    public Image HP_Bar2P;
+
+    [Space]
+    public Image SpecialGauge_1P;
+    public Image SpecialGauge_2P;
+
+    [Space]
+    public Image[] SkillIcons1P;
+    public Image[] SkillIcons2P;
 
     public enum GameResult { Win, Draw, Lose };
     public static GameResult result = GameResult.Draw;
@@ -26,10 +38,12 @@ public class StageCtrl : MonoBehaviour
         PlayerList = FindObjectsOfType<Entity>(); //Entity를 가진 객체로 리스트를 만듬
         playerNumber = PlayerList.Length; //처음은 살아있으므로 리스트에 넣음
         superPlayer = PlayerList[0]; //임시로 superPlayer 설정
+
         //플레이어 위치 설정
         PlayerList[0].transform.position = playerFirstLocations[0].position;
         PlayerList[1].transform.position = playerFirstLocations[1].position;
 
+        CreateUIManager(); //UIManager 생성
         //Debug.Log("플레이어 수" + playerNumber);
         //Debug.Log("플레이어1" + PlayerList[0].name);
         //Debug.Log("플레이어2" + PlayerList[1].name);
@@ -70,10 +84,19 @@ public class StageCtrl : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void CreateUIManager()
     {
-        
-    }
+        GameObject UIObj = new GameObject("UIManager");
+        UICtrl myUICtrl = UIObj.AddComponent<UICtrl>();
 
+        myUICtrl.HP_Bar1P = HP_Bar1P;
+        myUICtrl.HP_Bar2P = HP_Bar2P;
+        myUICtrl.SpecialGauge_1P = SpecialGauge_1P;
+        myUICtrl.SpecialGauge_2P = SpecialGauge_2P;
+        myUICtrl.SkillIcons1P = SkillIcons1P;
+        myUICtrl.SkillIcons2P = SkillIcons2P;
+
+        myUICtrl.Player1 = PlayerList[0];
+        myUICtrl.Player2 = PlayerList[1];
+    }
 }
