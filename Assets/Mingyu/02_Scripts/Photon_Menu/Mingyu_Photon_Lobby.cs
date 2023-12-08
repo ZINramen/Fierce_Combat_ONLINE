@@ -200,6 +200,15 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
                     sync.playerNumberT.text = item.PlayerCount.ToString();
 
                     sync.Set_RoomIndex = roomData_List.IndexOf(item);
+
+                    if (item.CustomProperties["stageName"] != null)
+                    {
+                        Debug.Log(item.CustomProperties["stageName"].ToString());
+                        sync.StageNameT.text = item.CustomProperties["stageName"].ToString();
+                        Debug.Log("AA");
+                    }
+                    else
+                        Debug.Log("이름 없음");
                 }
                 if (item != null)
                     roomItems.Add(sync);
@@ -225,6 +234,12 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         Debug.Log(roomList.Count);
     }
     #endregion
+
+    public override void OnPlayerPropertiesUpdate(Player targetPlayer, HashTable changedProps)
+    {
+        base.OnPlayerPropertiesUpdate(targetPlayer, changedProps);
+        Debug.Log("바뀜");
+    }
 
     public override void OnConnectedToMaster()
     {
@@ -302,16 +317,28 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         roomOptions.MaxPlayers = 2;
         Debug.Log(pw_Toggle.isOn);
 
+        string default_StageName = "피치 성 외각 ";
+
         if (pw_Toggle.isOn)
         {
             string InputPWord = makeRoom_Panel.transform.Find("RoomPassword_InputField").
                             GetComponent<InputField>().text;
 
             roomOptions.CustomRoomPropertiesForLobby = new string[] { "password" };
+            roomOptions.CustomRoomPropertiesForLobby = new string[] { "stageName" };
 
             roomOptions.CustomRoomProperties = new HashTable()
             {
-                { "password", InputPWord }
+                { "password", InputPWord },
+                { "stageName", default_StageName }
+            };
+        }
+        else
+        {
+            roomOptions.CustomRoomPropertiesForLobby = new string[] { "stageName" };
+            roomOptions.CustomRoomProperties = new HashTable()
+            {
+                { "stageName", default_StageName }
             };
         }
 
