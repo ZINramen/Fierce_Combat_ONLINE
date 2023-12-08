@@ -43,7 +43,7 @@ public class GoombaCtrl : MonoBehaviour
             }
             else
             {
-                temp.GetComponent<Entity>().Dameged(10, 10);
+                temp.GetComponent<Entity>().Damaged(10, 10);
             }
         }
     }

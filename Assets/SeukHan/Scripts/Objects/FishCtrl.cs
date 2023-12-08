@@ -37,7 +37,7 @@ public class FishCtrl : MonoBehaviour
     {
         GameObject temp = coll.gameObject;
 
-        if (temp.layer == LayerMask.NameToLayer("Entity")) temp.GetComponent<Entity>().Dameged(10, 5);
+        if (temp.layer == LayerMask.NameToLayer("Entity")) temp.GetComponent<Entity>().Damaged(10, 5);
     }
 
     // Update is called once per frame

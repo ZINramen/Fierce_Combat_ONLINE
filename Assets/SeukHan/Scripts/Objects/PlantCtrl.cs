@@ -42,7 +42,7 @@ public class PlantCtrl : MonoBehaviour
 
         if (temp.layer == LayerMask.NameToLayer("Entity"))
         {
-            temp.GetComponent<Entity>().Dameged(10, 10);
+            temp.GetComponent<Entity>().Damaged(10, 10);
         }
     }
 
