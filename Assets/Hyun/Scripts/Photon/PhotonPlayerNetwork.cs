@@ -1,85 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 {
-    public DynamicCamera cam;
     public bool isLobby = false;
 
-    [SerializeField] GameObject Player1;
-    [SerializeField] GameObject Player2;
     [SerializeField] GameObject PlayerLobby;
 
-    PhotonView pv;
-
-    public void StageLoad(string name)
-    {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            PhotonNetwork.LoadLevel(name);
-        }
-    }
+    DefaultPool pool;
 
     private void Start()
     {
-        DefaultPool pool = PhotonNetwork.PrefabPool as DefaultPool;
-        if (!pool.ResourceCache.ContainsKey(Player1.name))
+        pool = PhotonNetwork.PrefabPool as DefaultPool;
+        Debug.Log("실행");
+
+        if (pool != null && !pool.ResourceCache.ContainsKey(PlayerLobby.name))
         {
-            pool.ResourceCache.Add(Player1.name, Player1);
-            pool.ResourceCache.Add(Player2.name, Player2);
             pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
-        }
-        if (!isLobby)
-        {
-            cam = Camera.main.GetComponent<DynamicCamera>();
-            if (PhotonNetwork.IsMasterClient)
+
+            // PhotonNetwork.InRoom으로 방에 있을 때만 실행되도록 수정
+            if (PhotonNetwork.InRoom && SceneManager.GetActiveScene().name == "WaitingRoom")
             {
-                PhotonNetwork.Instantiate(Player1.name, Vector3.zero, Quaternion.identity);
+                StartCoroutine(WaitSpawn(pool));
             }
             else
             {
-                PhotonNetwork.Instantiate(Player2.name, Vector3.zero, Quaternion.identity);
+                // 방에 들어갈 때까지 대기하는 코루틴을 실행
+                StartCoroutine(WaitForJoinRoom(pool));
             }
         }
+
         else
-        {
-            PhotonNetwork.Instantiate(PlayerLobby.name, Vector3.zero, Quaternion.identity);
-        }
+            Debug.Log("저장x");
+
     }
 
-    private void Update()
+    IEnumerator WaitForJoinRoom(DefaultPool pool)
     {
-        if(cam)
-        if (!cam.enabled)
-        {
-            Entity[] entitys = FindObjectsByType<Entity>(FindObjectsSortMode.None);
-            if (entitys.Length > 1)
-            {
-                cam.enabled = true;
-            }
-        }
+        yield return new WaitUntil(() => PhotonNetwork.InRoom && SceneManager.GetActiveScene().name == "WaitingRoom");
+
+        // 방에 들어간 후에 WaitSpawn 코루틴 실행
+        StartCoroutine(WaitSpawn(pool));
     }
 
+    IEnumerator WaitSpawn(DefaultPool pool)
+    {
+        yield return new WaitForSeconds(0.5f); // 적절한 대기 시간
+        PhotonNetwork.Instantiate(PlayerLobby.name, Vector3.zero, Quaternion.identity);
 
-    /////////////////////네트워크////////////////////////
-    public override void OnJoinedRoom()
-    {
-        PhotonNetwork.AutomaticallySyncScene = true;
-        base.OnJoinedRoom();
+        Debug.Log("생성");
     }
-    public override void OnJoinRoomFailed(short returnCode, string message)
-    {
-        base.OnJoinRoomFailed(returnCode, message);
-        PhotonNetwork.CreateRoom("Fight", new RoomOptions { MaxPlayers = 2 });
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        base.OnConnectedToMaster();
-        PhotonNetwork.JoinRoom("Fight");
-    }
-    /////////////////////////////////////////////////////
 }

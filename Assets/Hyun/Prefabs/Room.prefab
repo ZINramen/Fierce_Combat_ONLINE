@@ -359,7 +359,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1015331306946720165}
         m_TargetAssemblyTypeName: PhotonRoomListInfoSync, Assembly-CSharp
-        m_MethodName: join
+        m_MethodName: joinRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
