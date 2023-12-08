@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 
 public class WaittingRoomCtrl : MonoBehaviourPun
@@ -15,6 +16,10 @@ public class WaittingRoomCtrl : MonoBehaviourPun
     public bool isGameStart = false;
 
     private PhotonView pv;
+
+    private string select_StageName = "피치 성 외각";
+    private Color brightColor = new Color(1.0f, 1.0f, 1.0f);
+    private Color darkColor = new Color(0.8f, 0.8f, 0.8f);
 
     private void Start()
     {
@@ -35,7 +40,35 @@ public class WaittingRoomCtrl : MonoBehaviourPun
 
             if (PhotonNetwork.IsMasterClient)
                 PhotonNetwork.LoadLevel("Test_Scene");
-
         }
     }
+
+    #region 스테이지 선택 버튼 클릭 코드
+
+    public void BtnClick_BrightBtn(GameObject buttonImage)
+    {
+        buttonImage.GetComponent<Image>().color = brightColor;
+    }
+
+    public void BtnClick_DarkBtn(GameObject buttonImage)
+    {
+        buttonImage.GetComponent<Image>().color = darkColor;
+    }
+
+    public void BtnClick_StageSelect()
+    {
+        if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"] != null)
+        {
+            ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable();
+            customRoomProperties.Add("stageName", select_StageName);
+            PhotonNetwork.CurrentRoom.SetCustomProperties(customRoomProperties);
+        }
+    }
+
+    public void BtnClick_Set_StageName(string stage_Name)
+    {
+        select_StageName = stage_Name;
+    }
+
+    #endregion
 }
