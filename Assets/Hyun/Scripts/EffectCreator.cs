@@ -3,11 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 public class EffectCreator : MonoBehaviour
 {
+    DynamicCamera cam;
     PhotonPlayer network;
+
+    public Transform HammerEffect;
+
     private void Start()
     {
         network = GetComponent<PhotonPlayer>();
+        cam = Camera.main.GetComponent<DynamicCamera>();
     }
+
+    public void CameraDownEffect(float strength)
+    {
+        cam.downOffsetY = strength;
+    }
+
+    public void PlayEffectWithTransform(string name)
+    {
+        if(name == "Hammer" && HammerEffect)
+        {
+            GameObject temp = Resources.Load<GameObject>("Effects/StrongHitEffect");
+            temp = Instantiate(temp);
+            temp.transform.position = HammerEffect.position - new Vector3(0,0.2f,0);
+            temp.transform.localEulerAngles = new Vector3(0, 0, 90);
+            temp.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        }
+    }
+
     public void PlayEffect(string effectName, RaycastHit2D hit)
     {
         GameObject temp = Resources.Load<GameObject>("Effects/" + effectName);

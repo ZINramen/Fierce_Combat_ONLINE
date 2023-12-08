@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HitColider : MonoBehaviour
 {
+    public bool stunTarget = false;
     public float flyingAttackForce = 0;
     public float attackForce = 10;
     public float thrustValue = 0.5f;
@@ -14,13 +15,16 @@ public class HitColider : MonoBehaviour
         if(entity)
         if (entity != owner)
         {
+            entity.stun = stunTarget;
             entity.flyingDamagedPower = flyingAttackForce;
-            
             if (owner.transform.localEulerAngles.y == 180)
+            {
                 entity.Damaged(attackForce, (-attackForce) * thrustValue);
+            }
             else
+            {
                 entity.Damaged(attackForce, attackForce * thrustValue);
-                
+            }
         }
     }
 }

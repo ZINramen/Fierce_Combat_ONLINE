@@ -13,7 +13,9 @@ public class DynamicCamera : MonoBehaviour
     [Header("Camera Area Control")]
     public float offsetX = 0;
     public float offsetY = 0;
-    
+
+    public float downOffsetY = 0;
+
     [Space]
 
     [Header("Camera Shake Control")]
@@ -68,6 +70,11 @@ public class DynamicCamera : MonoBehaviour
        
         else if (shakePowerTemp < 0)
             shakePowerTemp = 0;
+
+        if (downOffsetY > 0)
+            downOffsetY -= shakeReductionSpeed * 2 * Time.deltaTime;
+        else if (downOffsetY < 0)
+            downOffsetY = 0;
     }
 
     void LateUpdate()
@@ -78,7 +85,7 @@ public class DynamicCamera : MonoBehaviour
         targetingPointX = (player1.position.x + player2.position.x) / 2;
         targetingPointY = (player1.position.y + player2.position.y) / 2;
 
-        targetingPoint = new Vector3(targetingPointX + offsetX, targetingPointY + offsetY, transform.localEulerAngles.z);
+        targetingPoint = new Vector3(targetingPointX + offsetX, targetingPointY + offsetY - downOffsetY, transform.localEulerAngles.z);
         transform.position = Vector3.Lerp(transform.position, targetingPoint, moveSpeed * Time.deltaTime);
         
         farAmount = Mathf.Abs(player1.position.magnitude - player2.position.magnitude) * size_AddValue + size_OriginalValue;

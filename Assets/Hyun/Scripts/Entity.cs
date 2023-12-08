@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class Entity : MonoBehaviour
 {
-
+    public bool stun = false;
     private int[] keyValues;
 
     public PhotonPlayer network;
@@ -98,9 +98,8 @@ public class Entity : MonoBehaviour
         if (hp <= 0 && !isDie)
         {
             DamageBlock = DefenseStatus.invincible;
-            isDie = true;
-            hp = 0;
             aManager.Die();
+            hp = 0;
         }
     }
 
@@ -198,7 +197,12 @@ public class Entity : MonoBehaviour
         return hp;
     }
 
-
+    public void SuperDamaged(float damageValue, float thrustValue)
+    {
+        stun = true;
+        Damaged(damageValue, thrustValue);
+    }
+    
     public void Damaged(float damageValue, float thrustValue)
     {
         if (DamageBlock == DefenseStatus.invincible) return;

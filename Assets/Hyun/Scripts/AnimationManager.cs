@@ -7,6 +7,7 @@ using Photon.Realtime;
 
 public class AnimationManager : MonoBehaviour
 {
+    SkillManager skillManager;
     PhotonPlayer network;
     public Entity owner;
     public GameObject temp;
@@ -48,6 +49,7 @@ public class AnimationManager : MonoBehaviour
     {
         network = GetComponent<PhotonPlayer>();
         ani = GetComponent<Animator>();
+        skillManager = GetComponent<SkillManager>();
         if (network)
             network.am = this;
     }
@@ -151,17 +153,39 @@ public class AnimationManager : MonoBehaviour
         {
             if(actionCam)
                 actionCam.ShakeScreen(5);
-            ani.SetTrigger("Hit_Upgrade");
-            if (network)
-                network.RunTriggerRpc("Hit_Upgrade");
+
+            if (!owner.stun)
+            {
+                ani.SetTrigger("Hit_Upgrade");
+                if (network)
+                    network.RunTriggerRpc("Hit_Upgrade");
+            }
+            else 
+            {
+
+                ani.SetTrigger("Stun");
+                if (network)
+                    network.RunTriggerRpc("Stun");
+                owner.stun = false;
+            }
         }
         else
         {
             if (actionCam)
                 actionCam.ShakeScreen(5);
-            ani.SetTrigger("Hit");
-            if (network)
-                network.RunTriggerRpc("Hit");
+            if (!owner.stun) 
+            {
+                ani.SetTrigger("Hit");
+                if (network)
+                    network.RunTriggerRpc("Hit"); 
+            }
+            else
+            {
+                ani.SetTrigger("Stun");
+                if (network)
+                    network.RunTriggerRpc("Stun");
+                owner.stun = false;
+            }
         }
 
     }
@@ -234,6 +258,21 @@ public class AnimationManager : MonoBehaviour
                 ani.SetTrigger("Kick");
                 if (network)
                     network.RunTriggerRpc("Kick");
+            }
+            for (int i = 0; i < 8; i++) 
+            {
+                if (Input.GetKeyDown((KeyCode)(i + 49)))
+                {
+                    if(skillManager)
+                    {
+                        if(skillManager.skills[i] != "") 
+                        {
+                            ani.SetTrigger(skillManager.skills[i]);
+                            if (network)
+                                network.RunTriggerRpc(skillManager.skills[i]);
+                        }
+                    }
+                } 
             }
             if (Input.GetKey(DownArrow))
             {

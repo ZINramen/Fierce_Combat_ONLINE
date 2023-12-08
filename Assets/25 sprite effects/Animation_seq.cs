@@ -20,5 +20,9 @@ public class Animation_seq: MonoBehaviour
     {
         rendererMy.sharedMaterial.SetTexture("_MainTex", frames[frameIndex]);
         frameIndex = (frameIndex + 0001) % frames.Length;
+        if(frameIndex == frames.Length - 1) 
+        {
+            Destroy(this.gameObject, 1 / fps);
+        }
     }
 }

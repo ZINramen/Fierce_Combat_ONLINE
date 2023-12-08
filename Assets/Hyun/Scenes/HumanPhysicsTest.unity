@@ -362,6 +362,7 @@ MonoBehaviour:
   AutoSet: 1
   offsetX: 0
   offsetY: 0
+  downOffsetY: 0
   shakePowerTest: 0
   shakePowerTemp: 0
   shakeReductionSpeed: 10
@@ -935,6 +936,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human
       objectReference: {fileID: 0}
+    - target: {fileID: 5172570470041583196, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
+      propertyPath: attackForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172570470041583196, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
+      propertyPath: flyingAttackForce
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311680616694252135, guid: 5b649b63b0038ea4996833cfb1cc0b24, type: 3}
+      propertyPath: skills.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1097,6 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1045773e672824daf99f5c8b2edde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stun: 0
   network: {fileID: 0}
   Network_Catch: 0
   hp: 0

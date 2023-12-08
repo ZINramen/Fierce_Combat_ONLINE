@@ -8952,6 +8952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f775fbd5041ae8a4dad2101adc6ffd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HammerEffect: {fileID: 0}
 --- !u!114 &2298505158924605654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8982,7 +8983,7 @@ MonoBehaviour:
   currentCombo: 0
   maxcombo: 20
   ComboUI: {fileID: 2320536752282502563, guid: 02f78935d275c27478963ecf2e2006de, type: 3}
-  HitEffect: {fileID: 7483179238230582619, guid: 108bafd67ab773b4a80e2c76f624f622, type: 3}
+  HitEffect: {fileID: 5302201665987482517, guid: 10ecd86e54fbd744baa1f69bb0995cc2, type: 3}
   StrongHitEffect: {fileID: 5942996768073886119, guid: a1a7b4ac36c2cac4690161d6213c9499, type: 3}
   HitTextEffect: {fileID: 8229482444463616188, guid: 67ebec0b8db95af4080e234f6cc20919, type: 3}
   StrongHitTextEffect: {fileID: 5314262938032755345, guid: f1fcb19798d1ef84db2582311fbb55f0, type: 3}
@@ -9084,6 +9085,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Death
+  - Type: 9
+    SynchronizeType: 0
+    Name: Hammer
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
