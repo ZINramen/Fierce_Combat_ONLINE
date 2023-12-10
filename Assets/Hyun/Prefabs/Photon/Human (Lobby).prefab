@@ -10310,6 +10310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf252014a19b942bc4983ce0bcf63a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  telp: 0
+  stunTarget: 0
   flyingAttackForce: 5
   attackForce: 10
   thrustValue: 0.2
@@ -11802,6 +11804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   speed: 3
+  super: 0
   JumpPower: 3
   PlayerType: 0
   StopMove: 0
@@ -11864,6 +11867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1045773e672824daf99f5c8b2edde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stun: 0
   network: {fileID: 0}
   Network_Catch: 0
   hp: 0

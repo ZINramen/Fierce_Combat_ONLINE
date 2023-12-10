@@ -29,6 +29,17 @@ public class EffectCreator : MonoBehaviour
             temp.transform.localEulerAngles = new Vector3(0, 0, 90);
             temp.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
+        else
+        {
+            GameObject temp = Resources.Load<GameObject>("Effects/" + name);
+            temp = Instantiate(temp);
+            temp.transform.position = transform.root.position;
+            temp.transform.localEulerAngles = new Vector3(0, transform.root.localEulerAngles.y, 0);
+            
+            HitColider dot = temp.GetComponent<HitColider>();
+            if (dot)
+                dot.owner = transform.root.GetComponent<Entity>();
+        }
     }
 
     public void PlayEffect(string effectName, RaycastHit2D hit)

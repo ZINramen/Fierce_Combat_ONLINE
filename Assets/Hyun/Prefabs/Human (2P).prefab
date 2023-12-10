@@ -7224,6 +7224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1045773e672824daf99f5c8b2edde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stun: 0
   network: {fileID: 0}
   Network_Catch: 0
   hp: 0
@@ -11249,6 +11250,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1905942920916772409}
   - {fileID: 183980134167726277}
   - {fileID: 7680065189023591449}
   - {fileID: 8435091202878614070}
@@ -13858,6 +13860,152 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6216888734534209179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1905942920916772409}
+  - component: {fileID: 7770609530964960517}
+  - component: {fileID: 3259067887532058761}
+  - component: {fileID: 3040405892654284546}
+  - component: {fileID: 985615617597674098}
+  m_Layer: 0
+  m_Name: ef_21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1905942920916772409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216888734534209179}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -1.219, y: 0.657, z: 0}
+  m_LocalScale: {x: 0.14100966, y: 0.16712269, z: 0.14205424}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 434223957128522451}
+  m_LocalEulerAnglesHint: {x: -270, y: -90, z: 90}
+--- !u!33 &7770609530964960517
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216888734534209179}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &3259067887532058761
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216888734534209179}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3040405892654284546
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216888734534209179}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: af44c90624593ca4595f9e9affcffcff, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &985615617597674098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216888734534209179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91edf3c5d40935045bc1d74636015911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fps: 24
+  frames:
+  - {fileID: 2800000, guid: dae405f1927e89049b00fdb0714eeaa4, type: 3}
+  - {fileID: 2800000, guid: ece52f5ca54d33345954535cc5bcaee3, type: 3}
+  - {fileID: 2800000, guid: 03a293712685fbe458fe230f7c943819, type: 3}
+  - {fileID: 2800000, guid: 4324118b04960dc478a5efbdc8a019d1, type: 3}
+  - {fileID: 2800000, guid: 68c0475a20392724f82268d646e9354b, type: 3}
+  - {fileID: 2800000, guid: bb1e4bedd7f58314d8423ebfd9db8613, type: 3}
+  - {fileID: 2800000, guid: fad5e7540e7a2bb4dbbcabb803cf9027, type: 3}
+  - {fileID: 2800000, guid: 39e80080854d1de47bbc60592d2d3d46, type: 3}
+  - {fileID: 2800000, guid: 57ee10d79b72ec943b2a358b0281526e, type: 3}
+  - {fileID: 2800000, guid: 32e33f8e5a97a8a41a096194a8d2957f, type: 3}
+  - {fileID: 2800000, guid: 5f17f7e9a2ffcf548917ed7131c08a85, type: 3}
+  - {fileID: 2800000, guid: b2ca8f196bf37814d831ae57762e3714, type: 3}
+  - {fileID: 2800000, guid: 59b50a2849be4cd47831d4759d4f398f, type: 3}
+  - {fileID: 2800000, guid: eca33fc0f5daf6648802b9b0f4264ab1, type: 3}
+  - {fileID: 2800000, guid: ab651e6d6f76fc04192f92f27a13b23d, type: 3}
+  - {fileID: 2800000, guid: a91de885158057a40a95ab8892cfd3ab, type: 3}
+  - {fileID: 2800000, guid: e9e7b8dc04603bf488b4a6430a5860d5, type: 3}
+  - {fileID: 2800000, guid: eb7485688825b4a46825f0cf7e922a24, type: 3}
+  - {fileID: 2800000, guid: 2b6c1b5ff62aae449859bff2dd60fcbd, type: 3}
+  - {fileID: 2800000, guid: 62ce17bd03f73c34d8defd8c63273ba3, type: 3}
+  - {fileID: 2800000, guid: b6f616cf38d260941b0e509ed1ca1b3c, type: 3}
+  - {fileID: 2800000, guid: d5eb02a0c617b804f85a776c1e0d7fa8, type: 3}
+  - {fileID: 2800000, guid: 45effa36c4160af4f9e5e5a0ae89d1c9, type: 3}
+  - {fileID: 2800000, guid: 145100831e9b6fd4295eeb1088f1d4ba, type: 3}
+  loop: 1
 --- !u!1 &6329895897400935839
 GameObject:
   m_ObjectHideFlags: 0
@@ -15463,6 +15611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf252014a19b942bc4983ce0bcf63a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stunTarget: 0
   flyingAttackForce: 5
   attackForce: 10
   thrustValue: 0.2

@@ -66,6 +66,8 @@ public class Entity : MonoBehaviour
 
     private void Update()
     {
+        if (maxHP == 9999)
+            hp = 9999;
         if (emoticon && network && network.pv.IsMine)
             foreach (KeyCode key in keyValues)
             {
@@ -246,8 +248,7 @@ public class Entity : MonoBehaviour
 
                 if (HitEffect && damageValue > 0)
                 {
-                    if (flyingDamagedPower <= 0)
-                        PlayHitEffect(damageValue);
+                    PlayHitEffect(damageValue);
                 }
 
                 if (!network || PhotonNetwork.IsMasterClient)

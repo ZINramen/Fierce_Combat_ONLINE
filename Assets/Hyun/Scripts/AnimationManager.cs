@@ -138,6 +138,12 @@ public class AnimationManager : MonoBehaviour
         ani.ResetTrigger("Catch");
         ani.ResetTrigger("Dodge");
         ani.ResetTrigger("Dash");
+        ani.ResetTrigger("Gun");
+        ani.ResetTrigger("Sword");
+        ani.ResetTrigger("Hamemr");
+        ani.ResetTrigger("Kunai");
+        ani.ResetTrigger("Potion");
+
     }
 
     void StateChange(AnimationState newState) 
@@ -290,14 +296,11 @@ public class AnimationManager : MonoBehaviour
             {
                 ani.SetBool("Defense", false);
             }
-            if (Input.GetAxis("Horizontal") == 0)
+            if (Input.GetKeyDown(Dash) && !ani.GetBool("Down"))
             {
-                if (Input.GetKeyDown(Dash) && !ani.GetBool("Down"))
-                {
-                    ani.SetTrigger("Dash");
-                    if (network)
-                        network.RunTriggerRpc("Dash");
-                }
+                ani.SetTrigger("Dash");
+                if (network)
+                    network.RunTriggerRpc("Dash");
             }
             if (Input.GetKeyUp(Catch))
             {

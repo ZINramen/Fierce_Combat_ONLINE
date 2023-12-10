@@ -14,7 +14,8 @@ public class Movement : MonoBehaviour
     [Header("Movement Value")]
     [Tooltip("이동 속도")]
     public float speed = 5f;
-
+    public bool super = false;
+ 
     [Tooltip("점프력")]
     public float JumpPower = 5f;
 
@@ -63,7 +64,25 @@ public class Movement : MonoBehaviour
     void Update()
     {
         PhysicChange();
+        if (super)
+            SuperMove();
     }
+    private void SuperMove() 
+    {
+        float ve,he;
+
+        if (is2P)
+            he = Input.GetAxis("Horizontal_2P");
+        else
+            he = Input.GetAxis("Horizontal");
+        if (is2P)
+            ve = Input.GetAxis("Vertical_2P");
+        else
+            ve = Input.GetAxis("Vertical");
+
+        body.AddForce((Vector3.up * ve * 3f) + Vector3.right * he * 3);
+    }
+
     private void Move()
     {
         body.sharedMaterial = pMaterial;
