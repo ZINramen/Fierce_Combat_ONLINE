@@ -8,6 +8,7 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
 {
     public GameObject effect;
 
+    EffectCreator ec;
     public PhotonView pv;
     Movement mv;
     Entity entity;
@@ -36,12 +37,13 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
     }
     public void HpChange()
     {
-        pv.RPC("SetHpNetwork", RpcTarget.Others, entity.GetHp());
+        pv.RPC("SetHp", RpcTarget.Others, entity.GetHp());
     }
     public void NetworkSyncEffect(Vector2 pos) 
     {
         pv.RPC("ShowEffect", RpcTarget.Others, pos);
     }
+
 
     [PunRPC]
     public void ShowEmoticon(int value)
@@ -55,6 +57,7 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
         GameObject temp = Instantiate(effect);
         temp.transform.position = pos;
     }
+
 
     [PunRPC]
     public void ShowCombo()
@@ -74,7 +77,6 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
     }
 
 
-
     [PunRPC]
     public void Network_Trigger(string name)
     {
@@ -84,17 +86,18 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
     [PunRPC]
     public void SetHp(float value)
     {
-        entity.SetHp(value);
+        entity.SetHpNetwork(value);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        ec = GetComponent<EffectCreator>();
         entity = GetComponent<Entity>();
         pv = GetComponent<PhotonView>();
         mv = GetComponent<Movement>();
         am = GetComponent<AnimationManager>();
-
+        
         if (pv.IsMine)
         {
             mv.PlayerType = true;

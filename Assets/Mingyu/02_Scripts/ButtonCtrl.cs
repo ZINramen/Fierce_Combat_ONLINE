@@ -6,6 +6,9 @@ using Photon.Realtime;
 
 public class ButtonCtrl : MonoBehaviourPunCallbacks
 {
+    public Sprite On;
+    public Sprite Off;
+
     // 버튼이 스크린을 가지고 있다.
     public GameObject OK_Screen;
     public GameObject RoomCtrl;
@@ -22,6 +25,7 @@ public class ButtonCtrl : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
+        GetComponent<SpriteRenderer>().sprite = On;
         if (coll.gameObject.tag == "Player")
         {
             pv.RPC("Set_CollPlayer", RpcTarget.All, true);
@@ -30,6 +34,7 @@ public class ButtonCtrl : MonoBehaviourPunCallbacks
 
     private void OnTriggerExit2D(Collider2D coll)
     {
+        GetComponent<SpriteRenderer>().sprite = Off;
         if (coll.gameObject.tag == "Player")
         {
             pv.RPC("Set_CollPlayer", RpcTarget.All, false);
@@ -58,5 +63,10 @@ public class ButtonCtrl : MonoBehaviourPunCallbacks
     {
         OK_Screen.SetActive(isColl_Player);
         is_Coll = isColl_Player;
+
+        if(is_Coll)
+            GetComponent<SpriteRenderer>().sprite = On;
+        else
+            GetComponent<SpriteRenderer>().sprite = Off;
     }
 }

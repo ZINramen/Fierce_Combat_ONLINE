@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 
 public class Entity : MonoBehaviour
@@ -17,7 +18,7 @@ public class Entity : MonoBehaviour
 
     public Movement movement;
 
-    private float waitTime = 0;
+    public float waitTime = 0;
 
     public float maxHP = 100;
     public LayerMask target;
@@ -50,6 +51,7 @@ public class Entity : MonoBehaviour
     public GameObject CoolTextEffect;
 
     public EmoticonController emoticon;
+    public RectTransform ultScreen;
 
     private void Awake()
     {
@@ -66,6 +68,18 @@ public class Entity : MonoBehaviour
 
     private void Update()
     {
+        if (ultScreen) 
+        {
+            if(transform.localEulerAngles.y != 0) 
+            {
+                ultScreen.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else 
+            {
+                ultScreen.rotation = Quaternion.Euler(0, 180, 0);
+            }
+
+        }
         if (maxHP == 9999)
             hp = 9999;
         if (emoticon && network && network.pv.IsMine)
@@ -230,7 +244,7 @@ public class Entity : MonoBehaviour
             {
                 movement.Jump(flyingDamagedPower);
             }
-            if (DamageBlock != DefenseStatus.Guard)
+            if (DamageBlock != DefenseStatus.Guard && damageValue != 0)
             {
                 ComboView.nextOwner = this;
                 if (ComboUI)
@@ -268,7 +282,8 @@ public class Entity : MonoBehaviour
                     if (network)
                         network.HpChange();
                 }
-                Instantiate(CoolTextEffect).transform.position = transform.position;
+                if(damageValue != 0)
+                    Instantiate(CoolTextEffect).transform.position = transform.position;
             }
             if (DamageBlock == DefenseStatus.Warning)
             {

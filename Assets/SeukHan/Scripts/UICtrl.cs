@@ -37,17 +37,8 @@ public class UICtrl : MonoBehaviour
         var wait = new WaitForSecondsRealtime(0.5f);
         while(true)
         {
-            if (PhotonNetwork.IsMasterClient)
-            {
-                HP_Bar1P.fillAmount = Player1.GetHp() / Player1.maxHP;
-                HP_Bar2P.fillAmount = Player2.GetHp() / Player2.maxHP;
-            }
-            else
-            {
-                HP_Bar1P.fillAmount = Player2.GetHp() / Player2.maxHP;
-                HP_Bar2P.fillAmount = Player1.GetHp() / Player1.maxHP;
-            }
-
+            HP_Bar1P.fillAmount = Player1.GetHp() / Player1.maxHP;
+            HP_Bar2P.fillAmount = Player2.GetHp() / Player2.maxHP;
             yield return wait;
         }
     }

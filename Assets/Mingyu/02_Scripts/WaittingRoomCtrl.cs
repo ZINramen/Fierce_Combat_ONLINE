@@ -39,7 +39,10 @@ public class WaittingRoomCtrl : MonoBehaviourPun
             isGameStart = true;
 
             if (PhotonNetwork.IsMasterClient)
-                PhotonNetwork.LoadLevel("Test_Scene");
+            {
+                if(select_StageName == "피치 성 외각")
+                    PhotonNetwork.LoadLevel("Peach Castle");
+            }
         }
     }
 

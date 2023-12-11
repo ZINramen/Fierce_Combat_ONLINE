@@ -10,6 +10,9 @@ public class AttachPoint : MonoBehaviour
     public Entity owner;
     public Entity target;
 
+    public bool Ult = false;
+    public float UltDamage = 0;
+
     private void Start()
     {
         network = GetComponent<PhotonPlayer>();
@@ -30,6 +33,7 @@ public class AttachPoint : MonoBehaviour
         if (target)
         {
             target.Damaged(0, 0);
+            target.movement.SetVelocityZero();
             target.transform.parent = transform;
             target.movement.Freeze();
         }
@@ -40,11 +44,33 @@ public class AttachPoint : MonoBehaviour
         if (entity)
             if (entity == target)
             {
-                entity.SetHp(entity.GetHp()-5.0f);
+                if (UltDamage > 0)
+                {
+                    target.waitTime = 0;
+                    if (owner.transform.localEulerAngles.y != 0)
+                    {
+                        target.Damaged(UltDamage, -10);
+                        target.transform.eulerAngles = new Vector3(0, 0, 0);
+                    }
+                    else
+                    {
+                        target.Damaged(UltDamage, 10);
+                    }
+                    
+                }
+                else
+                    entity.SetHp(entity.GetHp() - 5.0f);
                 target = null;
                 entity.movement.UnFreeze();
                 entity.transform.parent = null; 
                 entity.Network_Catch = false;
+
+                if (Ult) 
+                {
+                    owner.aManager.ani.SetTrigger("Start");
+                    if(owner.network)
+                        owner.network.RunTriggerRpc("Start");
+                }
             } 
     }
 }

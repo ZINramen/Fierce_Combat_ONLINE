@@ -9,10 +9,24 @@ using UnityEngine.SceneManagement;
 public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 {
     public bool isLobby = false;
+    public StageCtrl stage;
 
     [SerializeField] GameObject PlayerLobby;
+    [SerializeField] GameObject Player1Level;
+    [SerializeField] GameObject Player2Level;
 
     DefaultPool pool;
+
+    private void Awake()
+    {
+        if (!isLobby)
+        {
+            if(PhotonNetwork.IsMasterClient)
+                PhotonNetwork.Instantiate(Player1Level.name, stage.playerFirstLocations[0].position, Quaternion.identity); 
+            else
+                PhotonNetwork.Instantiate(Player2Level.name, stage.playerFirstLocations[1].position, Quaternion.identity);
+        }
+    }
 
     private void Start()
     {
@@ -22,6 +36,8 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         if (pool != null && !pool.ResourceCache.ContainsKey(PlayerLobby.name))
         {
             pool.ResourceCache.Add(PlayerLobby.name, PlayerLobby);
+            pool.ResourceCache.Add(Player1Level.name, Player1Level);
+            pool.ResourceCache.Add(Player2Level.name, Player2Level);
 
             // PhotonNetwork.InRoom으로 방에 있을 때만 실행되도록 수정
             if (PhotonNetwork.InRoom && SceneManager.GetActiveScene().name == "WaitingRoom")
@@ -34,10 +50,6 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
                 StartCoroutine(WaitForJoinRoom(pool));
             }
         }
-
-        else
-            Debug.Log("저장x");
-
     }
 
     IEnumerator WaitForJoinRoom(DefaultPool pool)

@@ -44,6 +44,7 @@ public class AnimationManager : MonoBehaviour
     public KeyCode Emotion_1;
     public KeyCode Heal;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -132,18 +133,23 @@ public class AnimationManager : MonoBehaviour
     }
     void ResetAttackTriggerEvent()
     {
+        if (!ani) return;
         ani.ResetTrigger("Punch_Up");
         ani.ResetTrigger("Punch");
         ani.ResetTrigger("Kick");
         ani.ResetTrigger("Catch");
         ani.ResetTrigger("Dodge");
         ani.ResetTrigger("Dash");
-        ani.ResetTrigger("Gun");
-        ani.ResetTrigger("Sword");
-        ani.ResetTrigger("Hamemr");
-        ani.ResetTrigger("Kunai");
-        ani.ResetTrigger("Potion");
-
+        if (owner.ultScreen)
+        { 
+            ani.ResetTrigger("Gun");
+            ani.ResetTrigger("Sword");
+            ani.ResetTrigger("Hamemr");
+            ani.ResetTrigger("Kunai");
+            ani.ResetTrigger("Potion");
+            ani.ResetTrigger("Utl1");
+            ani.ResetTrigger("Utl2");
+        }
     }
 
     void StateChange(AnimationState newState) 
@@ -212,7 +218,14 @@ public class AnimationManager : MonoBehaviour
 
     public void Network_SetTrigger(string name) 
     {
-        ani.SetTrigger(name);
+        if(name == "Potion")
+            ani.SetTrigger("Potion_Quick");
+        else if (name == "Kunai")
+            ani.SetTrigger("Kunai_Quick");
+        else if (name == "Gun")
+            ani.SetTrigger("Gun_Quick");
+        else
+            ani.SetTrigger(name);
     } 
 
     public void Network_Effect()

@@ -1567,6 +1567,8 @@ MonoBehaviour:
   noCatch: 0
   owner: {fileID: 4076167003795396175}
   target: {fileID: 0}
+  Ult: 0
+  UltDamage: 0
 --- !u!1 &767875619311797446
 GameObject:
   m_ObjectHideFlags: 0
@@ -11872,6 +11874,7 @@ MonoBehaviour:
   Network_Catch: 0
   hp: 0
   movement: {fileID: 0}
+  waitTime: 0
   maxHP: 1000
   target:
     serializedVersion: 2
@@ -11892,6 +11895,7 @@ MonoBehaviour:
   StrongHitTextEffect: {fileID: 5314262938032755345, guid: f1fcb19798d1ef84db2582311fbb55f0, type: 3}
   CoolTextEffect: {fileID: 6268643683504991078, guid: ac04799a645e5a54dbd564caba5de5ff, type: 3}
   emoticon: {fileID: 3368788328294678246}
+  ultScreen: {fileID: 0}
 --- !u!114 &3236426529555372491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11991,6 +11995,33 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Hammer
+  - Type: 9
+    SynchronizeType: 0
+    Name: Stun
+  - Type: 9
+    SynchronizeType: 0
+    Name: Gun
+  - Type: 9
+    SynchronizeType: 0
+    Name: Sword
+  - Type: 9
+    SynchronizeType: 0
+    Name: Kunai
+  - Type: 9
+    SynchronizeType: 0
+    Name: Potion
+  - Type: 9
+    SynchronizeType: 0
+    Name: Fail
+  - Type: 9
+    SynchronizeType: 0
+    Name: Ult1
+  - Type: 9
+    SynchronizeType: 0
+    Name: Start
+  - Type: 9
+    SynchronizeType: 0
+    Name: Ult2
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0

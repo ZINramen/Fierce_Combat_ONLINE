@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class StageCtrl : MonoBehaviour
 {
+    private bool stageSettingEnd = false; // 스테이지 설정 완료 여부
     private int playerNumber; //살아 있는 player 수
     private Entity superPlayer; //가장 HP가 많은 player
 
@@ -25,29 +27,42 @@ public class StageCtrl : MonoBehaviour
     public Image[] SkillIcons1P;
     public Image[] SkillIcons2P;
 
-    public enum GameResult { Win, Draw, Lose };
-    public static GameResult result = GameResult.Draw;
+    public enum GameResult { Win, Draw, Lose, None};
+    public static GameResult result = GameResult.None;
+
+    public DynamicCamera dCam;
+
+    public CastleCtrl castle;
 
     //public void addPlayerList(Entity player)
     //{
     //    playerList[]
     //}
 
-    void Awake()
+    void Update()
     {
-        PlayerList = FindObjectsOfType<Entity>(); //Entity를 가진 객체로 리스트를 만듬
-        playerNumber = PlayerList.Length; //처음은 살아있으므로 리스트에 넣음
-        superPlayer = PlayerList[0]; //임시로 superPlayer 설정
+        if (PlayerList == null || PlayerList.Length < 2)
+        {
+            PlayerList = FindObjectsOfType<Entity>(); //Entity를 가진 객체로 리스트를 만듬
+        }
+        if(PlayerList != null && PlayerList.Length > 1 && !stageSettingEnd)
+        {
+            stageSettingEnd = true; // 다중 실행 방지
+            if (castle) 
+            {
+                castle.enabled = true;
+            }
+            dCam.enabled = true;
+            playerNumber = PlayerList.Length; //처음은 살아있으므로 리스트에 넣음
+            superPlayer = PlayerList[0]; //임시로 superPlayer 설정
 
-        //플레이어 위치 설정
-        PlayerList[0].transform.position = playerFirstLocations[0].position;
-        PlayerList[1].transform.position = playerFirstLocations[1].position;
+            CreateUIManager(); //UIManager 생성
+                               //Debug.Log("플레이어 수" + playerNumber);
+                               //Debug.Log("플레이어1" + PlayerList[0].name);
+                               //Debug.Log("플레이어2" + PlayerList[1].name);
 
-        CreateUIManager(); //UIManager 생성
-        //Debug.Log("플레이어 수" + playerNumber);
-        //Debug.Log("플레이어1" + PlayerList[0].name);
-        //Debug.Log("플레이어2" + PlayerList[1].name);
-        StartCoroutine(PlayerCheck());
+            StartCoroutine(PlayerCheck());
+        }
     }
 
     //player 체력 체크 후 승패 체크
@@ -96,7 +111,23 @@ public class StageCtrl : MonoBehaviour
         myUICtrl.SkillIcons1P = SkillIcons1P;
         myUICtrl.SkillIcons2P = SkillIcons2P;
 
-        myUICtrl.Player1 = PlayerList[0];
-        myUICtrl.Player2 = PlayerList[1];
+        foreach (Entity player in PlayerList)
+        {
+            if (player.network.pv.IsMine)
+            {
+                if (PhotonNetwork.IsMasterClient)
+                    myUICtrl.Player1 = player;
+                else
+                    myUICtrl.Player2 = player;
+            }
+            else 
+            {
+                if (PhotonNetwork.IsMasterClient)
+                    myUICtrl.Player2 = player;
+                else
+                    myUICtrl.Player1 = player;
+            }
+
+        }
     }
 }
