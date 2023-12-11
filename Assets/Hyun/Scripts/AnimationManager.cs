@@ -218,12 +218,17 @@ public class AnimationManager : MonoBehaviour
 
     public void Network_SetTrigger(string name) 
     {
-        if(name == "Potion")
+        if (name == "Potion")
             ani.SetTrigger("Potion_Quick");
         else if (name == "Kunai")
             ani.SetTrigger("Kunai_Quick");
         else if (name == "Gun")
-            ani.SetTrigger("Gun_Quick");
+        {
+            if (owner.movement.StopMove)
+                ani.SetTrigger("Gun");
+            else
+                ani.SetTrigger("Gun_Quick");
+        }
         else
             ani.SetTrigger(name);
     } 
