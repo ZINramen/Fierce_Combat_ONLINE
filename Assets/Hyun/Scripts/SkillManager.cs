@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkillManager : MonoBehaviour
 {
-    public string[] skills = new string[5];
+    public string[] skills = new string[6];
    
     public void AddSkill(string name) 
     {
@@ -24,7 +24,7 @@ public class SkillManager : MonoBehaviour
         {
             skills[3] = name;
         }
-        if (name == "Ts")
+        if (name == "Potion")
         {
             skills[4] = name;
         }

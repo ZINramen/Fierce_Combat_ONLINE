@@ -100,8 +100,10 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
         
         if (pv.IsMine)
         {
-            mv.PlayerType = true;
-            am.isPlayer = true;
+            if (mv)
+                mv.PlayerType = true;
+            if (am)
+                am.isPlayer = true;
         }
     }
 
@@ -112,7 +114,8 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
         {
             posX = transform.position.x;
             posY = transform.position.y;
-            combo = ComboView.currValue;
+            if(entity)
+                combo = ComboView.currValue;
 
             if (transform.localEulerAngles.y == 0)
                 rot = true;
@@ -121,8 +124,9 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
         }
         else
         {
-            if (!entity.Network_Catch)
-                transform.position = Vector3.Lerp(transform.position, new Vector3(posX, posY, transform.position.z), 0.3f);
+            if(entity)
+                if (!entity.Network_Catch)
+                    transform.position = Vector3.Lerp(transform.position, new Vector3(posX, posY, transform.position.z), 0.3f);
 
             if (rot)
                 transform.localEulerAngles = new Vector3(0, 0, 0);

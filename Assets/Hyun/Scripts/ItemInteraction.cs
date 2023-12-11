@@ -8,11 +8,12 @@ public class ItemInteraction : MonoBehaviour
     {
         Skill, Normal
     }
-
+    public bool notDestroy = false;
     public ItemType item;
     public string itemName;
 
-    private void OnTriggerEneter2D(Collider2D coll)
+    public GameObject effect;
+    private void OnTriggerEnter2D(Collider2D coll)
     {
         SkillManager skills = coll.GetComponent<SkillManager>();
         if (!skills) return;
@@ -26,5 +27,34 @@ public class ItemInteraction : MonoBehaviour
             case ItemType.Normal:
                 break;
         }
+        if (!notDestroy)
+        {
+            GameObject eff = Instantiate(effect);
+            eff.transform.position = transform.position;
+            Destroy(gameObject);
+        }
+    }
+    public void removeSkill() 
+    {
+    //    if (name == "Gun")
+    //    {
+    //        skills[0] = name;
+    //    }
+    //    if (name == "Sword")
+    //    {
+    //        skills[1] = name;
+    //    }
+    //    if (name == "Kunai")
+    //    {
+    //        skills[2] = name;
+    //    }
+    //    if (name == "Hammer")
+    //    {
+    //        skills[3] = name;
+    //    }
+    //    if (name == "Potion")
+    //    {
+    //        skills[4] = name;
+    //    }
     }
 }

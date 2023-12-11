@@ -3639,7 +3639,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536577824993388738}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6f53afc12dd15d341bbd0c407939cdad, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: e09ba9f0d1b36c44b9f51f85f5904db3, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -12061,6 +12061,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Potion_Quick
+  - Type: 9
+    SynchronizeType: 0
+    Name: Gun_Quick
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0

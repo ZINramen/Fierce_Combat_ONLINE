@@ -43,7 +43,10 @@ public class GoombaCtrl : MonoBehaviour
             }
             else
             {
-                temp.GetComponent<Entity>().Damaged(10, 10);
+                if(transform.localEulerAngles.y != 0)
+                    temp.GetComponent<Entity>().Damaged(10, 10);
+                else
+                    temp.GetComponent<Entity>().Damaged(10, -10);
             }
         }
     }
