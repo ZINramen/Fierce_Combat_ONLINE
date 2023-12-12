@@ -103,14 +103,14 @@ public class StageCtrl : MonoBehaviour
                 result = GameResult.Win;
                 Debug.Log(PlayerList[0].name + " Win");
 
-                StartCoroutine(View_GameResult(PlayerList[0].name));
+                StartCoroutine(View_GameResult(PlayerList[0]));
             }
             else if (PlayerList[0].GetHp() <= 0)
             {
                 result = GameResult.Lose;
                 Debug.Log(PlayerList[1].name + " Win");
 
-                StartCoroutine(View_GameResult(PlayerList[1].name));
+                StartCoroutine(View_GameResult(PlayerList[1]));
             }
 
             //Debug.Log("수뻐 플레이어 : " + superPlayer.name);
@@ -120,33 +120,40 @@ public class StageCtrl : MonoBehaviour
         }
     }
 
-    IEnumerator View_GameResult(string winnerName)
+    IEnumerator View_GameResult(Entity winner)
     {
         Debug.Log("끝!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         isDie = true;
 
         GameResult_UI.SetActive(true);
-        Set_ResultData(winnerName);
+        Set_ResultData(winner.gameObject.GetComponent<PhotonView>().Owner.NickName);
+
+        DefaultPool pool;
+        pool = PhotonNetwork.PrefabPool as DefaultPool;
+        Debug.Log("실행");
+
+        pool.ResourceCache.Clear();
 
         yield return new WaitForSecondsRealtime(3.0f);
         PhotonNetwork.LoadLevel("WaitingRoom");
+
     }
 
     private void Set_ResultData(string winnerName)
     {
         if (PhotonNetwork.MasterClient.NickName == winnerName)
         {
-            WinnerName_Text.text = PlayerList[0].gameObject.GetComponent<PhotonView>().Owner.NickName;
-            LoserName_Text.text = PlayerList[1].gameObject.GetComponent<PhotonView>().Owner.NickName;
+            WinnerName_Text.text = PhotonNetwork.MasterClient.NickName;
+            LoserName_Text.text = PhotonNetwork.PlayerList[1].NickName;
 
             Loser_UI.color = new Color(1.0f, 127 / 255.0f, 39 / 255.0f);
         }
         else
         {
-            LoserName_Text.text = PlayerList[0].gameObject.GetComponent<PhotonView>().Owner.NickName;
-            WinnerName_Text.text = PlayerList[1].gameObject.GetComponent<PhotonView>().Owner.NickName;
+            LoserName_Text.text = PhotonNetwork.MasterClient.NickName;
+            WinnerName_Text.text = PhotonNetwork.PlayerList[1].NickName;
 
-            Loser_UI.color = new Color(1.0f, 127 / 255.0f, 39 / 255.0f);
+            Winner_UI.color = new Color(1.0f, 127 / 255.0f, 39 / 255.0f);
         }
     }
 
