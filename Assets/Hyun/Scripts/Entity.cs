@@ -129,6 +129,8 @@ public class Entity : MonoBehaviour
     public void AddMp(int value) 
     {
         mp += value;
+        if (mp > maxMp)
+            mp = maxMp;
     }
     public void ResetMp()
     {

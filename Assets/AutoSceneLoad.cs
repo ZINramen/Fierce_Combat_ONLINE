@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class AutoSceneLoad : MonoBehaviour
 {
     public float delaytime;
-    public string sname = "TitleMenu(LobbyStart)";
+    public string sname = "TitleMenu(Demo)";
     void Start()
     {
         StartCoroutine(Load());

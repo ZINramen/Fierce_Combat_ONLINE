@@ -328,6 +328,7 @@ public class AnimationManager : MonoBehaviour
             }
             if (Input.GetKeyUp(Backstep))
             {
+                ani.SetTrigger("Dodge");
                 if (network)
                     network.RunTriggerRpc("Dodge");
             }

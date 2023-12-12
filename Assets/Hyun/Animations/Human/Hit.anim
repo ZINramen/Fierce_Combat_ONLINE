@@ -1384,13 +1384,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: PlaySound
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: a55c3c5b28a7d484a82060215cf2341a, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.083333336
     functionName: ResetTriggerEvent
     data: Dodge

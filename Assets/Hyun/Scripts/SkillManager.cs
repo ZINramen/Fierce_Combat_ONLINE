@@ -19,7 +19,7 @@ public class SkillManager : MonoBehaviour
             if(skills[1] == "Sword")
                 skills[5] = "Ult2";
             else
-                skills[5] = "Ult2";
+                skills[5] = "Ult1";
         }
         else 
         {

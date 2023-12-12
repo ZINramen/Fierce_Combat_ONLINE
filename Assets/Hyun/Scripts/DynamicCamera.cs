@@ -88,7 +88,7 @@ public class DynamicCamera : MonoBehaviour
         targetingPoint = new Vector3(targetingPointX + offsetX, targetingPointY + offsetY - downOffsetY, transform.localEulerAngles.z);
         transform.position = Vector3.Lerp(transform.position, targetingPoint, moveSpeed * Time.deltaTime);
         
-        farAmount = Mathf.Abs(player1.position.magnitude - player2.position.magnitude) * size_AddValue + size_OriginalValue;
+        farAmount = (player1.position- player2.position).magnitude * size_AddValue + size_OriginalValue;
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, farAmount, moveSpeed * Time.deltaTime);
     }
     

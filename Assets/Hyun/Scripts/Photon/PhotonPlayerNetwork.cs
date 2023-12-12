@@ -13,6 +13,9 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     public PhotonView pv;
     public Text chat_Text;
     public ScrollRect scRect;
+    public SpriteRenderer tv;
+    public Sprite[] stages;
+
 
     public bool isLobby = false;
     public StageCtrl stage;
@@ -118,4 +121,19 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     }
     #endregion
 
+
+    private void Update()
+    {
+        if (tv)
+        {
+            if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "피치 성 외곽")
+            {
+                tv.sprite = stages[0];
+            }
+            if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "달")
+            {
+                tv.sprite = stages[1];
+            }
+        }
+    }
 }
