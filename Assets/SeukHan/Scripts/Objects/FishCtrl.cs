@@ -70,7 +70,7 @@ public class FishCtrl : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(3.5f, 6.0f));
+            yield return new WaitForSeconds(Random.Range(20.0f, 25.0f));
             rb.AddForce(jumpForce, ForceMode2D.Impulse);
         }
     }

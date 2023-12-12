@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,12 +20,12 @@ public class SpawnGoomba : MonoBehaviour
     {
         while (true)
         {
-            if (GoombaCount < 5)
+            if (GoombaCount < 3 && PhotonNetwork.IsMasterClient)
             {
-                Instantiate(goomba, SpawnPoint.position, Quaternion.identity);
+                PhotonNetwork.Instantiate(goomba.name, SpawnPoint.position, Quaternion.identity);
             }
 
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(15.0f);
         }
     }
 }

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5823162570161181531}
   - component: {fileID: 3244781910866433429}
   - component: {fileID: 7828051070278045292}
+  - component: {fileID: 5950210565154060504}
+  - component: {fileID: -5730269614049927402}
   m_Layer: 7
   m_Name: Goomba
   m_TagString: Untagged
@@ -194,3 +196,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5950210565154060504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31555209162718956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-5730269614049927402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31555209162718956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcafe6221b0dcc743a730cf6097bb713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillActive: 0000000000
+  effect: {fileID: 0}
+  pv: {fileID: 0}
+  am: {fileID: 0}
+  combo: 0
+  ft: {fileID: 0}

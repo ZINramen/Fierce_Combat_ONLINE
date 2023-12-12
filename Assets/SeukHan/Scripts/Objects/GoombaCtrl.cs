@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -28,26 +29,32 @@ public class GoombaCtrl : MonoBehaviour
     {
         GameObject temp = coll.gameObject;
 
-        if(temp.tag == "Pipe")
+        if (temp.tag != "Terrain")
         {
-            moveX *= -1;
-            transform.Rotate(FlipY);
-        }
-        
-        if(temp.layer == LayerMask.NameToLayer("Entity"))
-        {
-            if(temp.GetComponent<Rigidbody2D>().velocity.y < 0 && temp.transform.position.y > transform.position.y + 0.2)
+            if (temp.tag == "Pipe")
             {
-                StartCoroutine(GoombaDied());
-                temp.GetComponent<Entity>().movement.Jump(2);
+                moveX *= -1;
+                transform.Rotate(FlipY);
+                return;
             }
-            else
+
+            if (temp.layer == LayerMask.NameToLayer("Entity"))
             {
-                if(transform.localEulerAngles.y != 0)
-                    temp.GetComponent<Entity>().Damaged(10, 10);
+                if (temp.GetComponent<Rigidbody2D>().velocity.y < 0 && temp.transform.position.y > transform.position.y + 0.2)
+                {
+                    StartCoroutine(GoombaDied());
+                    temp.GetComponent<Entity>().movement.Jump(2);
+                }
                 else
-                    temp.GetComponent<Entity>().Damaged(10, -10);
+                {
+                    if (transform.localEulerAngles.y != 0)
+                        temp.GetComponent<Entity>().Damaged(10, 10);
+                    else
+                        temp.GetComponent<Entity>().Damaged(10, -10);
+                }
             }
+
+            StartCoroutine(GoombaDied());
         }
     }
 
