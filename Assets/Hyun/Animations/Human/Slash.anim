@@ -763,11 +763,32 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.016666668
+    functionName: RemoveSKill
+    data: Sword
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.033333335
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 264bdce890897264c92d06ba77ae6748, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.05
     functionName: SetMovementForceX
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: -10
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.1
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: fecd3588d4e0077459016dc214cacebd, type: 3}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.15

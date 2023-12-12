@@ -9591,6 +9591,117 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3530040986027485896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5673297587741366258}
+  - component: {fileID: 2850514703453803670}
+  - component: {fileID: 3791293219011537022}
+  - component: {fileID: 9093846603811892531}
+  m_Layer: 3
+  m_Name: Nickname
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5673297587741366258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530040986027485896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.709, z: 0}
+  m_LocalScale: {x: 0.0071552605, y: 0.0071552605, z: 0.0071552605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 765350373295731505}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2850514703453803670
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530040986027485896}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5abfb0a229c98b3499cffa6c59c2ffb4, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!102 &3791293219011537022
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530040986027485896}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 500
+  m_FontStyle: 1
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: 5abfb0a229c98b3499cffa6c59c2ffb4, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!114 &9093846603811892531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530040986027485896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb6d74ce3ea2d545baec40dc4d02667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 4076167003795396175}
 --- !u!1 &3614182519135369369
 GameObject:
   m_ObjectHideFlags: 0
@@ -11677,6 +11788,7 @@ Transform:
   m_LocalScale: {x: 1.2195379, y: 1.138235, z: 1.30084}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5673297587741366258}
   - {fileID: 7958169865185058938}
   - {fileID: 39251839368776679}
   - {fileID: 1358901930240948477}
@@ -11873,9 +11985,11 @@ MonoBehaviour:
   network: {fileID: 0}
   Network_Catch: 0
   hp: 0
+  mp: 0
   movement: {fileID: 0}
   waitTime: 0
   maxHP: 1000
+  maxMp: 100
   target:
     serializedVersion: 2
     m_Bits: 8
@@ -12022,6 +12136,15 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Ult2
+  - Type: 9
+    SynchronizeType: 0
+    Name: Kunai_Quick
+  - Type: 9
+    SynchronizeType: 0
+    Name: Potion_Quick
+  - Type: 9
+    SynchronizeType: 0
+    Name: Gun_Quick
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -12037,10 +12160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcafe6221b0dcc743a730cf6097bb713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkillActive: 0000000000
   effect: {fileID: 0}
   pv: {fileID: 0}
   am: {fileID: 0}
   combo: 0
+  ft: {fileID: 9093846603811892531}
 --- !u!1 &5402460653236013365
 GameObject:
   m_ObjectHideFlags: 0

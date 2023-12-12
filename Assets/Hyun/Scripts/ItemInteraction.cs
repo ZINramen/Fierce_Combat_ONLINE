@@ -1,30 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class ItemInteraction : MonoBehaviour
 {
+    GameObject target;
+
     public enum ItemType
     {
-        Skill, Normal
+        Skill, Spawn
     }
     public bool notDestroy = false;
     public ItemType item;
     public string itemName;
 
     public GameObject effect;
+   
+    private void Start()
+    {
+        if(itemName == "")
+            if(PhotonNetwork.InRoom && PhotonNetwork.IsMasterClient)
+                StartCoroutine(SpawnItem());
+    }
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        SkillManager skills = coll.GetComponent<SkillManager>();
-        if (!skills) return;
-
         switch (item) 
         {
             case ItemType.Skill :
+                SkillManager skills = coll.GetComponent<SkillManager>();
+                if (!skills) return;
                 skills.AddSkill(itemName);
-                break;
-
-            case ItemType.Normal:
                 break;
         }
         if (!notDestroy)
@@ -34,27 +41,45 @@ public class ItemInteraction : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void removeSkill() 
+
+    IEnumerator SpawnItem() 
     {
-    //    if (name == "Gun")
-    //    {
-    //        skills[0] = name;
-    //    }
-    //    if (name == "Sword")
-    //    {
-    //        skills[1] = name;
-    //    }
-    //    if (name == "Kunai")
-    //    {
-    //        skills[2] = name;
-    //    }
-    //    if (name == "Hammer")
-    //    {
-    //        skills[3] = name;
-    //    }
-    //    if (name == "Potion")
-    //    {
-    //        skills[4] = name;
-    //    }
+        int value = 0;
+        while (true)
+        {
+            yield return new WaitForSeconds(5);
+            if (target == null)
+            {
+                yield return new WaitForSeconds(3);
+                value = Random.Range(0, 51);
+                if(value < 11) 
+                {
+                    value = Random.Range(3, 5);
+                }
+                else
+                {
+                    value = Random.Range(0, 3);
+                }
+                switch (value) 
+                {
+                    case 0:
+                        itemName = "SKILL-ITEM (Gun)";
+                            break;
+                    case 1:
+                        itemName = "SKILL-ITEM (Sword)";
+                        break;
+                    case 2:
+                        itemName = "SKILL-ITEM (Kunai)";
+                        break;
+                    case 3:
+                        itemName = "SKILL-ITEM (Hammer)";
+                        break;
+                    case 4:
+                        itemName = "SKILL-ITEM (Potion)";
+                        break;
+                }
+                target = PhotonNetwork.Instantiate("Item/"+ itemName, transform.position, Quaternion.identity);
+            }
+        }
     }
 }

@@ -1645,12 +1645,26 @@ AnimationClip:
     floatParameter: 3
     intParameter: 0
     messageOptions: 0
+  - time: 0.11666667
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d2bc50dea4ca642e9a0b2f78baa1096c, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.16666667
     functionName: StateChange
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
+    messageOptions: 0
+  - time: 0.55
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 3da35f998cb4a415fb680dc88323ecf9, type: 3}
+    floatParameter: 0
+    intParameter: 0
     messageOptions: 0
   - time: 0.5833333
     functionName: Jump

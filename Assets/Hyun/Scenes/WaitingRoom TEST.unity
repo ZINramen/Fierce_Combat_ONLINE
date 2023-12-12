@@ -2744,8 +2744,8 @@ MonoBehaviour:
   isLobby: 1
   stage: {fileID: 0}
   PlayerLobby: {fileID: 5190726052694202441, guid: a2fbe78fddb2ea546a20d1a679824fd1, type: 3}
-  Player1Level: {fileID: 0}
-  Player2Level: {fileID: 0}
+  Player1Level: {fileID: 5190726052694202441, guid: 832b6bd6ee6eeb1489a36c93d4822cf2, type: 3}
+  Player2Level: {fileID: 3116628648358586995, guid: ca7d576d0cdbdee4ebbcee14d1cd2ecb, type: 3}
 --- !u!114 &1355099544
 MonoBehaviour:
   m_ObjectHideFlags: 0

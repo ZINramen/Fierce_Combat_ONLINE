@@ -6,6 +6,8 @@ using Photon.Realtime;
 
 public class PhotonPlayer : MonoBehaviour, IPunObservable
 {
+    public bool[] SkillActive = { false, false, false, false, false };
+
     public GameObject effect;
 
     EffectCreator ec;
@@ -22,6 +24,7 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
 
     public int combo;
 
+    public FollowText ft;
 
     public void RunTriggerRpc(string name)
     {
@@ -43,7 +46,36 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
     {
         pv.RPC("ShowEffect", RpcTarget.Others, pos);
     }
+    public void MpChange()
+    {
+        pv.RPC("SetMp", RpcTarget.Others, entity.GetMp());
+    }
+    public void SkillIconChange(int value, bool SkillValue)
+    {
+        pv.RPC("ChangeSkill", RpcTarget.Others, value, SkillValue);
+    }
+    public void NameChange(string name)
+    {
+        pv.RPC("ShowNickname", RpcTarget.Others, name);
+    }
 
+    [PunRPC]
+    public void ShowNickname(string name)
+    {
+        ft.NameUpdate(name);
+    }
+
+    [PunRPC]
+    public void ChangeSkill(int value, bool SkillValue)
+    {
+        SkillActive[value] = SkillValue;
+    }
+
+    [PunRPC]
+    public void SetMp(int value)
+    {
+        entity.SetMpNetwork(value);
+    }
 
     [PunRPC]
     public void ShowEmoticon(int value)

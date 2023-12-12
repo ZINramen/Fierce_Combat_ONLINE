@@ -13,6 +13,7 @@ public class Entity : MonoBehaviour
     public bool Network_Catch = false;
 
     [SerializeField] private float hp;
+    [SerializeField] private int mp;
     private float attackForce = 0;
     private float thrustpower = 0;
 
@@ -20,7 +21,8 @@ public class Entity : MonoBehaviour
 
     public float waitTime = 0;
 
-    public float maxHP = 100;
+    public float maxHP = 1000;
+    public int maxMp = 100;
     public LayerMask target;
     public GameObject attackPos;
     public float attackLength;
@@ -64,10 +66,12 @@ public class Entity : MonoBehaviour
         aManager.owner = this;
         movement.owner = this;
         hp = maxHP;
+        mp = 0;
     }
 
     private void Update()
     {
+
         if (ultScreen) 
         {
             if(transform.localEulerAngles.y != 0) 
@@ -118,7 +122,21 @@ public class Entity : MonoBehaviour
             hp = 0;
         }
     }
+    public int GetMp()
+    {
+        return mp;
+    }
+    public void AddMp(int value) 
+    {
+        mp += value;
+    }
+    public void ResetMp()
+    {
+        mp = 0;
 
+        if (network)
+            network.MpChange();
+    }
     public void SetPower(float powerValue) 
     {
         attackForce = powerValue;
@@ -137,11 +155,20 @@ public class Entity : MonoBehaviour
                 Entity enemy = hitTarget.collider.gameObject.GetComponent<Entity>();
                 if (enemy)
                 {
+                    float temp = enemy.GetHp();
                     enemy.flyingDamagedPower = flyingAttackForce;
                     if (transform.localEulerAngles.y == 180)
                         enemy.Damaged(attackForce, -thrustpower);
                     else
                         enemy.Damaged(attackForce, thrustpower);
+                    if (temp > enemy.GetHp())
+                    {
+                        AddMp(5);
+                        if (network) 
+                        {
+                            network.MpChange();
+                        }
+                    }
                 }
             }
         }
@@ -172,9 +199,12 @@ public class Entity : MonoBehaviour
     // 날라가지 않고 데미지만
     public void Internal_Damaged(float damageValue)
     {
+        if (DamageBlock == DefenseStatus.invincible) return;
+        AddMp(5);
+        if (network)
+            network.MpChange();
         if (!network || PhotonNetwork.IsMasterClient)
         {
-            if (DamageBlock == DefenseStatus.invincible) return;
             if (waitTime == 0)
             {
                 hp -= damageValue;
@@ -190,6 +220,12 @@ public class Entity : MonoBehaviour
             hp = maxHP;
         else hp = value;
     }
+    public void SetMpNetwork(int value)
+    {
+        if (value > maxMp)
+            mp = maxMp;
+        else mp = value;
+    }
 
     // hp 임의 변경 : 아이템용이다.
     public void SetHp(float value)
@@ -197,6 +233,9 @@ public class Entity : MonoBehaviour
         if (hp > value)
         {
             PlayHitEffect(10);
+            AddMp(2);
+            if (network)
+                network.MpChange();
         }
         if (!network || PhotonNetwork.IsMasterClient)
         {
@@ -222,6 +261,9 @@ public class Entity : MonoBehaviour
     public void Damaged(float damageValue, float thrustValue)
     {
         if (DamageBlock == DefenseStatus.invincible) return;
+        AddMp(10);
+        if (network)
+            network.MpChange();
         if (currentCombo < maxcombo && damageValue != 0)
         {
             currentCombo++;

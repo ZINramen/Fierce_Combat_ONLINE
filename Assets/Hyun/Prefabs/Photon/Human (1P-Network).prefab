@@ -869,7 +869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3578692415199322178
 Transform:
   m_ObjectHideFlags: 0
@@ -944,7 +944,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472847566810636540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -21480,6 +21480,8 @@ GameObject:
   - component: {fileID: 8388885272806893869}
   - component: {fileID: 266556382843409427}
   - component: {fileID: 4159216124727914891}
+  - component: {fileID: 8171948598084545828}
+  - component: {fileID: 365713238223418975}
   m_Layer: 3
   m_Name: Human (1P-Network)
   m_TagString: Untagged
@@ -21658,10 +21660,10 @@ MonoBehaviour:
   Ec: {fileID: 6663377825845975621}
   Punch: 115
   Kick: 100
-  Guard: 0
+  Guard: 97
   Catch: 119
   Dash: 102
-  Backstep: 0
+  Backstep: 101
   Jump: 32
   DownArrow: 274
   UpArrow: 273
@@ -21696,9 +21698,11 @@ MonoBehaviour:
   network: {fileID: 0}
   Network_Catch: 0
   hp: 0
+  mp: 0
   movement: {fileID: 0}
   waitTime: 0
   maxHP: 1000
+  maxMp: 100
   target:
     serializedVersion: 2
     m_Bits: 8
@@ -21851,6 +21855,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Potion_Quick
+  - Type: 9
+    SynchronizeType: 0
+    Name: Gun_Quick
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -21866,10 +21873,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcafe6221b0dcc743a730cf6097bb713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkillActive: 0000000000
   effect: {fileID: 8348167719758411892, guid: 785d23ad8ef7b574c8b00a7ddf7038e4, type: 3}
   pv: {fileID: 0}
   am: {fileID: 0}
   combo: 0
+  ft: {fileID: 0}
 --- !u!114 &4159216124727914891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21883,16 +21892,125 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills:
-  - Gun
-  - Sword
-  - Kunai
-  - Hammer
-  - Potion
-  - Ult2
   - 
   - 
   - 
   - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  infinite: 0
+--- !u!82 &8171948598084545828
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190726052694202441}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &365713238223418975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190726052694202441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372e54ac4cda7584585ba6ddcf03b087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5217951317703922423
 GameObject:
   m_ObjectHideFlags: 0

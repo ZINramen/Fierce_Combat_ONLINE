@@ -26,10 +26,14 @@ namespace Photon.Chat.Lobby
         ChatClient chatClient;
         protected ChatAppSettings chatAppSettings;
         public InputField InputFieldChat;
+        public InputField NameBlock;
 
         public int TestLength = 2048;
         private byte[] testBytes = new byte[2048];
 
+        public bool lobbyStart = false;
+        
+        
         public void Connect()
         {
             Application.runInBackground = true;
@@ -131,6 +135,16 @@ namespace Photon.Chat.Lobby
         public void OnUserUnsubscribed(string channel, string user)
         {
 
+        }
+
+        void Start()
+        {
+            if (NameBlock)
+            {
+                NameBlock.text = PhotonNetwork.NickName;
+            }
+            if (lobbyStart)
+                Connect();
         }
 
         private void Update()

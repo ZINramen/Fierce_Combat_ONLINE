@@ -45,23 +45,29 @@ public class StageCtrl : MonoBehaviour
         {
             PlayerList = FindObjectsOfType<Entity>(); //Entity를 가진 객체로 리스트를 만듬
         }
-        if(PlayerList != null && PlayerList.Length > 1 && !stageSettingEnd)
+        if (PlayerList != null)
         {
-            stageSettingEnd = true; // 다중 실행 방지
-            if (castle) 
+            if (PlayerList.Length > 1)
             {
-                castle.enabled = true;
-            }
-            dCam.enabled = true;
-            playerNumber = PlayerList.Length; //처음은 살아있으므로 리스트에 넣음
-            superPlayer = PlayerList[0]; //임시로 superPlayer 설정
+                if (!stageSettingEnd)
+                {
+                    stageSettingEnd = true; // 다중 실행 방지
+                    if (castle)
+                    {
+                        castle.enabled = true;
+                    }
+                    dCam.enabled = true;
+                    playerNumber = PlayerList.Length; //처음은 살아있으므로 리스트에 넣음
+                    superPlayer = PlayerList[0]; //임시로 superPlayer 설정
 
-            CreateUIManager(); //UIManager 생성
-                               //Debug.Log("플레이어 수" + playerNumber);
-                               //Debug.Log("플레이어1" + PlayerList[0].name);
-                               //Debug.Log("플레이어2" + PlayerList[1].name);
+                    CreateUIManager(); //UIManager 생성
+                                       //Debug.Log("플레이어 수" + playerNumber);
+                                       //Debug.Log("플레이어1" + PlayerList[0].name);
+                                       //Debug.Log("플레이어2" + PlayerList[1].name);
 
-            StartCoroutine(PlayerCheck());
+                    StartCoroutine(PlayerCheck());
+                }
+            } 
         }
     }
 

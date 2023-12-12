@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SeukHan/Scenes/Stage-Hyun/Peach Castle.unity
     guid: aeec3364c7d8b5743bfd195d7b8e477b
+  - enabled: 1
+    path: Assets/Hyun/Scenes/Diconnect.unity
+    guid: d0864d40d7c65ef4fbd6277d2c9ec6ae
   m_configObjects: {}

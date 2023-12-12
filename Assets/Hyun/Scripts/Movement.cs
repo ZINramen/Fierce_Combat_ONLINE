@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour
         else
             he = Input.GetAxis("Horizontal");
         if (is2P)
-            ve = Input.GetAxis("Vertical_2P");
+            ve = Input.GetAxis("Vertical2P");
         else
             ve = Input.GetAxis("Vertical");
 

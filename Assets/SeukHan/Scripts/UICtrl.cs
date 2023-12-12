@@ -8,15 +8,12 @@ public class UICtrl : MonoBehaviour
 {
     public Image HP_Bar1P;
     public Image HP_Bar2P;
-
+    
     public Image SpecialGauge_1P;
     public Image SpecialGauge_2P;
 
     public Image[] SkillIcons1P;
     public Image[] SkillIcons2P;
-
-    private bool[] SkillActive1P = new bool[5];
-    private bool[] SkillActive2P = new bool[5];
 
     public Entity Player1;
     public Entity Player2;
@@ -24,10 +21,16 @@ public class UICtrl : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CheckHP());
+        StartCoroutine(CheckMP());
+    }
 
-        for(int i = 0; i < SkillActive1P.Length; i++) { 
-            SkillActive1P[i] = false;
-            SkillActive2P[i] = false;
+    private void Update()
+    {
+
+        for (int i = 0; i < 5; i++)
+        {
+            SkillIcons1P[i].gameObject.SetActive(Player1.network.SkillActive[i]);
+            SkillIcons2P[i].gameObject.SetActive(Player2.network.SkillActive[i]);
         }
     }
 
@@ -43,17 +46,14 @@ public class UICtrl : MonoBehaviour
         }
     }
 
-    private void CheckSkill()
+    IEnumerator CheckMP()
     {
-        if (PhotonNetwork.IsMasterClient)
+        var wait = new WaitForSecondsRealtime(0.5f);
+        while (true)
         {
-            //왼쪽 1p 스킬 아이콘 활성화 SkillActive1P[]
-            //오른쪽 2p 스킬 아이콘 활성화 SkillActive2P[]
-        }
-        else
-        {
-            //오른쪽 1p 스킬 아이콘 활성화 SkillActive1P[]
-            //왼쪽 2p 스킬 아이콘 활성화 SkillActive2P[]
+            SpecialGauge_1P.fillAmount = (float)Player1.GetMp() / Player1.maxMp;
+            SpecialGauge_2P.fillAmount = (float)Player2.GetMp() / Player2.maxMp;
+            yield return wait;
         }
     }
 }

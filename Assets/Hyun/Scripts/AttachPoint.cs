@@ -25,6 +25,7 @@ public class AttachPoint : MonoBehaviour
             if (entity != owner && entity.DamageBlock != Entity.DefenseStatus.invincible)
             {
                 target = entity;
+                target.DamageBlock = Entity.DefenseStatus.invincible;
                 entity.Network_Catch = true;
             }
     }
@@ -46,6 +47,7 @@ public class AttachPoint : MonoBehaviour
             {
                 if (UltDamage > 0)
                 {
+                    target.DamageBlock = Entity.DefenseStatus.Nope;
                     target.waitTime = 0;
                     if (owner.transform.localEulerAngles.y != 0)
                     {
@@ -55,6 +57,9 @@ public class AttachPoint : MonoBehaviour
                     else
                     {
                         target.Damaged(UltDamage, 10);
+                        owner.ResetMp();
+                        if (network)
+                            network.MpChange();
                     }
                     
                 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 using Photon.Pun;
 using Photon.Realtime;
@@ -8,14 +9,22 @@ using UnityEngine.SceneManagement;
 
 public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 {
+    string ChatMessage;
+    public PhotonView pv;
+    public Text chat_Text;
+    public ScrollRect scRect;
+
     public bool isLobby = false;
     public StageCtrl stage;
+    public Text player1Name;
+    public Text player2Name;
 
     [SerializeField] GameObject PlayerLobby;
     [SerializeField] GameObject Player1Level;
     [SerializeField] GameObject Player2Level;
 
     DefaultPool pool;
+
 
     private void Awake()
     {
@@ -30,6 +39,14 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        if(player1Name && PhotonNetwork.PlayerList != null && PhotonNetwork.PlayerList.Length > 1)
+            foreach (Player pl in PhotonNetwork.PlayerList)
+            {
+                if(pl.IsMasterClient)
+                    player1Name.text = pl.NickName;
+                else
+                    player2Name.text = pl.NickName;
+            }
         pool = PhotonNetwork.PrefabPool as DefaultPool;
         Debug.Log("실행");
 
@@ -52,6 +69,17 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         }
     }
 
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        base.OnPlayerLeftRoom(otherPlayer);
+        if (!isLobby)
+        {
+            PhotonNetwork.LeaveRoom();
+            PhotonNetwork.Disconnect();
+            SceneManager.LoadScene("Diconnect", LoadSceneMode.Single);
+        }
+    }
+
     IEnumerator WaitForJoinRoom(DefaultPool pool)
     {
         yield return new WaitUntil(() => PhotonNetwork.InRoom && SceneManager.GetActiveScene().name == "WaitingRoom");
@@ -67,4 +95,27 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 
         Debug.Log("생성");
     }
+
+    #region 로비 채팅 부분 코딩
+    public void Chatting_Lobby(InputField inputChatting)
+    {
+        ChatMessage = PhotonNetwork.NickName + ": " + inputChatting.text;
+        inputChatting.text = string.Empty;
+
+        pv.RPC("ChatInfo", RpcTarget.All, ChatMessage);
+    }
+
+    public void ShowChat(string chat)
+    {
+        chat_Text.text += chat + "\n";
+        scRect.verticalNormalizedPosition = 1.0f;
+    }
+
+    [PunRPC]
+    public void ChatInfo(string sChat)
+    {
+        ShowChat(sChat);
+    }
+    #endregion
+
 }

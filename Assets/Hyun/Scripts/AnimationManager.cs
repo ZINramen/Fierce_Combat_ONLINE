@@ -144,11 +144,11 @@ public class AnimationManager : MonoBehaviour
         { 
             ani.ResetTrigger("Gun");
             ani.ResetTrigger("Sword");
-            ani.ResetTrigger("Hamemr");
+            ani.ResetTrigger("Hammer");
             ani.ResetTrigger("Kunai");
             ani.ResetTrigger("Potion");
-            ani.ResetTrigger("Utl1");
-            ani.ResetTrigger("Utl2");
+            ani.ResetTrigger("Ult1");
+            ani.ResetTrigger("Ult2");
         }
     }
 

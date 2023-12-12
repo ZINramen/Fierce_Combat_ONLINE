@@ -54,6 +54,9 @@ MonoBehaviour:
   - Set_CollPlayer
   - StartGame
   - ShowEffectV2
+  - SetMp
+  - ChangeSkill
+  - ShowNickname
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
