@@ -13,8 +13,8 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     public PhotonView pv;
     public Text chat_Text;
     public ScrollRect scRect;
-    public SpriteRenderer tv;
-    public Sprite[] stages;
+    public GameObject[] stageImages;
+    public int stageIndex;
 
 
     public bool isLobby = false;
@@ -72,6 +72,16 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         }
     }
 
+    public override void OnLeftRoom()
+    {
+        base.OnLeftRoom();
+        pool = PhotonNetwork.PrefabPool as DefaultPool;
+        Debug.Log("실행");
+
+        pool.ResourceCache.Clear();
+        SceneManager.LoadScene("Diconnect", LoadSceneMode.Single);
+    }
+
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         base.OnPlayerLeftRoom(otherPlayer);
@@ -79,9 +89,9 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.LeaveRoom();
             PhotonNetwork.Disconnect();
-            SceneManager.LoadScene("Diconnect", LoadSceneMode.Single);
         }
     }
+
 
     IEnumerator WaitForJoinRoom(DefaultPool pool)
     {
@@ -114,6 +124,14 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         scRect.verticalNormalizedPosition = 1.0f;
     }
 
+    public void Left()
+    {
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.Disconnect();
+    }
+
+
+
     [PunRPC]
     public void ChatInfo(string sChat)
     {
@@ -124,15 +142,24 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (tv)
+        int i = 0;
+        foreach (GameObject stageImage in stageImages) 
         {
-            if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "피치 성 외곽")
+            if(i == stageIndex)
+                stageImage.SetActive(true);
+            else
+                stageImage.SetActive(false);
+            i++;
+        }
+        if (PhotonNetwork.CurrentRoom != null)
+        {
+            if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "피치 성 외각")
             {
-                tv.sprite = stages[0];
+                stageIndex = 0;
             }
             if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "달")
             {
-                tv.sprite = stages[1];
+                stageIndex = 1;
             }
         }
     }
