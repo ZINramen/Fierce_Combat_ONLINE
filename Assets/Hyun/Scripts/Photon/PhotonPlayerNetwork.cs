@@ -143,23 +143,26 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     private void Update()
     {
         int i = 0;
-        foreach (GameObject stageImage in stageImages) 
+        if (stageImages != null && stageImages.Length > 0)
         {
-            if(i == stageIndex)
-                stageImage.SetActive(true);
-            else
-                stageImage.SetActive(false);
-            i++;
-        }
-        if (PhotonNetwork.CurrentRoom != null)
-        {
-            if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "피치 성 외각")
+            foreach (GameObject stageImage in stageImages)
             {
-                stageIndex = 0;
+                if (i == stageIndex)
+                    stageImage.SetActive(true);
+                else
+                    stageImage.SetActive(false);
+                i++;
             }
-            if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "달")
+            if (PhotonNetwork.CurrentRoom != null)
             {
-                stageIndex = 1;
+                if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "피치 성 외각")
+                {
+                    stageIndex = 0;
+                }
+                if (PhotonNetwork.CurrentRoom.CustomProperties["stageName"].ToString() == "달")
+                {
+                    stageIndex = 1;
+                }
             }
         }
     }
