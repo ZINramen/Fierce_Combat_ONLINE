@@ -29,7 +29,7 @@ public class HitColider : MonoBehaviour
             {
                 entity.stun = stunTarget;
                 entity.flyingDamagedPower = flyingAttackForce;
-                if (owner.transform.localEulerAngles.y == 180)
+                if (owner && owner.transform.localEulerAngles.y == 180)
                 {
                     entity.Damaged(attackForce, (-attackForce) * thrustValue);
                 }

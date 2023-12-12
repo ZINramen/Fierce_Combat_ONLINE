@@ -112,7 +112,8 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
     [PunRPC]
     public void Network_Trigger(string name)
     {
-        am.Network_SetTrigger(name);
+        if(am)
+            am.Network_SetTrigger(name);
     }
 
     [PunRPC]

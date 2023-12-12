@@ -21,7 +21,7 @@ public class FollowText : MonoBehaviour
     }
     public void NameUpdate(string name)
     {
-        if(name != "")
+        if(name != "" && textM)
             textM.text = name;
     }
     private void Update()
