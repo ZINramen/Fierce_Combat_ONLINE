@@ -15,6 +15,16 @@ public class StageCtrl : MonoBehaviour
     public Entity[] PlayerList { get; set; } //player 목록
     public Transform[] playerFirstLocations; //player 시작 위치
 
+    // [Mingyu Version]
+    private bool isDie = false;
+    [SerializeField] GameObject GameResult_UI;
+
+    [SerializeField] Text WinnerName_Text;
+    [SerializeField] Text LoserName_Text;
+
+    [SerializeField] Image Winner_UI;
+    [SerializeField] Image Loser_UI;
+
     [Space]
     public Image HP_Bar1P;
     public Image HP_Bar2P;
@@ -74,7 +84,7 @@ public class StageCtrl : MonoBehaviour
     //player 체력 체크 후 승패 체크
     IEnumerator PlayerCheck()
     {
-        while (playerNumber > 0)
+        while (playerNumber > 0 && !isDie )
         {
             for (int i = 0; i < PlayerList.Length; i++)
             {
@@ -88,20 +98,55 @@ public class StageCtrl : MonoBehaviour
                 result = GameResult.Draw;
                 Debug.Log("Draw");
             }
-            else if (PlayerList[1].isDie == true)
+            else if (PlayerList[1].GetHp() <= 0)
             {
                 result = GameResult.Win;
                 Debug.Log(PlayerList[0].name + " Win");
+
+                StartCoroutine(View_GameResult(PlayerList[0].name));
             }
-            else if (PlayerList[0].isDie == true)
+            else if (PlayerList[0].GetHp() <= 0)
             {
                 result = GameResult.Lose;
                 Debug.Log(PlayerList[1].name + " Win");
+
+                StartCoroutine(View_GameResult(PlayerList[1].name));
             }
 
             //Debug.Log("수뻐 플레이어 : " + superPlayer.name);
-            Debug.Log("Player1 HP :" + PlayerList[0].GetHp() + "Player2 HP :" + PlayerList[1].GetHp());
+            //Debug.Log("Player1 HP :" + PlayerList[0].GetHp() + "Player2 HP :" + PlayerList[1].GetHp());
+            Debug.Log(PlayerList[1].isDie);
             yield return new WaitForSecondsRealtime(0.5f);
+        }
+    }
+
+    IEnumerator View_GameResult(string winnerName)
+    {
+        Debug.Log("끝!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        isDie = true;
+
+        GameResult_UI.SetActive(true);
+        Set_ResultData(winnerName);
+
+        yield return new WaitForSecondsRealtime(3.0f);
+        PhotonNetwork.LoadLevel("WaitingRoom");
+    }
+
+    private void Set_ResultData(string winnerName)
+    {
+        if (PhotonNetwork.MasterClient.NickName == winnerName)
+        {
+            WinnerName_Text.text = PlayerList[0].gameObject.GetComponent<PhotonView>().Owner.NickName;
+            LoserName_Text.text = PlayerList[1].gameObject.GetComponent<PhotonView>().Owner.NickName;
+
+            Loser_UI.color = new Color(1.0f, 127 / 255.0f, 39 / 255.0f);
+        }
+        else
+        {
+            LoserName_Text.text = PlayerList[0].gameObject.GetComponent<PhotonView>().Owner.NickName;
+            WinnerName_Text.text = PlayerList[1].gameObject.GetComponent<PhotonView>().Owner.NickName;
+
+            Loser_UI.color = new Color(1.0f, 127 / 255.0f, 39 / 255.0f);
         }
     }
 
