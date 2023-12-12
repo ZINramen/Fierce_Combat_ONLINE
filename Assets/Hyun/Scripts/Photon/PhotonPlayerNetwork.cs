@@ -15,16 +15,29 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
     [SerializeField] GameObject Player1Level;
     [SerializeField] GameObject Player2Level;
 
+    // 생성된 p1, p2 - Mingyu
+    private GameObject spawn_P1;
+    private GameObject spawn_P2;
+
+    [SerializeField] GameObject Ready_UI;
+    [SerializeField] GameObject Go_UI;
+
     DefaultPool pool;
 
     private void Awake()
     {
         if (!isLobby)
         {
-            if(PhotonNetwork.IsMasterClient)
-                PhotonNetwork.Instantiate(Player1Level.name, stage.playerFirstLocations[0].position, Quaternion.identity); 
-            else
-                PhotonNetwork.Instantiate(Player2Level.name, stage.playerFirstLocations[1].position, Quaternion.identity);
+            if (PhotonNetwork.IsMasterClient)
+            {
+                spawn_P1 = PhotonNetwork.Instantiate(Player1Level.name, stage.playerFirstLocations[0].position, Quaternion.identity);
+                StartCoroutine(Set_ReadyOption(spawn_P1));
+            }
+            else 
+            {
+                spawn_P2 = PhotonNetwork.Instantiate(Player2Level.name, stage.playerFirstLocations[1].position, Quaternion.identity);
+                StartCoroutine(Set_ReadyOption(spawn_P2));
+            }
         }
     }
 
@@ -66,5 +79,25 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         PhotonNetwork.Instantiate(PlayerLobby.name, Vector3.zero, Quaternion.identity);
 
         Debug.Log("생성");
+    }
+
+    IEnumerator Set_ReadyOption(GameObject spawnPlayer)
+    {
+        // 생성 후, 플레이어의 상태를 무적으로 만듬
+        spawnPlayer.GetComponent<Entity>().DamageBlock = Entity.DefenseStatus.invincible;
+        Ready_UI.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(1.5f);
+        StartCoroutine(GameStart(spawnPlayer));
+    }
+
+    IEnumerator GameStart(GameObject spawnPlayer)
+    {
+        spawnPlayer.GetComponent<Entity>().DamageBlock = Entity.DefenseStatus.Nope;
+        Ready_UI.SetActive(false);
+        Go_UI.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(0.5f);
+        Go_UI.SetActive(false);
     }
 }
