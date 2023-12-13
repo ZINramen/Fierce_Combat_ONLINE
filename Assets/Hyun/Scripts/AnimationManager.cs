@@ -229,6 +229,14 @@ public class AnimationManager : MonoBehaviour
             else
                 ani.SetTrigger("Gun_Quick");
         }
+        else if (name == "Ult1") 
+        {
+            ani.SetTrigger("Ult1_Quick");
+        }
+        else if(name == "Ult2") 
+        {
+            ani.SetTrigger("Ult2_Quick");
+        }
         else
             ani.SetTrigger(name);
     } 
