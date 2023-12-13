@@ -88,6 +88,7 @@ public class PhotonPlayer : MonoBehaviour, IPunObservable
     {
         GameObject temp = Instantiate(effect);
         temp.transform.position = pos;
+        temp.GetComponent<HitColider>().owner = gameObject.GetComponent<Entity>();
     }
 
 
