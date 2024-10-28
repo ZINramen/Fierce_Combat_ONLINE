@@ -54,7 +54,7 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
 
     IEnumerator Set_ReadyOption(GameObject spawnPlayer)
     {
-        // 생성 후, 플레이어의 상태를 무적으로 만듬
+        // 생성 후, 3초 카운트 동안 플레이어의 상태를 무적으로 만듬
         spawnPlayer.GetComponent<Entity>().DamageBlock = Entity.DefenseStatus.invincible;
         Ready_UI.SetActive(true);
 
