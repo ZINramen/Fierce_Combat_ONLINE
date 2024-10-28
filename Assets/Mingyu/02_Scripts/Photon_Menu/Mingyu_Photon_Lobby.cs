@@ -127,6 +127,7 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
         {
             pw_Panel = GameObject.Find("Pw_Panel");
             Debug.Log("방 비번 참조 패널" + pw_Panel.name);
+            pw_Panel.SetActive(false);
         }
 
         if (pw_Panel.transform.Find("Error_Log") != null)
@@ -449,8 +450,8 @@ public class Mingyu_Photon_Lobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("취소 입력");
 
-        title_UI.SetActive(true);
-        lobby.SetActive(true);
+        //title_UI.SetActive(true);
+        //lobby.SetActive(true);
         
         pw_Panel.SetActive(false);
         makeRoom_Panel.SetActive(false);

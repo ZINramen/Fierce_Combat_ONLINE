@@ -141,8 +141,8 @@ public class PhotonPlayerNetwork : MonoBehaviourPunCallbacks
         Debug.Log("생성");
     }
 
-    #region 로비 채팅 부분 코딩
-    public void Chatting_Lobby(InputField inputChatting)
+    #region 룸 채팅 부분 코딩
+    public void Chatting_Room(InputField inputChatting)
     {
         ChatMessage = PhotonNetwork.NickName + ": " + inputChatting.text;
         inputChatting.text = string.Empty;

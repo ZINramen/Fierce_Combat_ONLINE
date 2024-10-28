@@ -151,11 +151,11 @@ namespace Photon.Chat.Lobby
         {
             if (chatClient != null)
             {
-                chatClient.Service();
+                chatClient.Service();// 클라이언트의 서버 연결 상태 체크 및 갱신
 
                 if (channel == null)
                 {
-                    chatClient.TryGetChannel("Lobby", out channel);
+                    chatClient.TryGetChannel("Lobby", out channel); // 채널이 존재하면 메시지 초기화
                     if (channel != null)
                     {
                         channel.ClearMessages();
