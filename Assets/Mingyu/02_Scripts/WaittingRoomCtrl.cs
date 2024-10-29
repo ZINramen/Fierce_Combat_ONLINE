@@ -31,6 +31,7 @@ public class WaittingRoomCtrl : MonoBehaviourPun
         if (!PhotonNetwork.IsMasterClient)
             return;
 
+        // 각 양 옆의 버튼 상태 실시간 체크
         isColl_LButton = L_Button.GetComponent<ButtonCtrl>().Is_CollPlayer;
         isColl_RButton = R_Button.GetComponent<ButtonCtrl>().Is_CollPlayer;
 
